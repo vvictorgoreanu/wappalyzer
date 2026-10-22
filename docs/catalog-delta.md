@@ -6,33 +6,42 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 
 |  | Before | After |
 | --- | --- | --- |
-| Technologies | 7911 | 8430 |
+| Technologies | 7911 | 8482 |
 | Categories | 111 | 124 |
 
 | Change | Count |
 | --- | --- |
-| Added | 519 |
+| Added | 571 |
 | **Removed** | **0** |
-| Changed | 291 |
+| Changed | 302 |
 
 Nothing was removed from the catalog.
 
-## Added (519)
+## Added (571)
 
-### From upstream (319)
+### From upstream (371)
 
 <details><summary>List</summary>
 
 - 321 CMS
+- 3Q
+- ACTV8
+- AIDEM Technologies
 - AbanteCart
 - AboutMyClinic
 - AccessiWay
 - ActivEngage
+- Addingwell SST
 - Adenzo
+- Admatic
+- Adnuntius
+- Adventive
+- Advisible
 - Adwos CMS
 - Agendize
 - Akia
 - AllMyLinks
+- Altervista Platform
 - Angular Notitia
 - Anthropic
 - Anubis
@@ -40,8 +49,10 @@ Nothing was removed from the catalog.
 - Apruvd
 - Armin
 - Artifi
+- ArtsAI
 - AskHandle
 - Athos Commerce
+- Audion
 - Avasam
 - AvidAI
 - BITE
@@ -58,6 +69,7 @@ Nothing was removed from the catalog.
 - Boberdoo
 - BokaBord
 - Bomb Bomb
+- Book Like A Boss
 - BookBanket
 - Booker
 - BookingKoala
@@ -76,6 +88,7 @@ Nothing was removed from the catalog.
 - Cartylabs
 - Chimpify
 - CitrusLime
+- Cloudbac
 - Cloudflare Turnstile for WooCommerce
 - Commercy
 - ComplyAuto
@@ -99,10 +112,12 @@ Nothing was removed from the catalog.
 - Eaglecart
 - EdgeOne
 - Elloha
+- EmailOctopus
 - Employment Hero
 - Enzuzo
 - Eviivo
 - EyeFitU
+- Face Age
 - Famous.ai
 - Farazi Bilişim
 - FeatherPanel
@@ -110,11 +125,13 @@ Nothing was removed from the catalog.
 - Fieldd
 - FinConnect
 - Fixer
+- Flexmail
 - ForeUP
 - FormBucket
 - Formalize CSS
 - Formtoro
 - Forumbee
+- FreeWheel
 - Full On Sport
 - GOb2b
 - GOrendezvous
@@ -122,6 +139,8 @@ Nothing was removed from the catalog.
 - Grappos
 - GuildQuality
 - GuppY
+- Hackle
+- Happierleads
 - Hearth
 - Help.com
 - HelpCrunch
@@ -138,6 +157,7 @@ Nothing was removed from the catalog.
 - Intervo
 - Iteras
 - JamFeed
+- Job Boardly
 - KRT CDN
 - KVCore
 - KYKLO
@@ -156,7 +176,9 @@ Nothing was removed from the catalog.
 - Liscio
 - LocalSignal
 - LogMeIn
+- LogaTech
 - Logaholic
+- Lotame
 - Lovi
 - MVD Studio
 - Maguru
@@ -168,6 +190,7 @@ Nothing was removed from the catalog.
 - MembershipWorks
 - Menuu
 - MessageMedia
+- Metricool
 - Mexty
 - Mico
 - Microsoft Fabric
@@ -186,11 +209,13 @@ Nothing was removed from the catalog.
 - Norse Env
 - NovaDB
 - Novaresa
+- Omago
 - Omega Commerce
 - OnChat
 - Online Succes
 - OpnForm
 - Optinopoli
+- Orbit Commerce
 - PageNudge
 - PagineGialle
 - Pancake
@@ -200,16 +225,21 @@ Nothing was removed from the catalog.
 - Paymattic
 - Payva
 - Peachie
+- Peer39
 - Personyze
 - Pilera
 - Pixeleze
+- Podbean
+- Podscribe
 - Premion
+- Printify
 - Printlane
 - Prosperous AI
 - Publive
 - Quadran
 - Qualitando
 - Qualva
+- Quantyoo
 - Quicksprout
 - RE-OS.com
 - REsimpli
@@ -235,11 +265,13 @@ Nothing was removed from the catalog.
 - Sameday
 - Sanity.io
 - Satūs
+- Scrapive
 - SeedGrow
 - Segmetrics
 - Selligent
 - SeoToaster CMS
 - ShopStyle
+- ShopWise
 - Shopiteka
 - Shopsys
 - Singenuity
@@ -248,11 +280,15 @@ Nothing was removed from the catalog.
 - Sketchanet
 - SkyCMS by Netkoncept
 - SmartEmailing
+- SmartFront
 - SnatchBot
+- SociableKIT
 - Socure
 - Soffront CRM
+- Sonares
 - Sourcey
 - Sporcle
+- SproutStudio
 - SquadUP
 - Stampede
 - Stockist
@@ -261,6 +297,8 @@ Nothing was removed from the catalog.
 - Storenvy
 - StyleSeat
 - Subscrimia
+- SuiteDash
+- THEADX
 - Tagalys
 - Tanx
 - Tempus
@@ -268,10 +306,12 @@ Nothing was removed from the catalog.
 - TimeTap
 - Timepad
 - TrackFox
+- Traffective
 - Travello
 - Tulo
 - TuoTempo
 - TutorCruncher
+- Tutorbird
 - Twsaa
 - UXSniff
 - Unblu Virtual Agent
@@ -279,8 +319,10 @@ Nothing was removed from the catalog.
 - Ureserv
 - Useberry
 - Vagaro
+- Valorsic Studio
 - Vera
 - VeraCore
+- Verificado
 - VertaFlow
 - VertaFlow Analytics
 - VertaFlow Booking
@@ -296,6 +338,7 @@ Nothing was removed from the catalog.
 - WP SEO AI
 - WebAdministrator CMS
 - WebAwesome
+- WebinarGeek
 - Weblate
 - Weezevent
 - Wehaa
@@ -306,9 +349,11 @@ Nothing was removed from the catalog.
 - Workplace by Meta
 - Wx3
 - Wyre
+- Wysistat
 - X-Clacks-Overhead
 - Yell eCommerce
 - Yomdel
+- YouDraw
 - YouLead
 - YourGPT
 - Zad
@@ -316,16 +361,20 @@ Nothing was removed from the catalog.
 - Zammad
 - Zapier
 - Zapnito
+- Zeeg
 - Zensical
 - Zevioo
 - Ziber
 - Zipleads
 - Znode
+- Zoomd
 - Zozi
 - Zulip
 - Zyratalk
+- audienzz
 - autoship
 - bun
+- cituro
 - digi·access
 - doxo
 - eKonsilio
@@ -338,10 +387,13 @@ Nothing was removed from the catalog.
 - iTCHYROBOT
 - n8n
 - opentelemetry
+- streaMonkey
+- teachworks
 - theCut
 - tlooto
 - true
 - uSocial
+- |related| Natív Hirdetés Kft
 
 </details>
 
@@ -573,7 +625,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (291)
+## Changed (302)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -620,6 +672,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Birdeye | - | - | scriptSrc |
 | Blackbaud Luminate Online | cookies | regex | - |
 | Blackbaud TeamRaiser | scriptSrc | script | - |
+| Blackbaud eTapestry | - | - | scripts |
 | Blackboard | - | - | dns |
 | BlueKai | scripts | script | - |
 | Bootstrap | - | - | scriptSrc |
@@ -665,6 +718,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Featherlight | - | npm | - |
 | Finsweet | js | - | - |
 | Fisheye | - | tags, excludes | - |
+| Fonteva for Associations | - | - | html |
 | Force.com | scripts | script | - |
 | Forcepoint CASB | - | - | cats |
 | Forpsi DNS | - | - | dns |
@@ -689,9 +743,11 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | HiChina DNS | - | - | dns |
 | Hostpoint DNS | - | - | dns |
 | IBM Cloudant | - | excludes | - |
+| IBM WebSphere Application Server | - | - | html |
 | IFS Enterprise Asset Management | - | - | probe |
 | IPinfo | xhrUrl | xhr | - |
 | Immuta | - | - | dom, meta |
+| Impact | cookies | - | js, scriptSrc |
 | Informatica Business Process Management | xhrUrl | xhr | - |
 | InstantSearch+ | - | - | cats |
 | Intercom | dns | - | - |
@@ -756,6 +812,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Palo Alto Networks | description, saas, oss, dns | - | cats |
 | Pegasus Reservation Platform | - | html, scripts | - |
 | Pendo | oss, dns | - | scriptSrc |
+| Pentaho | - | - | html |
 | PeopleSoft Program Management | xhrUrl | xhr | - |
 | Peoplesoft Project Portfolio Management | xhrUrl | xhr | - |
 | Porto | - | - | css |
@@ -763,6 +820,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Prepr | scripts | - | - |
 | PrestaShop | scriptSrc | - | dom |
 | ProProfs Chat | scriptSrc | script | - |
+| ProgressBar.js | - | - | scriptSrc |
 | Qubit Universal Variable | - | - | js |
 | Quest Foglight | - | - | dom |
 | Radix UI | - | - | css |
@@ -808,6 +866,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Sidr | - | keywords | - |
 | Siebel | scripts | script | - |
 | Simple Social Icons | html | stylesheets | - |
+| SimplyBook.me | - | - | dom, js, scriptSrc |
 | Sitecore | headers, scripts | - | - |
 | Sitelinks Search Box | - | enhanced, schemaOrg | - |
 | SmarterStats | js | scripts | - |
@@ -821,14 +880,15 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Spring Framework | - | name | - |
 | Stackify Retrace | - | - | js |
 | Stripe Checkout | scriptSrc | script | - |
-| SuccessFactors LMS | - | slug | - |
-| Supabase | scriptSrc | - | js |
+| SuccessFactors LMS | - | slug | scripts |
+| Supabase | scriptSrc | - | js, scripts |
 | Svelte | - | - | js |
 | Tailwind CSS | - | - | scriptSrc |
 | TeamViewer | oss, dns | - | cats |
 | Telerik UI for ASP.NET AJAX | - | dom | - |
 | Tenrox | - | excludes | - |
 | Teradata Vantage | xhrUrl | xhr | - |
+| Terminalfour | html | - | - |
 | Textalk Webshop | - | - | html |
 | Thomson Reuters ONESOURCE | - | - | cats |
 | TomTom Maps API | scriptSrc | script | - |
@@ -848,6 +908,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Website Tonight | scriptSrc | script | - |
 | WiredMinds | scriptSrc | script | - |
 | WooCommerce | - | - | scriptSrc |
+| WooCommerce Subscriptions | html | - | dom |
 | Workday | oss, dom, xhr | - | cats |
 | Workday Integration Cloud Platform | xhrUrl | xhr | - |
 | Xaxis | scriptSrc | script | dns |
@@ -855,11 +916,13 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Yandex ClickHouse | xhrUrl | xhr | - |
 | Yandex Maps | scriptSrc | script | - |
 | Yandex SmartCaptcha | js, scripts | - | - |
+| Yandex.Metrika | scripts | - | scriptSrc |
 | Yola | dom | - | - |
 | ZenBasket | scripts | - | - |
 | Zendesk Answer Bot | xhrUrl | xhr | - |
 | Zoho | oss | - | cats, dns |
 | anime.js | headers | - | js |
+| authorize.net | html | - | - |
 | commercetools | xhrUrl | xhr | - |
 | dc.js | - | - | scriptSrc |
 | ipapi.co | xhrUrl | xhr | - |

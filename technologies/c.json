@@ -3988,6 +3988,29 @@
     ],
     "website": "https://consumers.citruspay.com/"
   },
+  "cituro": {
+    "cats": [
+      72
+    ],
+    "description": "cituro is a German online appointment-scheduling tool whose booking widget can be embedded on customer websites.",
+    "dom": [
+      "iframe[src*='cituro.com']"
+    ],
+    "icon": "cituro.png",
+    "js": {
+      "cituroLoader": "",
+      "cituroOptions": "",
+      "cituroWidget": "",
+      "buildCituroOptions": ""
+    },
+    "scriptSrc": [
+      "app\\.cituro\\.com/"
+    ],
+    "website": "https://www.cituro.com",
+    "xhr": [
+      "(?:app|cdn)\\.cituro\\.com"
+    ]
+  },
   "City Hive": {
     "cats": [
       6
@@ -5578,6 +5601,22 @@
       "c9": ""
     },
     "website": "https://c9.io/"
+  },
+  "Cloudbac": {
+    "cats": [
+      1,
+      51
+    ],
+    "description": "Cloudbac is a SaaS website builder and hosting platform for businesses.",
+    "headers": {
+      "X-Powered-By": "^Cloudbac$"
+    },
+    "icon": "Cloudbac.svg",
+    "meta": {
+      "generator": "^Cloudbac$"
+    },
+    "saas": true,
+    "website": "https://www.cloudbac.com"
   },
   "Cloudbeds": {
     "cats": [

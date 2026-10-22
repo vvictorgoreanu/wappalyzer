@@ -67,6 +67,16 @@
     ],
     "website": "https://modelviewer.dev"
   },
+  "|related| Natív Hirdetés Kft": {
+    "cats": [
+      36
+    ],
+    "icon": "related.png",
+    "scripts": [
+      "//related\\.hu"
+    ],
+    "website": "https://related.hu"
+  },
   "1&1 MyWebsite": {
     "cats": [
       1
@@ -260,6 +270,16 @@
       "low"
     ],
     "website": "https://www.34sp.com"
+  },
+  "3Q": {
+    "cats": [
+      14
+    ],
+    "icon": "3Q.png",
+    "scripts": [
+      "3qsdn\\.com"
+    ],
+    "website": "https://3q.video"
   },
   "3Scale API Management": {
     "cats": [

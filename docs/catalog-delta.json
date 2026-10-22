@@ -6,13 +6,13 @@
     "categories": 111
   },
   "after": {
-    "technologies": 8430,
+    "technologies": 8482,
     "categories": 124
   },
   "summary": {
-    "added": 519,
+    "added": 571,
     "removed": 0,
-    "changed": 291
+    "changed": 302
   },
   "newCategories": [
     {
@@ -83,15 +83,24 @@
   ],
   "addedFromUpstream": [
     "321 CMS",
+    "3Q",
+    "ACTV8",
+    "AIDEM Technologies",
     "AbanteCart",
     "AboutMyClinic",
     "AccessiWay",
     "ActivEngage",
+    "Addingwell SST",
     "Adenzo",
+    "Admatic",
+    "Adnuntius",
+    "Adventive",
+    "Advisible",
     "Adwos CMS",
     "Agendize",
     "Akia",
     "AllMyLinks",
+    "Altervista Platform",
     "Angular Notitia",
     "Anthropic",
     "Anubis",
@@ -99,8 +108,10 @@
     "Apruvd",
     "Armin",
     "Artifi",
+    "ArtsAI",
     "AskHandle",
     "Athos Commerce",
+    "Audion",
     "Avasam",
     "AvidAI",
     "BITE",
@@ -117,6 +128,7 @@
     "Boberdoo",
     "BokaBord",
     "Bomb Bomb",
+    "Book Like A Boss",
     "BookBanket",
     "Booker",
     "BookingKoala",
@@ -135,6 +147,7 @@
     "Cartylabs",
     "Chimpify",
     "CitrusLime",
+    "Cloudbac",
     "Cloudflare Turnstile for WooCommerce",
     "Commercy",
     "ComplyAuto",
@@ -158,10 +171,12 @@
     "Eaglecart",
     "EdgeOne",
     "Elloha",
+    "EmailOctopus",
     "Employment Hero",
     "Enzuzo",
     "Eviivo",
     "EyeFitU",
+    "Face Age",
     "Famous.ai",
     "Farazi Bilişim",
     "FeatherPanel",
@@ -169,11 +184,13 @@
     "Fieldd",
     "FinConnect",
     "Fixer",
+    "Flexmail",
     "ForeUP",
     "FormBucket",
     "Formalize CSS",
     "Formtoro",
     "Forumbee",
+    "FreeWheel",
     "Full On Sport",
     "GOb2b",
     "GOrendezvous",
@@ -181,6 +198,8 @@
     "Grappos",
     "GuildQuality",
     "GuppY",
+    "Hackle",
+    "Happierleads",
     "Hearth",
     "Help.com",
     "HelpCrunch",
@@ -197,6 +216,7 @@
     "Intervo",
     "Iteras",
     "JamFeed",
+    "Job Boardly",
     "KRT CDN",
     "KVCore",
     "KYKLO",
@@ -215,7 +235,9 @@
     "Liscio",
     "LocalSignal",
     "LogMeIn",
+    "LogaTech",
     "Logaholic",
+    "Lotame",
     "Lovi",
     "MVD Studio",
     "Maguru",
@@ -227,6 +249,7 @@
     "MembershipWorks",
     "Menuu",
     "MessageMedia",
+    "Metricool",
     "Mexty",
     "Mico",
     "Microsoft Fabric",
@@ -245,11 +268,13 @@
     "Norse Env",
     "NovaDB",
     "Novaresa",
+    "Omago",
     "Omega Commerce",
     "OnChat",
     "Online Succes",
     "OpnForm",
     "Optinopoli",
+    "Orbit Commerce",
     "PageNudge",
     "PagineGialle",
     "Pancake",
@@ -259,16 +284,21 @@
     "Paymattic",
     "Payva",
     "Peachie",
+    "Peer39",
     "Personyze",
     "Pilera",
     "Pixeleze",
+    "Podbean",
+    "Podscribe",
     "Premion",
+    "Printify",
     "Printlane",
     "Prosperous AI",
     "Publive",
     "Quadran",
     "Qualitando",
     "Qualva",
+    "Quantyoo",
     "Quicksprout",
     "RE-OS.com",
     "REsimpli",
@@ -294,11 +324,13 @@
     "Sameday",
     "Sanity.io",
     "Satūs",
+    "Scrapive",
     "SeedGrow",
     "Segmetrics",
     "Selligent",
     "SeoToaster CMS",
     "ShopStyle",
+    "ShopWise",
     "Shopiteka",
     "Shopsys",
     "Singenuity",
@@ -307,11 +339,15 @@
     "Sketchanet",
     "SkyCMS by Netkoncept",
     "SmartEmailing",
+    "SmartFront",
     "SnatchBot",
+    "SociableKIT",
     "Socure",
     "Soffront CRM",
+    "Sonares",
     "Sourcey",
     "Sporcle",
+    "SproutStudio",
     "SquadUP",
     "Stampede",
     "Stockist",
@@ -320,6 +356,8 @@
     "Storenvy",
     "StyleSeat",
     "Subscrimia",
+    "SuiteDash",
+    "THEADX",
     "Tagalys",
     "Tanx",
     "Tempus",
@@ -327,10 +365,12 @@
     "TimeTap",
     "Timepad",
     "TrackFox",
+    "Traffective",
     "Travello",
     "Tulo",
     "TuoTempo",
     "TutorCruncher",
+    "Tutorbird",
     "Twsaa",
     "UXSniff",
     "Unblu Virtual Agent",
@@ -338,8 +378,10 @@
     "Ureserv",
     "Useberry",
     "Vagaro",
+    "Valorsic Studio",
     "Vera",
     "VeraCore",
+    "Verificado",
     "VertaFlow",
     "VertaFlow Analytics",
     "VertaFlow Booking",
@@ -355,6 +397,7 @@
     "WP SEO AI",
     "WebAdministrator CMS",
     "WebAwesome",
+    "WebinarGeek",
     "Weblate",
     "Weezevent",
     "Wehaa",
@@ -365,9 +408,11 @@
     "Workplace by Meta",
     "Wx3",
     "Wyre",
+    "Wysistat",
     "X-Clacks-Overhead",
     "Yell eCommerce",
     "Yomdel",
+    "YouDraw",
     "YouLead",
     "YourGPT",
     "Zad",
@@ -375,16 +420,20 @@
     "Zammad",
     "Zapier",
     "Zapnito",
+    "Zeeg",
     "Zensical",
     "Zevioo",
     "Ziber",
     "Zipleads",
     "Znode",
+    "Zoomd",
     "Zozi",
     "Zulip",
     "Zyratalk",
+    "audienzz",
     "autoship",
     "bun",
+    "cituro",
     "digi·access",
     "doxo",
     "eKonsilio",
@@ -397,10 +446,13 @@
     "iTCHYROBOT",
     "n8n",
     "opentelemetry",
+    "streaMonkey",
+    "teachworks",
     "theCut",
     "tlooto",
     "true",
-    "uSocial"
+    "uSocial",
+    "|related| Natív Hirdetés Kft"
   ],
   "addedForRequest": [
     {
@@ -2066,6 +2118,14 @@
       "valuesChanged": []
     },
     {
+      "name": "Blackbaud eTapestry",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "scripts"
+      ]
+    },
+    {
       "name": "Blackboard",
       "fieldsAdded": [],
       "fieldsRemoved": [],
@@ -2500,6 +2560,14 @@
       "valuesChanged": []
     },
     {
+      "name": "Fonteva for Associations",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "html"
+      ]
+    },
+    {
       "name": "Force.com",
       "fieldsAdded": [
         "scripts"
@@ -2719,6 +2787,14 @@
       "valuesChanged": []
     },
     {
+      "name": "IBM WebSphere Application Server",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "html"
+      ]
+    },
+    {
       "name": "IFS Enterprise Asset Management",
       "fieldsAdded": [],
       "fieldsRemoved": [],
@@ -2743,6 +2819,17 @@
       "valuesChanged": [
         "dom",
         "meta"
+      ]
+    },
+    {
+      "name": "Impact",
+      "fieldsAdded": [
+        "cookies"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "js",
+        "scriptSrc"
       ]
     },
     {
@@ -3347,6 +3434,14 @@
       ]
     },
     {
+      "name": "Pentaho",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "html"
+      ]
+    },
+    {
       "name": "PeopleSoft Program Management",
       "fieldsAdded": [
         "xhrUrl"
@@ -3409,6 +3504,14 @@
         "script"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "ProgressBar.js",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "scriptSrc"
+      ]
     },
     {
       "name": "Qubit Universal Variable",
@@ -3919,6 +4022,16 @@
       "valuesChanged": []
     },
     {
+      "name": "SimplyBook.me",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "dom",
+        "js",
+        "scriptSrc"
+      ]
+    },
+    {
       "name": "Sitecore",
       "fieldsAdded": [
         "headers",
@@ -4046,7 +4159,9 @@
       "fieldsRemoved": [
         "slug"
       ],
-      "valuesChanged": []
+      "valuesChanged": [
+        "scripts"
+      ]
     },
     {
       "name": "Supabase",
@@ -4055,7 +4170,8 @@
       ],
       "fieldsRemoved": [],
       "valuesChanged": [
-        "js"
+        "js",
+        "scripts"
       ]
     },
     {
@@ -4109,6 +4225,14 @@
       "fieldsRemoved": [
         "xhr"
       ],
+      "valuesChanged": []
+    },
+    {
+      "name": "Terminalfour",
+      "fieldsAdded": [
+        "html"
+      ],
+      "fieldsRemoved": [],
       "valuesChanged": []
     },
     {
@@ -4292,6 +4416,16 @@
       ]
     },
     {
+      "name": "WooCommerce Subscriptions",
+      "fieldsAdded": [
+        "html"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "dom"
+      ]
+    },
+    {
       "name": "Workday",
       "fieldsAdded": [
         "oss",
@@ -4363,6 +4497,16 @@
       "valuesChanged": []
     },
     {
+      "name": "Yandex.Metrika",
+      "fieldsAdded": [
+        "scripts"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "scriptSrc"
+      ]
+    },
+    {
       "name": "Yola",
       "fieldsAdded": [
         "dom"
@@ -4408,6 +4552,14 @@
       "valuesChanged": [
         "js"
       ]
+    },
+    {
+      "name": "authorize.net",
+      "fieldsAdded": [
+        "html"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": []
     },
     {
       "name": "commercetools",

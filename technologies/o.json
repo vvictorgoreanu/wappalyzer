@@ -720,6 +720,26 @@
     ],
     "website": "https://omacro.com"
   },
+  "Omago": {
+    "cats": [
+      52
+    ],
+    "description": "Omago is an AI customer-service assistant for business websites that answers visitor questions in the customer's own language, captures leads and hands conversations over to WhatsApp.",
+    "dom": [
+      "#omago-widget-container",
+      "#omago-widget-button"
+    ],
+    "icon": "Omago.svg",
+    "pricing": [
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "app\\.omago\\.ai/widget\\.js"
+    ],
+    "website": "https://omago.ai"
+  },
   "Omeda": {
     "cats": [
       86,
@@ -3170,6 +3190,31 @@
       "www\\.orankl\\.com/"
     ],
     "website": "https://www.orankl.com"
+  },
+  "Orbit Commerce": {
+    "cats": [
+      6
+    ],
+    "description": "Orbit Commerce is a hosted ecommerce platform from the UK with a drag-and-drop page builder, themes, payments, B2B selling and marketing tools.",
+    "headers": {
+      "X-Powered-By": "^Orbit Commerce$"
+    },
+    "icon": "Orbit Commerce.svg",
+    "implies": [
+      "Next.js"
+    ],
+    "js": {
+      "OrbitCommerce.platform": "^Orbit Commerce$"
+    },
+    "meta": {
+      "generator": "^Orbit Commerce$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://orbitcommerce.net"
   },
   "Orbit Slider": {
     "cats": [
