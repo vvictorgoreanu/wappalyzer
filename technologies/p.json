@@ -2359,7 +2359,7 @@
       "X-Powered-By": ".*Pentaho.*"
     },
     "html": [
-      "<title>.*Pentaho Platform.*|.*Pentaho User Console</title>"
+      "<title>.*Pentaho Platform|Pentaho User Console</title>"
     ],
     "scripts": [
       "/js/pentaho-.*\\.js",

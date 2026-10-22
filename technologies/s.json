@@ -16750,7 +16750,7 @@
     "js": {
       "sapsf": ""
     },
-    "scripts": ".*sapsf\\.js",
+    "scripts": "sapsf\\.js",
     "website": "https://www.sap.com/products/hcm/onboarding.html"
   },
   "Sucuri": {

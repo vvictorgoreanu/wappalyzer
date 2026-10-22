@@ -3558,7 +3558,6 @@
     "icon": "Fonteva.svg",
     "website": "https://www.fonteva.com/",
     "html": [
-      "(?:<style>[^<]*|[^>]*>)\\s*<div id=\"(?:powerup-powerboard|PowerBoardApp)Container\">",
       "<div id=\"(?:powerup-powerboard|PowerBoardApp)Container\">"
     ]
   },
