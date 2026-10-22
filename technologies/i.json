@@ -1292,12 +1292,20 @@
     "icon": "Impact.svg",
     "js": {
       "ImpactRadiusEvent": "",
-      "irEvent": ""
+      "irEvent": "",
+      "ire": "",
+      "ire_o": "",
+      "impactDataLayer": ""
     },
     "scriptSrc": [
-      "d\\.impactradius-event\\.com"
+      "d\\.impactradius-event\\.com",
+      "utt\\.impactcdn\\.com"
     ],
-    "website": "https://impact.com/"
+    "website": "https://impact.com/",
+    "cookies": {
+      "ir_gbd": "",
+      "ir_pi": ""
+    }
   },
   "imperia CMS": {
     "cats": [

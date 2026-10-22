@@ -491,7 +491,10 @@
     "scripts": [
       "www\\.accessiway\\.at"
     ],
-    "website": "https://www.accessiway.com"
+    "website": "https://www.accessiway.com",
+    "js": {
+      "accessWidget.config.footerHtml": ""
+    }
   },
   "Accesso": {
     "cats": [
@@ -1055,6 +1058,16 @@
     },
     "website": "https://docs.microsoft.com/en-us/windows/win32/com/activex-objects"
   },
+  "ACTV8": {
+    "cats": [
+      36
+    ],
+    "icon": "ACTV8.svg",
+    "js": {
+      "a8MpParams": ""
+    },
+    "website": "https://www.actv8me.com/"
+  },
   "Acuity Scheduling": {
     "cats": [
       72
@@ -1408,6 +1421,16 @@
     ],
     "website": "https://co.addi.com/"
   },
+  "Addingwell SST": {
+    "cats": [
+      42
+    ],
+    "html": [
+      "\\.js\\?aw='.*?\\+.*?dl;"
+    ],
+    "icon": "Addingwell SST.png",
+    "website": "https://www.addingwell.com"
+  },
   "Addsearch": {
     "cats": [
       29
@@ -1721,6 +1744,20 @@
     ],
     "website": "https://www.adloox.com"
   },
+  "Admatic": {
+    "cats": [
+      36
+    ],
+    "description": "Admatic is a Turkish advertising and supply-side platform (SSP) that serves ads via header bidding and programmatic exchanges.",
+    "icon": "Admatic.png",
+    "scriptSrc": [
+      "\\.admatic\\.com\\.tr/"
+    ],
+    "website": "https://www.admatic.com.tr",
+    "xhr": [
+      "\\.admatic\\.(?:com\\.tr|de|io)"
+    ]
+  },
   "AdminBuy": {
     "cats": [
       1
@@ -1886,6 +1923,16 @@
       "\\.adnegah\\.net/"
     ],
     "website": "https://adnegah.net"
+  },
+  "Adnuntius": {
+    "cats": [
+      36
+    ],
+    "icon": "Adnuntius.png",
+    "scripts": [
+      "cdn\\.adnuntius\\.com/adn\\.js"
+    ],
+    "website": "https://adnuntius.com"
   },
   "Adnymics": {
     "cats": [
@@ -2625,6 +2672,25 @@
     ],
     "website": "https://www.advancedcustomfields.com"
   },
+  "Adventive": {
+    "cats": [
+      36
+    ],
+    "description": "Adventive is an ad-serving and rich-media advertising platform; its ad tags are served from ads.adventive.com.",
+    "dom": [
+      "script[src*=\"ads.adventive.com/\"]",
+      "img[src*=\"ads.adventive.com/\"]",
+      "iframe[src*=\"ads.adventive.com/\"]"
+    ],
+    "icon": "Adventive.png",
+    "scriptSrc": [
+      "ads\\.adventive\\.com/"
+    ],
+    "website": "https://adventive.com",
+    "xhr": [
+      "ads\\.adventive\\.com"
+    ]
+  },
   "Advert Stream": {
     "cats": [
       36
@@ -2675,6 +2741,16 @@
       "\\.advin\\.cz/"
     ],
     "website": "https://www.advin.cz"
+  },
+  "Advisible": {
+    "cats": [
+      36
+    ],
+    "icon": "Advisible.png",
+    "scripts": [
+      "//cdn\\.advisible\\.com"
+    ],
+    "website": "https://www.advisible.com"
   },
   "Adwos CMS": {
     "cats": [
@@ -3270,6 +3346,17 @@
     ],
     "saas": true,
     "website": "https://www.aidbase.ai"
+  },
+  "AIDEM Technologies": {
+    "cats": [
+      36
+    ],
+    "icon": "AIDEM Technologies.png",
+    "scripts": [
+      "//zero\\.aidemsrv\\.com/dist/prebid\\.js",
+      "stream\\.aidemsrv\\.com/lib/stream\\.js"
+    ],
+    "website": "https://www.aidem.com/"
   },
   "Aiden": {
     "cats": [
@@ -4781,6 +4868,17 @@
       "js/alternc\\.js"
     ],
     "website": "https://alternc.com"
+  },
+  "Altervista Platform": {
+    "cats": [
+      11,
+      88
+    ],
+    "html": [
+      "<a href=\"http://www.altervista.org\">Altervista</a>"
+    ],
+    "icon": "Altervista Platform.png",
+    "website": "https://altervista.com"
   },
   "Altis": {
     "cats": [
@@ -8889,6 +8987,23 @@
     "oss": true,
     "website": "https://artplayer.org"
   },
+  "ArtsAI": {
+    "cats": [
+      36
+    ],
+    "description": "ArtsAI is an AI-driven advertising attribution and measurement platform that tracks campaign performance via its arttrk.com pixel.",
+    "dom": [
+      "img[src*=\"arttrk.com/pixel\"]"
+    ],
+    "html": [
+      "arttrk\\.com/pixel"
+    ],
+    "icon": "ArtsAI.png",
+    "website": "https://artsai.com",
+    "xhr": [
+      "arttrk\\.com"
+    ]
+  },
   "Aruba.it": {
     "cats": [
       88,
@@ -10068,6 +10183,16 @@
     ],
     "website": "https://www.webmandesign.eu/portfolio/auberge-wordpress-theme/"
   },
+  "audienzz": {
+    "cats": [
+      1
+    ],
+    "icon": "audienzz.png",
+    "js": {
+      "audienzz": ""
+    },
+    "website": "https://audienzz.ch"
+  },
   "AudioEye": {
     "cats": [
       68
@@ -10101,6 +10226,23 @@
     ],
     "icon": "Audiohook.svg",
     "website": "https://www.audiohook.com"
+  },
+  "Audion": {
+    "cats": [
+      36
+    ],
+    "description": "Audion is a digital audio advertising company; its Audion360 podcast player is embedded on publisher pages and loads from 360.audion.fm.",
+    "dom": [
+      "#audion360-podcast-player-init, .audion-reader"
+    ],
+    "icon": "Audion.png",
+    "scriptSrc": [
+      "\\.360\\.audion\\.fm/"
+    ],
+    "website": "https://www.audion.fm",
+    "xhr": [
+      "\\.audion\\.fm"
+    ]
   },
   "Auglio": {
     "cats": [
@@ -10298,7 +10440,11 @@
     "scriptSrc": [
       "\\.authorize\\.net/"
     ],
-    "website": "https://www.authorize.net"
+    "website": "https://www.authorize.net",
+    "html": [
+      "authorizenet\\\\?/directpost_payment",
+      "js\\.authorize\\.net"
+    ]
   },
   "authorized.by": {
     "cats": [

@@ -340,9 +340,14 @@
     },
     "scriptSrc": [
       "mc\\.yandex\\.ru/metrika/(?:tag|watch)\\.js",
-      "cdn\\.jsdelivr\\.net/npm/yandex\\-metrica\\-watch/watch\\.js"
+      "cdn\\.jsdelivr\\.net/npm/yandex\\-metrica\\-watch/watch\\.js",
+      "cdn\\.jsdelivr\\.net/npm/yandex\\-metrica\\-watch/(?:tag|watch)\\.js"
     ],
-    "website": "https://metrika.yandex.com"
+    "website": "https://metrika.yandex.com",
+    "scripts": [
+      "mc\\.yandex\\.ru/metrika/(?:tag|watch)\\.js",
+      "cdn\\.jsdelivr\\.net/npm/yandex\\-metrica\\-watch/(?:tag|watch)\\.js"
+    ]
   },
   "Yapla": {
     "cats": [
@@ -1195,6 +1200,26 @@
     },
     "saas": true,
     "website": "https://www.youcms.eu"
+  },
+  "YouDraw": {
+    "cats": [
+      6
+    ],
+    "description": "YouDraw is a Brazilian ecommerce and print-on-demand platform with hosted storefronts (YD Store).",
+    "headers": {
+      "X-Generator": "^YouDraw"
+    },
+    "icon": "YouDraw.png",
+    "meta": {
+      "generator": "^YouDraw"
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://youdraw.com.br"
   },
   "Youform": {
     "cats": [
