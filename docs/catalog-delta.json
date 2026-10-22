@@ -6,11 +6,11 @@
     "categories": 111
   },
   "after": {
-    "technologies": 8481,
+    "technologies": 8482,
     "categories": 124
   },
   "summary": {
-    "added": 570,
+    "added": 571,
     "removed": 0,
     "changed": 302
   },
@@ -252,6 +252,7 @@
     "Metricool",
     "Mexty",
     "Mico",
+    "Microsoft Fabric",
     "MiniBC",
     "Moofx",
     "MoreVago",
@@ -3172,6 +3173,7 @@
     {
       "name": "Microsoft Power BI",
       "fieldsAdded": [
+        "dom",
         "js",
         "scriptSrc"
       ],

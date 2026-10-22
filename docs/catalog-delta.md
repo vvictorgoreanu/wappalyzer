@@ -6,20 +6,20 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 
 |  | Before | After |
 | --- | --- | --- |
-| Technologies | 7911 | 8481 |
+| Technologies | 7911 | 8482 |
 | Categories | 111 | 124 |
 
 | Change | Count |
 | --- | --- |
-| Added | 570 |
+| Added | 571 |
 | **Removed** | **0** |
 | Changed | 302 |
 
 Nothing was removed from the catalog.
 
-## Added (570)
+## Added (571)
 
-### From upstream (370)
+### From upstream (371)
 
 <details><summary>List</summary>
 
@@ -193,6 +193,7 @@ Nothing was removed from the catalog.
 - Metricool
 - Mexty
 - Mico
+- Microsoft Fabric
 - MiniBC
 - Moofx
 - MoreVago
@@ -783,7 +784,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Microsoft Commerce Server | - | - | cookies |
 | Microsoft FrontPage | meta | slug, dom | - |
 | Microsoft Insider Risk Management | xhrUrl | xhr | dom |
-| Microsoft Power BI | js, scriptSrc | - | - |
+| Microsoft Power BI | dom, js, scriptSrc | - | - |
 | Microsoft SQL Server | - | - | dns |
 | Miso | xhrUrl | xhr | - |
 | Mixpanel | - | - | dns |
