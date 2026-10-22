@@ -2455,7 +2455,7 @@
     "icon": "Blackbaud eTapestry.svg",
     "website": "https://www.blackbaud.com/products/blackbaud-etapestry",
     "html": "\\n[\\s\\S]*<div id=\"etapx-footer-credit\">",
-    "scripts": "etap\\..*\\.min\\.js|.*BlackbaudLabs\\.eTapestry.*",
+    "scripts": "etap\\..*\\.min\\.js|BlackbaudLabs\\.eTapestry",
     "js": {
       "Etap": "function",
       "BlackbaudLabs": "object"

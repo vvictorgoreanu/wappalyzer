@@ -309,7 +309,7 @@
     "meta": {
       "generator": "^(?:IBM )?WebSphere Application Server$"
     },
-    "html": "<!-- Created by IBM -->|[\\w\\s]+IBM"
+    "html": "<!-- Created by IBM -->|[\\w\\s]IBM"
   },
   "IBM WebSphere DataPower": {
     "cats": [
