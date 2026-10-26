@@ -1464,5 +1464,43 @@
     ],
     "website": "https://www.yzmcms.com",
     "html": "^(?=[\\s\\S]{0,}?YzmCMS)(?=[\\s\\S]{0,}?yzm-common\\.css)"
+  },
+  "Yacla": {
+    "cats": [
+      32
+    ],
+    "description": "Yacla is a service that delivers prequalified, engaged sales contacts directly to a CRM at a predetermined fixed price.",
+    "icon": "Yacla.svg",
+    "saas": true,
+    "scripts": "\\.yac\\.la",
+    "website": "https://yacla.com"
+  },
+  "Yaghoot Web": {
+    "cats": [
+      47,
+      54
+    ],
+    "description": "Yaghoot Web is a provider of website design, search engine optimization, and performance optimization.",
+    "icon": "YaghootWeb.svg",
+    "meta": {
+      "generator": "^yaghootweb$"
+    },
+    "saas": true,
+    "website": "https://yaghootweb.com"
+  },
+  "YouCanBookMe": {
+    "cats": [
+      72
+    ],
+    "description": "YouCanBookMe is an online scheduling solution for small businesses that enables appointment booking, calendar integration, and automated availability management.",
+    "icon": "YouCanBookMe.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.youcanbook\\.me",
+    "website": "https://youcanbook.me"
   }
 }

@@ -10186,5 +10186,211 @@
       "cdn\\.pyze\\.com"
     ],
     "website": "https://www.pyze.com"
+  },
+  "PageLines": {
+    "cats": [
+      32
+    ],
+    "cpe": "cpe:2.3:a:pagelines:pagelines:*:*:*:*:*:wordpress:*:*",
+    "description": "PageLines is a platform that provides AI assistants designed to support revenue teams by automating tasks, analyzing data, and improving efficiency across sales and revenue-related workflows.",
+    "icon": "PageLines.svg",
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "requires": "WordPress",
+    "saas": true,
+    "scriptSrc": "/wp-content/themes/pagelines/js",
+    "website": "https://www.pagelines.com"
+  },
+  "Pagefind": {
+    "cats": [
+      29
+    ],
+    "description": "Pagefind is an open-source static site search library for indexing and searching website content.",
+    "icon": "Pagefind.svg",
+    "js": {
+      "PagefindUI": ""
+    },
+    "oss": true,
+    "scriptSrc": "(?:^|\\/)_?pagefind\\/pagefind-ui\\.js(?:$|\\?)",
+    "website": "https://pagefind.app"
+  },
+  "PaymentForm.io": {
+    "cats": [
+      110
+    ],
+    "description": "PaymentForm.io is a form and checkout page builder for collecting payments, selling products, receiving donations, and registering event attendees.",
+    "icon": "PaymentForm.io.svg",
+    "meta": {
+      "generator": "^PaymentForm\\.io$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "(?:^|//)[^/]+\\.paymentform\\.io/payment-form-embed\\.js(?:[?#]|$)",
+    "url": "^https?://[^/]+\\.paymentform\\.io/",
+    "website": "https://paymentform.io"
+  },
+  "Payzito": {
+    "cats": [
+      41
+    ],
+    "description": "Payzito is a payment platform and plugin for WordPress and Joomla that provides payment links, forms, wallets, routing, and multiple gateways.",
+    "dom": "link[href*='/wp-content/plugins/payzito/'], link[href*='/wp-content/payzito_config/'], script[src*='/wp-content/plugins/payzito/'], script[src*='/wp-content/payzito_config/']",
+    "icon": "Payzito.png",
+    "pricing": [
+      "low",
+      "freemium",
+      "onetime",
+      "recurring"
+    ],
+    "scriptSrc": [
+      "/wp-content/(?:plugins/payzito/|payzito_config/).+\\.js\\?v=([\\d.]+)\\;version:\\1",
+      "/wp-content/(?:plugins/payzito/|payzito_config/)"
+    ],
+    "website": "https://payzito.net"
+  },
+  "Pitchero": {
+    "cats": [
+      1
+    ],
+    "description": "Pitchero is a sports website creation software that enables teams, clubs, and leagues to build and manage websites with tools for scheduling, communication, and content publishing.",
+    "icon": "Pitchero.svg",
+    "saas": true,
+    "scripts": "www\\.pitchero\\.com",
+    "website": "https://www.pitchero.com"
+  },
+  "Pointat": {
+    "cats": [
+      84
+    ],
+    "description": "Pointat is a loyalty system designed to help retail businesses increase store sales by up to three times through structured customer engagement and rewards management.",
+    "icon": "Pointat.svg",
+    "js": {
+      "pointatData.customer": ""
+    },
+    "saas": true,
+    "scriptSrc": "my\\.pointat\\.app",
+    "website": "https://pointat.app"
+  },
+  "Popsixle": {
+    "cats": [
+      32
+    ],
+    "description": "Popsixle is a server-side tracking and attribution solution designed to help ecommerce brands capture and send accurate conversion data to ad platforms.",
+    "icon": "Popsixle.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "/popsixle\\.php",
+    "website": "https://popsixle.com"
+  },
+  "Populi": {
+    "cats": [
+      21
+    ],
+    "description": "Populi is a platform that helps colleges manage academic and administrative operations while supporting a streamlined educational experience for students.",
+    "dom": "iframe[src*='.populiweb.com/']",
+    "icon": "Populi.svg",
+    "meta": {
+      "application-name": "^Populi$"
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://populi.co"
+  },
+  "PostFinance Checkout": {
+    "cats": [
+      41
+    ],
+    "cookies": {
+      "wc_postfinancecheckout_device_id": ""
+    },
+    "description": "PostFinance Checkout is a payment service provider for online shops with hosted checkout, ecommerce plugins, and APIs.",
+    "dom": "script[src^='https://checkout.postfinance.ch/s/'][src*='/payment/device.js']",
+    "icon": "PostFinance Checkout.png",
+    "pricing": [
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "checkout\\.postfinance\\.ch/s/\\d+/payment/device\\.js",
+    "website": "https://www.postfinance.ch/en/business/products/payment-collection/online-shop.html"
+  },
+  "Pozvonim": {
+    "cats": [
+      10
+    ],
+    "description": "Pozvonim is a call tracking and visitor retention service that records and analyzes incoming calls, monitors visitor behavior, and provides tools to help businesses track customer interactions and engagement across websites.",
+    "icon": "Pozvonim.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "api\\.pozvonim\\.com",
+    "website": "https://pozvonim.com"
+  },
+  "Profile Builder": {
+    "cats": [
+      87
+    ],
+    "description": "Profile Builder is a WordPress plugin for creating registration, login, and edit-profile forms, managing user roles, and restricting content.",
+    "dom": "link[href*='/wp-content/plugins/profile-builder/']",
+    "oss": true,
+    "requires": "WordPress",
+    "website": "https://www.cozmoslabs.com/wordpress-profile-builder/"
+  },
+  "PropertyMeld": {
+    "cats": [
+      53
+    ],
+    "description": "PropertyMeld is a property maintenance software platform that manages repair requests, communication, and workflow coordination between property managers, residents, and service vendors.",
+    "icon": "PropertyMeld.svg",
+    "js": {
+      "webpackChunkproperty_meld": ""
+    },
+    "pricing": [],
+    "saas": true,
+    "scripts": "com\\.propertymeld\\.app-sso",
+    "website": "https://propertymeld.com"
+  },
+  "Pushnews": {
+    "cats": [
+      32
+    ],
+    "description": "Pushnews is a web push notification and marketing platform that enables websites to send targeted browser notifications to subscribers for communication, engagement, and promotional campaigns.",
+    "icon": "Pushnews.svg",
+    "js": {
+      "loadPushNewsFile": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "pushnewsbr\\.pushnews",
+    "website": "https://pushnews.com.br"
+  },
+  "privIQ": {
+    "cats": [
+      16
+    ],
+    "description": "privIQ is a platform that provides customized solutions for data privacy, operational risk, and regulatory compliance, including GDPR and CCPA, to support structured risk management.",
+    "icon": "privIQ.svg",
+    "saas": true,
+    "scripts": "app\\.priviq\\.com",
+    "website": "https://www.priviq.com"
   }
 }

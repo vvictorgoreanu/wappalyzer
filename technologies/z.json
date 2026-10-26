@@ -2027,5 +2027,116 @@
       "\\.zyratalk\\.com"
     ],
     "website": "https://www.zyratalk.com"
+  },
+  "ZClouding": {
+    "cats": [
+      1
+    ],
+    "description": "ZClouding is a cloud-based platform that enables businesses to create, manage, and maintain their online presence through web-based tools and services.",
+    "icon": "ZClouding.svg",
+    "saas": true,
+    "scripts": "track\\.zclouding\\.com",
+    "website": "https://zclouding.com"
+  },
+  "ZOYEQ": {
+    "cats": [
+      6
+    ],
+    "description": "ZOYEQ is a cloud ecommerce platform for building and managing online stores, orders, inventory, and point-of-sale operations.",
+    "icon": "ZOYEQ.svg",
+    "js": {
+      "ZOYEQ": ""
+    },
+    "meta": {
+      "generator": "^ZOYEQ$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.zoyeq.com"
+  },
+  "Zapia": {
+    "cats": [
+      88
+    ],
+    "description": "Zapia provides managed website, domain, hosting, email, cloud, and VPN infrastructure services.",
+    "headers": {
+      "Server": "^zapia$"
+    },
+    "icon": "Zapia.svg",
+    "pricing": [
+      "low",
+      "onetime",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://zapia.fr/"
+  },
+  "Zephyr Cloud": {
+    "cats": [
+      62
+    ],
+    "description": "Zephyr Cloud is a deployment platform for micro-frontends and Module Federation applications.",
+    "headers": {
+      "x-server": "^zephyr-cloud$"
+    },
+    "icon": "Zephyr Cloud.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://zephyr-cloud.io/"
+  },
+  "Zigaform": {
+    "cats": [
+      110
+    ],
+    "description": "Zigaform is a custom form building service that enables the creation and management of online forms for data collection, user input, and workflow automation across websites and applications.",
+    "icon": "Zigaform.svg",
+    "requires": "WordPress",
+    "saas": true,
+    "scriptSrc": "/wp-content/plugins/zigaform-wp-estimator/",
+    "website": "https://zigaform.com"
+  },
+  "Zucks": {
+    "cats": [
+      36
+    ],
+    "description": "Zucks is an advertising platform that connects advertisers with publishers seeking to place and manage digital advertisements across various channels.",
+    "icon": "Zucks.svg",
+    "saas": true,
+    "scripts": "\\.zucks\\.net",
+    "website": "https://zucks.co.jp"
+  },
+  "Zyncro": {
+    "cats": [
+      72
+    ],
+    "description": "Zyncro is an online booking platform for scheduling paid appointments, collecting payments, and sending reminders.",
+    "dom": {
+      "[data-zyncro-url]": {
+        "attributes": {
+          "data-zyncro-url": "^(?:https?://)?zyncro\\.in/[^/?#]+/[^?#]+"
+        }
+      },
+      "a[href*='zyncro.in/']": {
+        "attributes": {
+          "href": "^https?://zyncro\\.in/[^/?#]+/[^?#]+"
+        }
+      }
+    },
+    "icon": "Zyncro.png",
+    "pricing": [
+      "low",
+      "freemium"
+    ],
+    "saas": true,
+    "scriptSrc": "zyncro\\.in/embed\\.js",
+    "website": "https://zyncro.in"
   }
 }

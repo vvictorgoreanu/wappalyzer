@@ -679,5 +679,36 @@
       "xzero-js@([\\d.]+)/xzero\\.min\\.js.*\\;version:\\1"
     ],
     "website": "https://xzerojs.org"
+  },
+  "XCompliant": {
+    "cats": [
+      68
+    ],
+    "description": "XCompliant is an automated accessibility solution designed to support ADA and WCAG compliance by identifying and addressing accessibility issues across digital platforms.",
+    "icon": "XCompliant.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "app\\.xcompliant\\.com",
+    "website": "https://xcompliant.com"
+  },
+  "Xendit": {
+    "cats": [
+      41
+    ],
+    "description": "Xendit is a payment gateway in Indonesia and Southeast Asia.",
+    "icon": "Xendit.svg",
+    "js": {
+      "Xendit.card": ""
+    },
+    "pricing": [
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "js\\.xendit\\.co/",
+    "website": "https://www.xendit.co"
   }
 }

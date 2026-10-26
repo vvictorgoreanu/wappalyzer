@@ -12105,5 +12105,358 @@
       "freemium"
     ],
     "website": "https://azuriom.com"
+  },
+  "ANDCommerce": {
+    "cats": [
+      6
+    ],
+    "description": "ANDCommerce is an ecommerce platform for building and operating online stores.",
+    "icon": "ANDCommerce.svg",
+    "meta": {
+      "generator": "^ANDCommerce$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "/extension_andcommerce/",
+      "/andcommerce(?:scriptcontent|scriptlayout)_"
+    ],
+    "website": "https://www.andcommerce.com.br/"
+  },
+  "APILayer": {
+    "cats": [
+      47
+    ],
+    "description": "APILayer is an API marketplace that provides scalable APIs across multiple categories, including artificial intelligence and finance.",
+    "icon": "APILayer.svg",
+    "saas": true,
+    "scripts": "api\\.apilayer\\.com",
+    "website": "https://apilayer.com"
+  },
+  "AXENTRA OS": {
+    "cats": [
+      84,
+      100
+    ],
+    "description": "AXENTRA OS is a Shopify app for customer accounts, loyalty, order management, returns, subscriptions, reviews, and other post-purchase features.",
+    "icon": "AXENTRA OS.png",
+    "implies": "Shopify",
+    "js": {
+      "axentraFetchCached": "",
+      "axentraLoadScript": ""
+    },
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://axentraos.com"
+  },
+  "Accelevents": {
+    "cats": [
+      72
+    ],
+    "description": "Accelevents is an enterprise-grade event management software platform that supports planning, hosting, and managing virtual, hybrid, and in-person events.",
+    "dom": "link[href*='analytics.accelevents.com']",
+    "icon": "Accelevents.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.accelevents.com"
+  },
+  "AccessGo": {
+    "cats": [
+      68
+    ],
+    "description": "AccessGo is a digital accessibility solution that provides tools and on-site widgets to help websites meet recognized accessibility standards and enhance usability across diverse user needs.",
+    "icon": "AccessGo.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.accessgo\\.de",
+    "website": "https://www.accessgo.de"
+  },
+  "ActiveNow": {
+    "cats": [
+      21
+    ],
+    "description": "ActiveNow is a platform for managing school extracurricular activities, including program organization, participation tracking, scheduling, and administrative coordination.",
+    "icon": "ActiveNow.svg",
+    "js": {
+      "activeNowFormSelector": "",
+      "activeNowOrigin": "",
+      "activenow": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.activenow\\.pl",
+    "website": "https://activenow.io"
+  },
+  "Agnicart": {
+    "cats": [
+      6
+    ],
+    "description": "Agnicart is an ecommerce SaaS platform which allows users to create their own store.",
+    "icon": "Agnicart.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "cdn\\.agnicart\\.com",
+    "website": "https://www.agnicart.com"
+  },
+  "Aimharder": {
+    "cats": [
+      72
+    ],
+    "description": "Aimharder is a software platform for managing sports facility operations, including scheduling, memberships, bookings, payments, and administrative tasks.",
+    "dom": "iframe[src*='.aimharder.com']",
+    "icon": "Aimharder.svg",
+    "saas": true,
+    "scriptSrc": "//aimharder\\.com/js/",
+    "website": "https://aimharder.com"
+  },
+  "Airwallex": {
+    "cats": [
+      41
+    ],
+    "description": "Airwallex is a global payments and financial platform for online payments, multi-currency accounts, transfers, and embedded finance.",
+    "dom": "iframe[title='Airwallex action popup'], link[href*='static.airwallex.com/widgets/sdk-controller/sdk/v1/index.js'], script#airwallex-fraud-api, script[src*='checkout.airwallex.com/'], script[src*='checkout-demo.airwallex.com/']",
+    "icon": "Airwallex.svg",
+    "js": {
+      "Airwallex": "",
+      "_AirwallexSDKs": ""
+    },
+    "pricing": [
+      "payg"
+    ],
+    "website": "https://www.airwallex.com/us"
+  },
+  "Akoova": {
+    "cats": [
+      62,
+      88
+    ],
+    "description": "Akoova is an AWS-native managed platform that enables scalable deployment, hosting, and operation of Magento and Adobe Commerce environments.",
+    "headers": {
+      "K-Hosting-By": "^Akoova$"
+    },
+    "icon": "Akoova.svg",
+    "pricing": [],
+    "saas": true,
+    "website": "https://akoova.com"
+  },
+  "AlloIncognito": {
+    "cats": [
+      52
+    ],
+    "description": "AlloIncognito is a platform that provides communication capabilities to and within Russia.",
+    "icon": "AlloIncognito.svg",
+    "saas": true,
+    "scriptSrc": "api\\.alloincognito\\.ru",
+    "website": "https://www.alloincognito.ru"
+  },
+  "Amondo": {
+    "cats": [
+      96
+    ],
+    "description": "Amondo is a content aggregation, curation, and publishing platform that collects, organizes, and distributes digital content across channels.",
+    "icon": "Amondo.svg",
+    "js": {
+      "amondo.imprint": "",
+      "amondo_init": ""
+    },
+    "saas": true,
+    "scripts": "\\.amondo\\.com",
+    "website": "https://amondo.com"
+  },
+  "Anviara EU Widerrufsbutton": {
+    "cats": [
+      100
+    ],
+    "description": "Anviara EU Widerrufsbutton is a Shopify app that adds a compliant EU withdrawal button and form to online stores.",
+    "dom": ".anv-withdrawal-form, .anv-withdrawal-button",
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": [
+      "customerorderediting\\.com/assets/altcha-[\\da-f]+\\.js",
+      "cdn\\.shopify\\.com/extensions/.+/self-serve-order-edit-.+/assets/withdrawal-link-locale\\.js"
+    ],
+    "website": "https://anviara.com"
+  },
+  "Anybot": {
+    "cats": [
+      53
+    ],
+    "description": "Anybot is an omnichannel customer service automation platform that centralizes and streamlines customer interactions across multiple communication channels using automated workflows and response handling.",
+    "icon": "Anybot.svg",
+    "js": {
+      "$anybot.chat": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "anybot\\.me\\/js\\/anybot(?:\\.min)?\\.sdk\\.js",
+    "website": "https://anybot.me"
+  },
+  "Appfolio": {
+    "cats": [
+      1
+    ],
+    "description": "AppFolio is a property management software platform that provides tools for managing residential and commercial properties.",
+    "icon": "AppFolio.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "/wp-content/plugins/listings-for-appfolio-pro/js/",
+    "scripts": "cdn\\.appfolio\\.com",
+    "website": "https://www.appfolio.com"
+  },
+  "Approcket": {
+    "cats": [
+      51
+    ],
+    "description": "Approcket is a website builder platform that provides tools for creating, managing, and publishing websites and online stores through a hosted platform.",
+    "headers": {
+      "X-Powered-By": "^AppRocket$"
+    },
+    "icon": "Approcket.svg",
+    "meta": {
+      "generator": "^AppRocket Website Builder$"
+    },
+    "saas": true,
+    "website": "https://approcket.ir"
+  },
+  "Assoconnect": {
+    "cats": [
+      53
+    ],
+    "description": "Assoconnect is an association management software platform that provides tools for membership management, event organization, communication, and administrative operations.",
+    "icon": "Assoconnect.svg",
+    "meta": {
+      "author": "^AssoConnect$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "app\\.assoconnect\\.com",
+    "website": "https://www.assoconnect.com"
+  },
+  "Assortion": {
+    "cats": [
+      6
+    ],
+    "description": "Assortion is a tool that helps merchants increase average order value by providing personalized upsell and cross-sell recommendations during the shopping experience.",
+    "icon": "Assortion.svg",
+    "js": {
+      "Assortion.cart": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "cdn\\.assortion\\.com/",
+    "website": "https://www.assortion.com"
+  },
+  "Atarim": {
+    "cats": [
+      47
+    ],
+    "description": "Atarim is an AI-based platform that enhances websites through an agentic creative system covering design, UX, SEO, copywriting, accessibility, and related optimization tasks.",
+    "icon": "Atarim.svg",
+    "js": {
+      "ATARIM.file": "",
+      "atarimUI": "",
+      "atarim_server_down": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "\\.atarimworker\\.dev",
+    "website": "https://atarim.io"
+  },
+  "Audienceful": {
+    "cats": [
+      75
+    ],
+    "description": "Audienceful is an email marketing software platform used to create, manage, send, and analyze email campaigns.",
+    "dom": "form[action*='app.audienceful.com/']",
+    "icon": "Audienceful.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "app\\.audienceful\\.com",
+    "website": "https://www.audienceful.com"
+  },
+  "Audigent": {
+    "cats": [
+      97
+    ],
+    "description": "Audigent is a first-party data platform that curates and activates audience data while providing identity solutions for targeting, measurement, and data interoperability.",
+    "icon": "Audigent.svg",
+    "js": {
+      "audigentLogic": ""
+    },
+    "saas": true,
+    "website": "https://audigent.com"
+  },
+  "Autegro": {
+    "cats": [
+      6
+    ],
+    "description": "Autegro is a vehicle inventory and sales platform that integrates vehicle listings, detail pages, and lead forms into dealership websites.",
+    "dom": "script[data-ac24-widget][data-ac24-app-url='https://app.autegro.de']",
+    "icon": "Autegro.svg",
+    "pricing": [
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://app\\.autegro\\.de/widget\\.js(?:\\?|$)",
+    "website": "https://www.autegro.de"
+  },
+  "alugha": {
+    "cats": [
+      14
+    ],
+    "description": "alugha is a video hosting and localization platform with a multilingual player, subtitles, audio tracks, translation, and dubbing tools.",
+    "dom": "iframe[src^='https://alugha.com/embed/web-player'], iframe[src^='http://alugha.com/embed/web-player'], iframe[src^='//alugha.com/embed/web-player']",
+    "icon": "alugha.png",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring",
+      "payg",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://alugha.com"
   }
 }

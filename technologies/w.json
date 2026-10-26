@@ -5876,5 +5876,223 @@
     "xhr": [
       "wysistat\\.(?:com|net)"
     ]
+  },
+  "WP Stratos": {
+    "cats": [
+      62,
+      88
+    ],
+    "description": "WP Stratos is a managed WordPress hosting platform.",
+    "headers": {
+      "platform": "^WP Stratos$",
+      "x-powered-by": "^WP Stratos Managed Cloud$"
+    },
+    "icon": "WP Stratos.svg",
+    "implies": "WordPress",
+    "saas": true,
+    "website": "https://wpstratos.com"
+  },
+  "WP ULike": {
+    "cats": [
+      87
+    ],
+    "description": "WP ULike is a WordPress plugin for adding like, dislike, and reaction controls to website content.",
+    "icon": "WP ULike.svg",
+    "js": {
+      "WordpressUlike": ""
+    },
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "requires": "WordPress",
+    "scriptSrc": [
+      "/wp-content/plugins/wp-ulike/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
+      "/wp-content/plugins/wp-ulike-pro/.+\\.js"
+    ],
+    "website": "https://wpulike.com"
+  },
+  "WaveRez": {
+    "cats": [
+      72
+    ],
+    "description": "WaveRez is an online booking software platform designed for the watersport and boat tour industry.",
+    "icon": "WaveRez.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "reservations\\.waverez\\.com",
+    "website": "https://waverez.com"
+  },
+  "Wavoto": {
+    "cats": [
+      6
+    ],
+    "description": "Wavoto is an eCommerce platform that provides integrated tools for managing online storefronts.",
+    "dom": "link[href*='www.wavoto.com']",
+    "icon": "Wavoto.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.wavoto.com"
+  },
+  "Weasy": {
+    "cats": [
+      6
+    ],
+    "description": "Weasy is an AI-based platform that automatically generates websites and online stores from minimal input.",
+    "icon": "Weasy.svg",
+    "js": {
+      "weasyPixel": ""
+    },
+    "meta": {
+      "author": "^Weasy$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.weasy\\.io",
+    "website": "https://weasy.io"
+  },
+  "WebToffee EU Order Withdrawal Button for WooCommerce": {
+    "cats": [
+      87
+    ],
+    "description": "WebToffee EU Order Withdrawal Button for WooCommerce is an open-source plugin for submitting and managing online order withdrawal requests.",
+    "icon": "WebToffee EU Order Withdrawal Button.png",
+    "oss": true,
+    "requires": "WooCommerce",
+    "scriptSrc": "/wp-content/plugins/wt-eu-withdrawal-button/assets/js/wbte-ewb-frontend(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1",
+    "website": "https://wordpress.org/plugins/wt-eu-withdrawal-button/"
+  },
+  "Webmercs": {
+    "cats": [
+      6
+    ],
+    "description": "Webmercs is a platform that develops websites alongside integrated backend logistics and warehousing solutions for advanced customers operating in the B2C and B2B computer retail sector.",
+    "headers": {
+      "Server": "^Webmercs$"
+    },
+    "icon": "Webmercs.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.webmercs.com"
+  },
+  "Webstorio": {
+    "cats": [
+      51
+    ],
+    "description": "Webstorio is an AI-powered website builder with built-in CMS, hosting, ecommerce, forms, and database tools.",
+    "dom": "script[data-webstorio-sdk-stub], script#webstorio-sdk",
+    "icon": "Webstorio.png",
+    "implies": [
+      "Next.js"
+    ],
+    "js": {
+      "__webstorioCallQueue__": "",
+      "__webstorioQueue__": "",
+      "webstorio": ""
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://webstorio.com"
+  },
+  "Wegic": {
+    "cats": [
+      1
+    ],
+    "description": "Wegic is a platform that utilizes artificial intelligence to automate website design, development, and management based on user input.",
+    "icon": "Wegic.svg",
+    "js": {
+      "WegicCollect": "",
+      "WegicElementInspector": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.wegic\\.ai",
+    "website": "https://wegic.ai"
+  },
+  "Wirsindhandwerk": {
+    "cats": [
+      90
+    ],
+    "description": "Wirsindhandwerk is a customer review platform for trades businesses with embeddable rating widgets.",
+    "icon": "Wirsindhandwerk.svg",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://w\\.(?:wsh|wirsindhandwerk)\\.de/(?:[a-f0-9]{32}|[a-z0-9]{40})\\.js(?:[?#]|$)",
+    "website": "https://www.wirsindhandwerk.de"
+  },
+  "Wobily": {
+    "cats": [
+      6
+    ],
+    "description": "Wobily is an Israel-based store builder system for creating and managing online shops.",
+    "icon": "Wobily.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdnw\\.wobily\\.com/",
+    "website": "https://www.wobily.com"
+  },
+  "WzShop": {
+    "cats": [
+      6
+    ],
+    "description": "WzShop is a SaaS platform for creating online catalogs and storefronts that route orders through WhatsApp and social channels.",
+    "icon": "WzShop.svg",
+    "meta": {
+      "generator": "^WzShop$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://wzshop.com.br"
+  },
+  "wpForo": {
+    "cats": [
+      87
+    ],
+    "description": "wpForo is a WordPress plugin for building discussion forums and online communities.",
+    "dom": "link[href*='/wp-content/plugins/wpforo/'], script[src*='/wp-content/plugins/wpforo/']",
+    "icon": "wpForo.png",
+    "implies": "WordPress",
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "onetime"
+    ],
+    "website": "https://wpforo.com"
   }
 }

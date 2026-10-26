@@ -8165,5 +8165,260 @@
     ],
     "saas": true,
     "website": "https://tyslo.com"
+  },
+  "TMW Shield": {
+    "cats": [
+      16
+    ],
+    "description": "TMW Shield is a DDoS mitigation and proxy service for protected network, hosting, and application traffic.",
+    "headers": {
+      "server": "^TMW Shield$",
+      "x-tmw-cache": ""
+    },
+    "icon": "TMW-Shield.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.tmw.global"
+  },
+  "Tabler Icons": {
+    "cats": [
+      17
+    ],
+    "description": "Tabler Icons is an open-source icon library with SVG, icon font, and framework packages for web interfaces.",
+    "dom": "link[href*='tabler-icons'], svg.icon-tabler, svg.tabler-icon, i.ti[class*='ti-']",
+    "icon": "Tabler Icons.svg",
+    "oss": true,
+    "website": "https://tabler.io/icons"
+  },
+  "Tachyon Forge": {
+    "cats": [
+      51
+    ],
+    "description": "Tachyon Forge is an AI-based website builder that allows websites to be created and configured using Tachyon’s development engine and integrated tools.",
+    "headers": {
+      "X-Matched-Path": "/atlas\\.tachyon\\."
+    },
+    "icon": "TachyonForge.svg",
+    "saas": true,
+    "scripts": "tachyonwebtech\\.com/",
+    "website": "https://www.tachyonwebtech.com"
+  },
+  "Teletype App": {
+    "cats": [
+      52
+    ],
+    "description": "Teletype App is a messenger platform that enables real-time text-based communication between users across connected devices.",
+    "icon": "TeletypeApp.svg",
+    "js": {
+      "_teletypeWidget": "",
+      "teletypeExternalId": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.teletype\\.app",
+    "website": "https://teletype.app"
+  },
+  "That Open Engine": {
+    "cats": [
+      25
+    ],
+    "description": "That Open Engine is an open-source collection of JavaScript libraries for building browser-based BIM applications.",
+    "icon": "That Open Engine.svg",
+    "implies": "Three.js",
+    "oss": true,
+    "scripts": [
+      "@thatopen/(?:components(?:-front)?|fragments|ui(?:-obc)?|web-ifc)",
+      "FragmentsManager"
+    ],
+    "website": "https://docs.thatopen.com"
+  },
+  "The Newsletter Plugin": {
+    "cats": [
+      87
+    ],
+    "description": "The Newsletter Plugin is a WordPress plugin for managing subscribers and creating, sending, and tracking email campaigns.",
+    "dom": "link#newsletter-css[href*='/wp-content/plugins/newsletter/style.css']",
+    "icon": "The Newsletter Plugin.svg",
+    "oss": true,
+    "pricing": [
+      "freemium",
+      "low",
+      "onetime"
+    ],
+    "requires": "WordPress",
+    "scriptSrc": "/wp-content/plugins/newsletter/(?:main|subscription/validate)\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1",
+    "website": "https://www.thenewsletterplugin.com"
+  },
+  "TheraPsy Bookings": {
+    "cats": [
+      72
+    ],
+    "description": "TheraPsy Bookings is an online appointment scheduling service for therapists with hosted booking pages and embeddable calendars.",
+    "dom": {
+      "iframe[src*=\"bookings.therapsy.at\"]": {
+        "attributes": {
+          "src": "^https?://bookings\\.therapsy\\.at/\\?(?:[^#]*&)?id=[a-f0-9]{32}(?:[&#]|$)"
+        }
+      }
+    },
+    "icon": "TheraPsy Bookings.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "url": "^https?://bookings\\.therapsy\\.at/\\?(?:[^#]*&)?id=[a-f0-9]{32}(?:[&#]|$)",
+    "website": "https://www.therapsy.at/funktionen/bookings"
+  },
+  "Tiendana": {
+    "cats": [
+      6
+    ],
+    "description": "Tiendana is a SaaS platform that enables businesses to sell through point-of-sale terminals, an online store, and self-service kiosks.",
+    "headers": {
+      "Custom-Server": "^Tiendana$"
+    },
+    "icon": "Tiendana.svg",
+    "js": {
+      "tiendana.appendStoreParam": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.tiendana.com"
+  },
+  "Tijara Plus": {
+    "cats": [
+      6
+    ],
+    "description": "Tijara Plus is a hosted ecommerce platform for creating online stores and managing products, payments, and shipping.",
+    "headers": {
+      "X-Tijara-Plus": "^store$"
+    },
+    "icon": "Tijara Plus.png",
+    "js": {
+      "TijaraPlus.platform": "^Tijara Plus$"
+    },
+    "meta": {
+      "generator": "^Tijara Plus$"
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://tijaraplus.com"
+  },
+  "Transpond": {
+    "cats": [
+      32
+    ],
+    "description": "Transpond is a marketing platform that provides tools for campaign management, audience engagement, and performance tracking to support business marketing strategies.",
+    "dom": "api\\.transpond\\.io",
+    "icon": "Transpond.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "api\\.transpond\\.io/",
+    "website": "https://transpond.io"
+  },
+  "Treatwell": {
+    "cats": [
+      72
+    ],
+    "description": "Treatwell is an online marketplace and booking platform for hair, beauty, and wellness appointments.",
+    "icon": "Treatwell.png",
+    "meta": {
+      "og:site_name": "^Treatwell$"
+    },
+    "pricing": [
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "isTreatwellBrandedWidget",
+    "url": "^https?://(?:www\\.)?treatwell\\.(?:at|be|ch|co\\.uk|com|de|es|fr|gr|ie|it|lt|nl|pt)(?:[/?#]|$)",
+    "website": "https://www.treatwell.com"
+  },
+  "Trello": {
+    "cats": [
+      13
+    ],
+    "description": "Trello is a web-based collaboration and project management application that organizes work into boards, lists, and cards.",
+    "icon": "Trello.svg",
+    "js": {
+      "trelloVersion": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "p\\.trellocdn\\.com/(?:card|embed)\\.min\\.js",
+    "website": "https://trello.com"
+  },
+  "Trustmary": {
+    "cats": [
+      90
+    ],
+    "description": "Trustmary is a customer experience platform that structures and presents feedback data in a way that is accessible to both artificial intelligence systems and human audiences.",
+    "icon": "Trustmary.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "embed\\.trustmary\\.com",
+    "website": "https://trustmary.com"
+  },
+  "Twipla": {
+    "cats": [
+      10
+    ],
+    "description": "Twipla is a website intelligence platform with traffic analytics, heatmaps, session recordings, funnels, and visitor surveys.",
+    "dom": {
+      "script#wix-viewer-model": {
+        "text": "Twipla Session Recordings|dad178e5-571d-45bf-89a0-c1f97242199f"
+      }
+    },
+    "icon": "Twipla.svg",
+    "js": {
+      "_visaSettings": ""
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "(?:www\\.)?twipla\\.com/analytics/main\\.js",
+    "website": "https://www.twipla.com"
+  },
+  "Typedream": {
+    "cats": [
+      51
+    ],
+    "description": "Typedream is a website builder that enables users to create and publish websites without writing code, using a visual interface and prebuilt components.",
+    "icon": "Typedream.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "api\\.typedream\\.com",
+    "website": "https://typedream.com"
   }
 }
