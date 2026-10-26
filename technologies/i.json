@@ -125,6 +125,15 @@
     ],
     "website": "https://carbondesignsystem.com"
   },
+  "IBM CICS Transaction Server": {
+    "cats": [
+      22
+    ],
+    "website": "https://www.ibm.com/products/cics-transaction-server",
+    "headers": {
+      "Server": "^ibm_cics_transaction_server"
+    }
+  },
   "IBM Cloud": {
     "cats": [
       63,
@@ -296,6 +305,15 @@
       "generator": "IBM Web Content Manager"
     }
   },
+  "IBM WebSEAL": {
+    "cats": [
+      64
+    ],
+    "website": "https://www.ibm.com/products/verify-identity-access",
+    "headers": {
+      "Server": "^webseal"
+    }
+  },
   "IBM WebSphere Application Server": {
     "cats": [
       22
@@ -344,6 +362,13 @@
       "server": "IBM z/VM"
     },
     "website": "https://www.ibm.com/it-infrastructure/z/zvm"
+  },
+  "iCagenda": {
+    "cats": [
+      19
+    ],
+    "website": "https://www.icagenda.com/",
+    "html": "com_icagenda"
   },
   "ICE": {
     "cats": [
@@ -1465,6 +1490,24 @@
     ],
     "website": "https://impressure.io"
   },
+  "Improve Digital": {
+    "cats": [
+      36
+    ],
+    "website": "https://360yield.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*360yield\\.com(?:[:/?#]|$)"
+    ]
+  },
+  "Improvely": {
+    "cats": [
+      10
+    ],
+    "website": "https://www.improvely.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*iljmp\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Imunify360": {
     "cats": [
       16
@@ -1642,6 +1685,9 @@
     "website": "https://www.indexexchange.com",
     "xhr": [
       "\\.casalemedia\\.com"
+    ],
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*indexww\\.com(?:[:/?#]|$)"
     ]
   },
   "Indexhibit": {
@@ -1804,6 +1850,15 @@
     ],
     "website": "https://startinfinity.com"
   },
+  "Infinity Call Tracking": {
+    "cats": [
+      10
+    ],
+    "website": "https://infinity-tracking.net",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*infinity-tracking\\.net(?:[:/?#]|$)"
+    ]
+  },
   "Inflection AI": {
     "cats": [
       200,
@@ -1902,7 +1957,10 @@
       "recurring"
     ],
     "saas": true,
-    "website": "https://infogram.com"
+    "website": "https://infogram.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*jifo\\.co(?:[:/?#]|$)"
+    ]
   },
   "Infolinks": {
     "cats": [
@@ -1948,7 +2006,8 @@
       "szmvars": ""
     },
     "scriptSrc": [
-      "^https?://(?:[^/]+\\.)?i(?:oam|v)wbox\\.de/"
+      "^https?://(?:[^/]+\\.)?i(?:oam|v)wbox\\.de/",
+      "^https?://(?:[a-z0-9-]+\\.)*ioam\\.de(?:[:/?#]|$)"
     ],
     "website": "https://www.infonline.de"
   },
@@ -3181,6 +3240,15 @@
     ],
     "website": "https://www.invoca.com"
   },
+  "InZynk": {
+    "cats": [
+      36
+    ],
+    "website": "https://inzynk.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*inzynk\\.io(?:[:/?#]|$)"
+    ]
+  },
   "Ionic": {
     "cats": [
       18
@@ -3480,6 +3548,24 @@
     },
     "website": "https://ipresta.ir"
   },
+  "iPROM": {
+    "cats": [
+      36
+    ],
+    "website": "https://iprom.eu/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*iprom\\.net(?:[:/?#]|$)"
+    ]
+  },
+  "Ipsos DotMetrics": {
+    "cats": [
+      10
+    ],
+    "website": "https://www.dotmetrics.net/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*dotmetrics\\.net(?:[:/?#]|$)"
+    ]
+  },
   "ipstack": {
     "cats": [
       79
@@ -3702,7 +3788,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.issuu\\.com/"
+      "\\.issuu\\.com/",
+      "^https?://(?:[a-z0-9-]+\\.)*isu\\.pub(?:[:/?#]|$)"
     ],
     "website": "https://issuu.com"
   },

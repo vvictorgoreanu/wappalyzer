@@ -1207,6 +1207,15 @@
     "saas": true,
     "website": "https://feedbackautomatic.com"
   },
+  "Feedbackify": {
+    "cats": [
+      73
+    ],
+    "website": "https://feedbackify.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*feedbackify\\.com(?:[:/?#]|$)"
+    ]
+  },
   "FeederNinja": {
     "cats": [
       5
@@ -1631,7 +1640,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.filestackapi\\.com"
+      "\\.filestackapi\\.com",
+      "^https?://(?:[a-z0-9-]+\\.)*filepicker\\.io(?:[:/?#]|$)"
     ],
     "scripts": [
       "\\.filestackapi\\.com"
@@ -4622,6 +4632,15 @@
     ],
     "website": "https://fourthwall.com/"
   },
+  "Foxentry": {
+    "cats": [
+      19
+    ],
+    "website": "https://foxentry.cz/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*foxentry\\.cz(?:[:/?#]|$)"
+    ]
+  },
   "FoxPush": {
     "cats": [
       5
@@ -4966,6 +4985,15 @@
       "FTB_AddEvent": ""
     },
     "website": "https://freetextbox.com"
+  },
+  "Freetobook": {
+    "cats": [
+      19
+    ],
+    "website": "https://freetobook.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*freetobook\\.com(?:[:/?#]|$)"
+    ]
   },
   "freewebstore": {
     "cats": [

@@ -366,6 +366,13 @@
     ],
     "website": "https://trytada.com"
   },
+  "Tag Groups": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/tag-groups/",
+    "html": "/wp-content/plugins/tag-groups/"
+  },
   "Tagalys": {
     "cats": [
       76
@@ -400,6 +407,14 @@
       "\\.tagboard\\.com/"
     ],
     "website": "https://tagboard.com"
+  },
+  "tagDiv Composer": {
+    "cats": [
+      51,
+      87
+    ],
+    "website": "https://tagdiv.com/",
+    "html": "/wp-content/plugins/td-composer"
   },
   "Tagembed": {
     "cats": [
@@ -448,6 +463,15 @@
       "\\.taggbox\\.com"
     ],
     "website": "https://taggbox.com/"
+  },
+  "Taggstar": {
+    "cats": [
+      76
+    ],
+    "website": "https://syndigo.com/taggstar-solutions/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*taggstar\\.com(?:[:/?#]|$)"
+    ]
   },
   "Tagnology": {
     "cats": [
@@ -1136,6 +1160,15 @@
       "app\\.targetbay\\.com"
     ],
     "website": "https://targetbay.com"
+  },
+  "Targito": {
+    "cats": [
+      32
+    ],
+    "website": "https://www.targito.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*targito\\.com(?:[:/?#]|$)"
+    ]
   },
   "Tars": {
     "cats": [
@@ -2327,6 +2360,15 @@
     ],
     "website": "https://thehotelsnetwork.com"
   },
+  "The Media Trust": {
+    "cats": [
+      16
+    ],
+    "website": "https://mediatrust.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*webcontentassessor\\.com(?:[:/?#]|$)"
+    ]
+  },
   "The Monetyzer": {
     "cats": [
       36
@@ -2886,6 +2928,13 @@
     ],
     "website": "https://themegrill.com/themes/colormag"
   },
+  "ThemeGrill Demo Importer": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/themegrill-demo-importer/",
+    "html": "/plugins/themegrill-demo-importer"
+  },
   "ThemeGrill eStore": {
     "cats": [
       80
@@ -3401,6 +3450,16 @@
     ],
     "website": "https://www.thinkupthemes.com/themes/minamaze"
   },
+  "ThinkCMF": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.thinkcmf.com/",
+    "html": "made by <a href=\"http://www\\.thinkcmf\\.com\" target=\"_blank\">thinkcmf</a>",
+    "headers": {
+      "X-Powered-By": "^thinkcmf"
+    }
+  },
   "Thinkific": {
     "cats": [
       21
@@ -3439,6 +3498,15 @@
       "\\.thinkingchat\\.com/"
     ],
     "website": "https://thinkingchat.com"
+  },
+  "ThinkJS": {
+    "cats": [
+      18
+    ],
+    "website": "https://thinkjs.org/",
+    "headers": {
+      "X-Powered-By": "^thinkjs"
+    }
   },
   "ThinkPHP": {
     "cats": [
@@ -4016,7 +4084,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "code\\.tidio\\.co"
+      "code\\.tidio\\.co",
+      "^https?://(?:[a-z0-9-]+\\.)*tidiochat\\.com(?:[:/?#]|$)"
     ],
     "website": "https://www.tidio.com"
   },
@@ -5012,6 +5081,15 @@
     ],
     "website": "https://www.toneden.io"
   },
+  "TongWeb": {
+    "cats": [
+      22
+    ],
+    "website": "https://www.tongtech.com/",
+    "headers": {
+      "Server": "^tongweb server"
+    }
+  },
   "Tontine": {
     "cats": [
       74
@@ -5326,6 +5404,15 @@
       "TNTracker": ""
     },
     "website": "https://townnews.com/"
+  },
+  "TPMN": {
+    "cats": [
+      36
+    ],
+    "website": "http://tpmn.io/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*tpmn\\.co\\.kr(?:[:/?#]|$)"
+    ]
   },
   "Trac": {
     "cats": [
@@ -5654,6 +5741,16 @@
       "trafficguard\\.ai"
     ],
     "website": "https://trafficguard.ai"
+  },
+  "TrafficJunky": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.trafficjunky.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*contentabc\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*trafficjunky\\.net(?:[:/?#]|$)"
+    ]
   },
   "TrafficStars": {
     "cats": [
@@ -6438,6 +6535,15 @@
     ],
     "website": "https://trovo.live"
   },
+  "TruConversion": {
+    "cats": [
+      10
+    ],
+    "website": "https://truconversion.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*truconversion\\.com(?:[:/?#]|$)"
+    ]
+  },
   "true": {
     "cats": [
       90
@@ -6570,6 +6676,15 @@
       "\\bTrunkrs\\b"
     ],
     "website": "https://trunkrs.nl"
+  },
+  "Trust Guard": {
+    "cats": [
+      16
+    ],
+    "website": "https://trust-guard.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*trust-guard\\.com(?:[:/?#]|$)"
+    ]
   },
   "TrustArc": {
     "cats": [
@@ -6764,6 +6879,15 @@
     ],
     "saas": true,
     "website": "https://site.trustvox.com.br"
+  },
+  "TrustX": {
+    "cats": [
+      36
+    ],
+    "website": "https://trustx.org",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*trustx\\.org(?:[:/?#]|$)"
+    ]
   },
   "TrustYou": {
     "cats": [
@@ -6980,6 +7104,16 @@
       "turolinks\\.js"
     ],
     "website": "https://github.com/turbolinks/turbolinks"
+  },
+  "TurboMail": {
+    "cats": [
+      30
+    ],
+    "website": "http://www.turbomail.org/",
+    "html": [
+      "^(?=[\\s\\S]{0,}?powered by turbomail)(?=[\\s\\S]{0,}?wzcon1 clearfix)",
+      "<a href=\"http://www\\.turbomail\\.org\">powered by turbomail</a>"
+    ]
   },
   "Turbopack": {
     "cats": [

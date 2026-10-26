@@ -1415,6 +1415,13 @@
     ],
     "website": "https://www.webinato.com"
   },
+  "WebIssues": {
+    "cats": [
+      13
+    ],
+    "website": "https://webissues.mimec.org/",
+    "html": "<div id=\"header-right\">webissues"
+  },
   "Webito": {
     "cats": [
       51
@@ -1651,6 +1658,16 @@
     ],
     "saas": true,
     "website": "https://www.webolytics.com"
+  },
+  "Weborama": {
+    "cats": [
+      36
+    ],
+    "website": "https://weborama.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*weborama\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*weborama\\.fr(?:[:/?#]|$)"
+    ]
   },
   "Webotit": {
     "cats": [
@@ -2441,6 +2458,15 @@
     ],
     "website": "https://weply.chat"
   },
+  "Werkzeug": {
+    "cats": [
+      18
+    ],
+    "website": "https://werkzeug.palletsprojects.com/",
+    "headers": {
+      "Server": "^werkzeug"
+    }
+  },
   "WeTravel": {
     "cats": [
       104
@@ -3076,6 +3102,15 @@
     "saas": true,
     "website": "https://www.winedirect.com"
   },
+  "Wing FTP Server": {
+    "cats": [
+      19
+    ],
+    "website": "https://www.wftpserver.com/",
+    "headers": {
+      "Server": "^wing ftp server"
+    }
+  },
   "Wink": {
     "cats": [
       26,
@@ -3106,6 +3141,13 @@
       "api\\.winlocal\\.ru"
     ],
     "website": "https://winlocal.ru"
+  },
+  "Winmail Server": {
+    "cats": [
+      30
+    ],
+    "website": "https://www.magicwinmail.com/",
+    "html": "^(?=[\\s\\S]{0,}?\\(build )(?=[\\s\\S]{0,}?background=\"customer/winmail_bg11\\.jpg)"
   },
   "Wins eCommerce": {
     "cats": [
@@ -3391,6 +3433,15 @@
     ],
     "website": "https://wishloop.com"
   },
+  "Wishpond": {
+    "cats": [
+      32
+    ],
+    "website": "https://wishpond.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*wishpond\\.net(?:[:/?#]|$)"
+    ]
+  },
   "Wistia": {
     "cats": [
       14
@@ -3409,7 +3460,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.wistia\\.com"
+      "\\.wistia\\.com",
+      "^https?://(?:[a-z0-9-]+\\.)*wistia\\.net(?:[:/?#]|$)"
     ],
     "website": "https://wistia.com"
   },
@@ -4012,6 +4064,15 @@
     ],
     "saas": true,
     "website": "https://woorise.com"
+  },
+  "Woosmap": {
+    "cats": [
+      35
+    ],
+    "website": "https://woosmap.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*woosmap\\.com(?:[:/?#]|$)"
+    ]
   },
   "Woostify": {
     "cats": [
@@ -4749,6 +4810,15 @@
     "saas": true,
     "website": "https://wowee.cz"
   },
+  "Wowza Streaming Engine": {
+    "cats": [
+      22
+    ],
+    "website": "https://www.wowza.com/streaming-engine",
+    "headers": {
+      "Server": "^wowzastreamingengine"
+    }
+  },
   "Wowza Video Player": {
     "cats": [
       14
@@ -4825,6 +4895,13 @@
     "html": "<!--.*WP Customer Reviews.*-->",
     "scriptSrc": "/wp-content/plugins/wp-customer-reviews/.*\\.js"
   },
+  "WP Directory Kit": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wpdirectorykit/",
+    "html": "/wp-content/plugins/wpdirectorykit/"
+  },
   "WP Easy Columns": {
     "cats": [
       87
@@ -4869,6 +4946,13 @@
     ],
     "website": "https://wpengine.com"
   },
+  "WP Fast Total Search": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/fulltext-search/",
+    "html": "wp-content/plugins/fulltext-search"
+  },
   "WP Fastest Cache": {
     "cats": [
       87,
@@ -4907,6 +4991,14 @@
       "/wpFeatherlight\\.pkgd\\.min\\.js"
     ],
     "website": "https://wordpress.org/plugins/wp-featherlight"
+  },
+  "WP Go Maps": {
+    "cats": [
+      5,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wp-google-maps/",
+    "html": "/wp-content/plugins/wp-google-maps"
   },
   "WP Google Map Embed": {
     "cats": [
@@ -4972,6 +5064,14 @@
     ],
     "website": "https://wpgridbuilder.com"
   },
+  "WP Hotel Booking": {
+    "cats": [
+      72,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wp-hotel-booking/",
+    "html": "/wp-content/plugins/wp-hotel-booking/"
+  },
   "WP Job Openings": {
     "cats": [
       87,
@@ -5029,6 +5129,13 @@
       "/wp-content/plugins/wp-maintenance-mode/.+wpmm\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1"
     ],
     "website": "https://github.com/andrianvaleanu/WP-Maintenance-Mode"
+  },
+  "WP Maps Pro": {
+    "cats": [
+      87
+    ],
+    "website": "https://www.wpmapspro.com/",
+    "html": "/wp-content/plugins/wp-maps-pro/"
   },
   "WP Page Numbers": {
     "cats": [
@@ -5334,6 +5441,14 @@
     ],
     "website": "https://wpbakery.com"
   },
+  "WPBookit": {
+    "cats": [
+      72,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wpbookit/",
+    "html": "/wp-content/plugins/wpbookit/"
+  },
   "wpCache": {
     "cats": [
       23,
@@ -5376,6 +5491,14 @@
       "WordPress"
     ],
     "website": "https://wpcacheon.io"
+  },
+  "wpDiscuz": {
+    "cats": [
+      15,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wpdiscuz/",
+    "html": "/wp-content/plugins/wpdiscuz"
   },
   "WPForms": {
     "cats": [
@@ -5429,6 +5552,13 @@
     ],
     "website": "https://wpml.org/"
   },
+  "WPMobile.App": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wpappninja/",
+    "html": "/wp-content/plugins/wpappninja"
+  },
   "WPMU DEV Smush": {
     "cats": [
       87
@@ -5448,6 +5578,13 @@
     ],
     "website": "https://wpmudev.com/project/wp-smush-pro"
   },
+  "WPS Hide Login": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wps-hide-login/",
+    "html": "/wp-content/plugins/wps-hide-login"
+  },
   "WPS Visitor Counter": {
     "cats": [
       87
@@ -5461,6 +5598,20 @@
       "WordPress"
     ],
     "website": "https://wordpress.org/plugins/wps-visitor-counter/"
+  },
+  "WPvivid Backup & Migration": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wpvivid-backuprestore/",
+    "html": "wp-content/plugins/wpvivid-backuprestore"
+  },
+  "WPZOOM Portfolio": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/wpzoom-portfolio/",
+    "html": "/wp-content/plugins/wpzoom-portfolio"
   },
   "Wrike": {
     "cats": [
@@ -5598,7 +5749,8 @@
     "saas": true,
     "scriptSrc": [
       "\\.bounceexchange\\.com",
-      "\\.smarterhq\\.io/"
+      "\\.smarterhq\\.io/",
+      "^https?://(?:[a-z0-9-]+\\.)*wknd\\.ai(?:[:/?#]|$)"
     ],
     "website": "https://www.wunderkind.co"
   },
@@ -5612,7 +5764,8 @@
       "WURFL": ""
     },
     "scriptSrc": [
-      "\\.wurfl\\.io"
+      "\\.wurfl\\.io",
+      "^https?://(?:[a-z0-9-]+\\.)*wurflcloud\\.com(?:[:/?#]|$)"
     ],
     "website": "https://web.wurfl.io/"
   },

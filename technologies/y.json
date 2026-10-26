@@ -237,7 +237,10 @@
     "description": "Yandex Maps is a mapping service with search, traffic and road conditions.",
     "icon": "Yandex Maps.svg",
     "website": "https://yandex.com/maps",
-    "scriptSrc": "/(api-maps|enterprise)\\.\\.yandex\\.[^/]+/2\\.1\\?"
+    "scriptSrc": [
+      "/(api-maps|enterprise)\\.\\.yandex\\.[^/]+/2\\.1\\?",
+      "^https?://api-maps\\.yandex\\.ru(?:[:/?#]|$)"
+    ]
   },
   "Yandex SmartCaptcha": {
     "cats": [
@@ -1454,5 +1457,12 @@
       "analytics\\.yxper\\.com"
     ],
     "website": "https://yxper.com"
+  },
+  "YzmCMS": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.yzmcms.com",
+    "html": "^(?=[\\s\\S]{0,}?YzmCMS)(?=[\\s\\S]{0,}?yzm-common\\.css)"
   }
 }

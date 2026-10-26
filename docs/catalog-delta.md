@@ -6,62 +6,97 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 
 |  | Before | After |
 | --- | --- | --- |
-| Technologies | 7911 | 8482 |
+| Technologies | 7911 | 8677 |
 | Categories | 111 | 124 |
 
 | Change | Count |
 | --- | --- |
-| Added | 571 |
+| Added | 766 |
 | **Removed** | **0** |
-| Changed | 302 |
+| Changed | 348 |
 
 Nothing was removed from the catalog.
 
-## Added (571)
+## Added (766)
 
-### From upstream (371)
+### From upstream (566)
 
 <details><summary>List</summary>
 
 - 321 CMS
 - 3Q
+- 53KF
+- 74cms
+- AAX
 - ACTV8
 - AIDEM Technologies
 - AbanteCart
+- Ably
 - AboutMyClinic
 - AccessiWay
 - ActivEngage
+- ActiveCollab
+- AcyMailing
+- Ad6Media
+- AdKernel
+- AdMan Media
+- AdScore
+- AdSpeed
+- Adacado
 - Addingwell SST
 - Adenzo
 - Admatic
+- Adnami
 - Adnuntius
+- Ads Pro Plugin
+- AdsWizz
 - Adventive
+- AdvertServe
 - Advisible
+- Adwise
 - Adwos CMS
 - Agendize
 - Akia
+- Alibaba Cloud OSS
+- Alibaba Mail
 - AllMyLinks
+- AlphaSSL
 - Altervista Platform
+- Anedot
 - Angular Notitia
 - Anthropic
 - Anubis
+- Apache Struts
 - Apanio
+- Apester
 - Apruvd
+- Apusic Application Server
 - Armin
 - Artifi
 - ArtsAI
 - AskHandle
 - Athos Commerce
+- Atlas AI Digital Assistant
+- Atmail
+- Audioboom
 - Audion
+- AvantLink
 - Avasam
 - AvidAI
+- BBB Accredited Business Seal
 - BITE
 - Balance
+- BannerFlow
 - Bear Blog
 - BedBooking
 - Belliza
 - Benchmark
+- BidTheatre
+- Bidswitch
+- Bidtellect
+- Bitbucket
 - Bitmovin
+- Bizrate Insights
 - Blankshield
 - Blockly
 - BlogHunch
@@ -76,7 +111,9 @@ Nothing was removed from the catalog.
 - Booklux
 - Botsplash
 - Brafton
+- Brandmetrics
 - Brivity
+- Broken Link Notifier
 - Bsport
 - CHIIRP
 - Callgear
@@ -86,41 +123,65 @@ Nothing was removed from the catalog.
 - Caremerge
 - Cartline
 - Cartylabs
+- Casdoor
+- Catchpoint
+- Celtra
 - Chimpify
+- Citadel
 - CitrusLime
+- Clientexec
+- ClipBucket
 - Cloudbac
 - Cloudflare Turnstile for WooCommerce
+- CmsEasy
+- CmsTop
+- Codigo
 - Commercy
+- CommuniGate Pro
 - ComplyAuto
 - Conduze
+- Confluence
 - Convious
 - CookieBAR
 - Cool Popup
+- Coral
 - CoreMedia
+- Coremail
+- Council Advertising Network
 - Curated
+- DMCA.com Protection
 - Dapta
 - DataGrail
 - Databuddy
+- Datawrapper
 - Devuelving
 - DialogTab
 - Divide
 - Doctena
+- DouPHP
+- Download Manager
 - DrChrono
 - DreamROI
 - DressOn
 - Droplabs
+- Dynamic Converter
 - Eaglecart
 - EdgeOne
+- EduSoho
 - Elloha
 - EmailOctopus
 - Employment Hero
 - Enzuzo
+- Euroland IR
+- Eventin
+- Everest Forms Pro
 - Eviivo
 - EyeFitU
 - Face Age
 - Famous.ai
 - Farazi Bilişim
 - FeatherPanel
+- Feedbackify
 - Fider
 - Fieldd
 - FinConnect
@@ -131,23 +192,46 @@ Nothing was removed from the catalog.
 - Formalize CSS
 - Formtoro
 - Forumbee
+- Foxentry
 - FreeWheel
+- Freetobook
 - Full On Sport
+- G2
+- GEO my WP
 - GOb2b
 - GOrendezvous
 - Genially
+- Geniuslink
+- GeoEdge
+- GeoNode
+- Gift Cards For WooCommerce Pro
+- Gnatta
+- GovMetric
+- Gradio
 - Grappos
+- Group-Office
 - GuildQuality
 - GuppY
 - Hackle
+- Hanweb JCMS
 - Happierleads
 - Hearth
 - Help.com
 - HelpCrunch
 - HigherMe HR
+- Horde
+- HostBill
 - Hotbot
+- Hubvisor
 - HumHub
+- Hybrid
+- IBM CICS Transaction Server
+- IBM WebSEAL
+- Improve Digital
+- Improvely
+- InZynk
 - Indeed
+- Infinity Call Tracking
 - Influenster
 - Informizely
 - Innovorder
@@ -155,67 +239,101 @@ Nothing was removed from the catalog.
 - Inso
 - Interago
 - Intervo
+- Ipsos DotMetrics
 - Iteras
 - JamFeed
 - Job Boardly
 - KRT CDN
 - KVCore
 - KYKLO
+- Kaipuyun Search
+- Kaizen Platform
 - KaliCart Bridge
 - Kapa.ai
+- Kargo
 - Kauz
+- Kerio Connect
 - Kiprotect
 - Kit
 - Kiwify
 - Kleecks
+- Knorex XPO
+- LTK
+- LaRecipe
+- LeadConnector
 - Leads2b
 - LeadsLeap
 - Leaky Paywall
+- LearnPress
 - Learnbase
+- LightWidget
 - Line-Up
 - Liscio
+- ListingPro
+- LiveHelpNow
 - LocalSignal
 - LogMeIn
 - LogaTech
 - Logaholic
+- Loop11
 - Lotame
 - Lovi
+- MCMS
 - MVD Studio
+- MacCMS
 - Maguru
+- Mail Mint
 - Mailshake
 - Makeplans
 - Mangomint
+- MasterStudy LMS
+- Mather Economics
 - Mega
 - Membership Toolkit
 - MembershipWorks
 - Menuu
 - MessageMedia
+- MetInfo
 - Metricool
 - Mexty
 - Mico
 - Microsoft Fabric
 - MiniBC
+- MonetizeMore
 - Moofx
 - MoreVago
+- Multiview
 - MyCred
 - MyPersonas
 - MyPlay
+- NEORY
 - NOCNOK
+- Narrative
 - Naukri
 - NeoAsist
 - Nepcha Analytics
+- NetTalk
 - Nexxtmove
+- Ninja Tables
 - NinjaCat
 - Norse Env
+- NotificationX
+- Nova Studio
 - NovaDB
 - Novaresa
 - Omago
 - Omega Commerce
 - OnChat
 - Online Succes
+- Ontame
+- OpenAM
+- OpenConf
+- Opinion Stage
 - OpnForm
+- Opta
 - Optinopoli
 - Orbit Commerce
+- Page Builder CK
 - PageNudge
 - PagineGialle
 - Pancake
@@ -224,22 +342,31 @@ Nothing was removed from the catalog.
 - Paycove
 - Paymattic
 - Payva
+- PbootCMS
 - Peachie
 - Peer39
+- Performax
 - Personyze
 - Pilera
 - Pixeleze
 - Podbean
 - Podscribe
+- Popads
+- Post Timeline
+- Prefixbox
 - Premion
+- Print Invoice & Delivery Notes for WooCommerce
 - Printify
 - Printlane
+- Profitshare
 - Prosperous AI
+- PubNation
 - Publive
 - Quadran
 - Qualitando
 - Qualva
 - Quantyoo
+- Qubely
 - Quicksprout
 - RE-OS.com
 - REsimpli
@@ -249,8 +376,10 @@ Nothing was removed from the catalog.
 - Recommy
 - Recras
 - Refix
+- Relevanssi
 - Remedo
 - ReplyBox
+- Request a Quote for WooCommerce
 - Resonate
 - Returnflows
 - Rezku
@@ -262,32 +391,46 @@ Nothing was removed from the catalog.
 - Roya
 - Ruttl
 - Ruzuku
+- Samba TV
 - Sameday
 - Sanity.io
 - Satūs
 - Scrapive
+- Seafile
 - SeedGrow
+- Seedtag
 - Segmetrics
+- SelectMedia
 - Selligent
 - SeoToaster CMS
 - ShopStyle
 - ShopWise
 - Shopiteka
 - Shopsys
+- Simple Job Board
 - Singenuity
+- Site Blindado
 - SiteGPT
 - SiteGalore
 - Sketchanet
 - SkyCMS by Netkoncept
+- Smadex
+- Smart Wishlist
 - SmartEmailing
 - SmartFront
 - SnatchBot
 - SociableKIT
+- Socialphotos
 - Socure
 - Soffront CRM
+- Sojern
 - Sonares
+- Sophus3
+- SourceKnowledge
 - Sourcey
+- Speed Shift Media
 - Sporcle
+- Sportradar
 - SproutStudio
 - SquadUP
 - Stampede
@@ -295,27 +438,46 @@ Nothing was removed from the catalog.
 - StoragePug
 - Store Vantage
 - Storenvy
+- StreamAMG
+- StreamingVideoProvider
 - StyleSeat
 - Subscrimia
 - SuiteDash
 - THEADX
+- TPMN
+- Tag Groups
 - Tagalys
+- Taggstar
 - Tanx
+- Targito
 - Tempus
+- The Media Trust
+- ThemeGrill Demo Importer
+- ThinkCMF
+- ThinkJS
 - Thinkstack
 - TimeTap
 - Timepad
+- TongWeb
 - TrackFox
 - Traffective
+- TrafficJunky
 - Travello
+- TruConversion
+- Trust Guard
+- TrustX
 - Tulo
 - TuoTempo
+- TurboMail
 - TutorCruncher
 - Tutorbird
 - Twsaa
+- U-Mail
 - UXSniff
 - Unblu Virtual Agent
+- Underdog Media
 - Uniform Digital Experience
+- Uniqodo
 - Ureserv
 - Useberry
 - Vagaro
@@ -328,25 +490,45 @@ Nothing was removed from the catalog.
 - VertaFlow Booking
 - VertaFlow Chat
 - VertaFlow Forms
+- Vidyard
 - VikaOn
 - VirtFusion
 - VisBook
 - Vizium
+- Vizzit
 - Voizee
 - Voucherify
 - W3 Ataiva
+- WP Directory Kit
+- WP Fast Total Search
+- WP Go Maps
+- WP Hotel Booking
+- WP Maps Pro
 - WP SEO AI
+- WPBookit
+- WPMobile.App
+- WPS Hide Login
+- WPZOOM Portfolio
+- WPvivid Backup & Migration
 - WebAdministrator CMS
 - WebAwesome
+- WebIssues
 - WebinarGeek
 - Weblate
+- Weborama
 - Weezevent
 - Wehaa
+- Werkzeug
 - Whelp
 - Wholesale Suite
 - WhosOn
+- Wing FTP Server
+- Winmail Server
 - Wishloop
+- Wishpond
+- Woosmap
 - Workplace by Meta
+- Wowza Streaming Engine
 - Wx3
 - Wyre
 - Wysistat
@@ -356,6 +538,8 @@ Nothing was removed from the catalog.
 - YouDraw
 - YouLead
 - YourGPT
+- YzmCMS
+- Z-Blog
 - Zad
 - Zadarma
 - Zammad
@@ -363,36 +547,47 @@ Nothing was removed from the catalog.
 - Zapnito
 - Zeeg
 - Zensical
+- Zeta Zync
 - Zevioo
 - Ziber
 - Zipleads
 - Znode
 - Zoomd
+- Zotonic
 - Zozi
 - Zulip
 - Zyratalk
 - audienzz
 - autoship
+- b2evolution
 - bun
 - cituro
 - digi·access
 - doxo
 - eKonsilio
 - eZCater
+- emetriq
 - eola
 - ezyVet
 - freewebstore
 - getUBetter
+- iCagenda
 - iMagaza
+- iPROM
 - iTCHYROBOT
+- mediarithmics
+- miniBB
 - n8n
 - opentelemetry
+- phpList
 - streaMonkey
+- tagDiv Composer
 - teachworks
 - theCut
 - tlooto
 - true
 - uSocial
+- wpDiscuz
 - |related| Natív Hirdetés Kft
 
 </details>
@@ -625,7 +820,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (302)
+## Changed (348)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -639,8 +834,12 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | AWS IoT Device Defender | xhrUrl | xhr | - |
 | AWStats | scriptSrc | - | - |
 | Accenture Duck Creek | - | - | cats |
+| AccessiBe | - | - | scriptSrc |
+| ActBlue | scriptSrc | - | - |
+| ActiveCampaign | - | - | scriptSrc |
 | AdStir | scriptSrc | script | - |
 | Adobe Media Optimizer | scriptSrc | uncat, script | - |
+| Airship | - | - | scriptSrc |
 | Airtable | dns | - | - |
 | Alfahosting DNS | - | - | dns |
 | All in One SEO | - | dom | - |
@@ -658,6 +857,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Amazon Redshift | icon, saas, oss, xhr | - | cats |
 | Amazon Simple Workflow (SWF) | xhrUrl | xhr | - |
 | Amazon Widgets | xhrUrl | xhr | dom |
+| Amplience | scriptSrc | - | - |
 | Apache Hudi | xhrUrl | xhr | - |
 | Apache Iceberg | xhrUrl | xhr | - |
 | Apple Numbers | - | mime | - |
@@ -668,6 +868,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Azure HDI | meta, xhrUrl | xhr | text, dom |
 | BMC Recovery Manager | xhrUrl | xhr | - |
 | BMC Release | - | - | implies |
+| Baidu Analytics (百度统计) | - | - | scriptSrc |
 | Bing Maps | scriptSrc | script | - |
 | Birdeye | - | - | scriptSrc |
 | Blackbaud Luminate Online | cookies | regex | - |
@@ -676,14 +877,19 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Blackboard | - | - | dns |
 | BlueKai | scripts | script | - |
 | Bootstrap | - | - | scriptSrc |
+| BowNow | scriptSrc | - | - |
+| BuySellAds | - | - | scriptSrc |
 | CCH Site Builder | meta | dom | - |
+| CallTrackingMetrics | scriptSrc | - | - |
 | Canva | oss, dns, dom | - | cats |
 | Casewise | js | scripts | - |
 | Certona | scriptSrc | script | - |
+| Chartbeat | - | - | scriptSrc |
 | Chatra | xhrUrl | xhr | - |
 | Checkly | xhrUrl | xhr | - |
 | Citrix NetScaler | - | - | dom |
 | ClassiPress | - | keywords | - |
+| CleverTap | scriptSrc | - | - |
 | ClickUp | dns | - | - |
 | Commerce Engine | xhrUrl | xhr | - |
 | Contentstack | scripts | - | - |
@@ -698,11 +904,13 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Digi Connect | icon | icons | - |
 | Dinahosting DNS | - | - | dns |
 | DiskStation Manager | scriptSrc | script, ssl | - |
+| Disqus | - | - | scriptSrc |
 | Docker | dns | - | - |
 | DocuSign | - | - | dns |
+| Dotdigital | - | - | scriptSrc |
 | Dremio | - | - | xhr |
 | Dropbox | description, saas, oss, xhr, scriptSrc | - | cats, dns |
-| Dynatrace | dns | - | - |
+| Dynatrace | dns, scriptSrc | - | - |
 | Dynatrace Application Monitoring | scriptSrc | script | - |
 | Dyte | xhrUrl | xhr | - |
 | Easy FancyBox | scriptSrc | dom, examples, script | - |
@@ -710,12 +918,15 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Easy Social Share Buttons for WordPress | scriptSrc | script | - |
 | ElasticSuite | scripts | - | - |
 | Enfold | - | - | scripts, css |
+| Etracker | - | - | scriptSrc |
+| Extole | - | - | scriptSrc |
 | FLV Player | scripts | script | - |
 | Facebook Comments | - | language, category | - |
 | Facebook Like Button | scriptSrc | script | - |
 | Facebook Login Button | scriptSrc | script | - |
 | Facebook Pixel Advanced Matching | xhrUrl | xhr | - |
 | Featherlight | - | npm | - |
+| Filestack | - | - | scriptSrc |
 | Finsweet | js | - | - |
 | Fisheye | - | tags, excludes | - |
 | Fonteva for Associations | - | - | html |
@@ -725,6 +936,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | FortiWeb | - | version | - |
 | Frontpage Slideshow | html | tests | - |
 | Genesys Workforce Management | - | - | js |
+| Geniee | - | - | scriptSrc |
 | GitLab | dns | - | - |
 | GlobalSign EV | certIssuer | ssl | - |
 | GoDaddy DNS | - | - | dns |
@@ -745,16 +957,21 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | IBM Cloudant | - | excludes | - |
 | IBM WebSphere Application Server | - | - | html |
 | IFS Enterprise Asset Management | - | - | probe |
+| INFOnline | - | - | scriptSrc |
 | IPinfo | xhrUrl | xhr | - |
 | Immuta | - | - | dom, meta |
 | Impact | cookies | - | js, scriptSrc |
+| Index Exchange | scriptSrc | - | - |
+| Infogram | scriptSrc | - | - |
 | Informatica Business Process Management | xhrUrl | xhr | - |
 | InstantSearch+ | - | - | cats |
 | Intercom | dns | - | - |
+| Issuu | - | - | scriptSrc |
 | JTL Shop | js | - | - |
 | JW Player | - | - | dom |
 | Juniper | - | excludes | - |
-| Kameleoon | - | - | js |
+| Kaltura | - | - | scriptSrc |
+| Kameleoon | - | - | js, scriptSrc |
 | Kimonix | - | - | scripts |
 | Klaviyo | dns | - | - |
 | Kubernetes Dashboard | description, saas, oss, html, implies | - | cats |
@@ -763,13 +980,18 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Lijit | scriptSrc | script | - |
 | Linear | dns | - | - |
 | LinkedIn Insight Tag | scriptSrc | script | - |
+| LiveChat | - | - | scriptSrc |
+| LivePerson | - | - | scriptSrc |
 | Livewire | - | - | js |
 | Locomotive Scroll | - | - | js |
 | Loom | description, oss, dom, xhrUrl | - | cats, dns, xhr |
 | Lovable | dns, scriptSrc | - | cats |
 | MadCap Flare | - | developer | - |
 | Magento Business Intelligence | scriptSrc | script | - |
-| Matomo Analytics | - | - | scripts |
+| Mailmunch | scriptSrc | - | - |
+| Mapp | scriptSrc | - | - |
+| Marchex | - | - | scriptSrc |
+| Matomo Analytics | - | - | scriptSrc, scripts |
 | Maxymiser | scripts | script | - |
 | MicroAd | scriptSrc | script | - |
 | MicroAd COMPASS | scriptSrc | script | - |
@@ -790,11 +1012,13 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Mixpanel | - | - | dns |
 | MongoDB | dns | - | - |
 | Motive | oss, scriptSrc, xhr, dom | - | cats |
+| Movable Ink | scriptSrc | - | - |
 | My Calendar | scriptSrc | script | - |
 | MyFonts | xhrUrl | xhr | - |
 | Namecheap DNS | - | - | dns |
 | NetIQ Access Manager | cats | categories | - |
 | Netlify | dns | - | - |
+| New Relic | scriptSrc | - | - |
 | Niagahoster | - | implies | - |
 | Nielsen NetRatings SiteCensus | scriptSrc | script | - |
 | Notion | dns | - | - |
@@ -804,6 +1028,8 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | OneTrust | - | - | scriptSrc |
 | Open Source Presto | - | url | - |
 | OpenText WEM | scriptSrc | regex, script | headers |
+| OpenX | - | - | scriptSrc |
+| OptinMonster | scriptSrc | - | - |
 | Oracle Eloqua | scriptSrc | script | - |
 | Oracle Endeca Information Discovery | js | scripts | - |
 | Oracle WebCenter Sites | - | - | dom |
@@ -815,6 +1041,8 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Pentaho | - | - | html |
 | PeopleSoft Program Management | xhrUrl | xhr | - |
 | Peoplesoft Project Portfolio Management | xhrUrl | xhr | - |
+| Piano | - | - | scriptSrc |
+| Picreel | - | - | scriptSrc |
 | Porto | - | - | css |
 | PowerPress | - | examples | - |
 | Prepr | scripts | - | - |
@@ -824,6 +1052,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Qubit Universal Variable | - | - | js |
 | Quest Foglight | - | - | dom |
 | Radix UI | - | - | css |
+| RebelMouse | scriptSrc | - | - |
 | Redux | - | - | js |
 | Remodal | - | examples, npm | - |
 | Riskified | scriptSrc | - | - |
@@ -839,6 +1068,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Salesforce Work.Com | meta, xhrUrl | xhr | dom |
 | Salla | scriptSrc | - | - |
 | Segment | - | - | dns |
+| Sentry | - | - | scriptSrc |
 | ServiceNow Agile Development | xhrUrl | xhr | dom, meta |
 | ServiceNow Application Portfolio Management (APM) | meta, xhrUrl | xhr | dom |
 | ServiceNow Automated Test Framework | meta, xhrUrl | xhr | dom |
@@ -865,17 +1095,21 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Shopware | scripts | - | - |
 | Sidr | - | keywords | - |
 | Siebel | scripts | script | - |
+| Sift | - | - | scriptSrc |
 | Simple Social Icons | html | stylesheets | - |
 | SimplyBook.me | - | - | dom, js, scriptSrc |
 | Sitecore | headers, scripts | - | - |
+| Siteimprove | - | - | scriptSrc |
 | Sitelinks Search Box | - | enhanced, schemaOrg | - |
 | SmarterStats | js | scripts | - |
+| Snap Pixel | - | - | scriptSrc |
 | SocialShopWave | scriptSrc | script | - |
 | SockJS | js | - | - |
 | Software AG CentraSite | xhrUrl | xhr | - |
 | Software AG NATURAL | xhrUrl | xhr | probe |
 | Software AG Terracotta | xhrUrl | xhr | - |
 | SolidJS | scriptSrc | - | - |
+| SoundCloud | - | - | scriptSrc |
 | Spacious | scriptSrc | script | - |
 | Spring Framework | - | name | - |
 | Stackify Retrace | - | - | js |
@@ -891,6 +1125,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Terminalfour | html | - | - |
 | Textalk Webshop | - | - | html |
 | Thomson Reuters ONESOURCE | - | - | cats |
+| Tidio | - | - | scriptSrc |
 | TomTom Maps API | scriptSrc | script | - |
 | TransIP DNS | - | - | dns |
 | Trino | - | url, xhr | - |
@@ -900,17 +1135,22 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Twilio Video | scriptSrc | script | - |
 | Twitter Conversion Tag | scriptSrc | script | - |
 | Umbraco | xhrUrl | xhr | scripts |
+| Uniconsent | - | - | scriptSrc |
 | VMware Tanzu | meta | - | dom |
+| Viafoura | scriptSrc | - | - |
 | VisitorTrack | scriptSrc | script | - |
 | WP Customer Reviews | scriptSrc | script | - |
 | WURFL.js | scriptSrc | script | - |
 | WebSocket | headers | - | - |
 | Website Tonight | scriptSrc | script | - |
 | WiredMinds | scriptSrc | script | - |
+| Wistia | - | - | scriptSrc |
 | WooCommerce | - | - | scriptSrc |
 | WooCommerce Subscriptions | html | - | dom |
 | Workday | oss, dom, xhr | - | cats |
 | Workday Integration Cloud Platform | xhrUrl | xhr | - |
+| Wunderkind | - | - | scriptSrc |
+| Wurfl | - | - | scriptSrc |
 | Xaxis | scriptSrc | script | dns |
 | Xtime | - | - | dom |
 | Yandex ClickHouse | xhrUrl | xhr | - |
@@ -925,6 +1165,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | authorize.net | html | - | - |
 | commercetools | xhrUrl | xhr | - |
 | dc.js | - | - | scriptSrc |
+| eKomi | scriptSrc | - | - |
 | ipapi.co | xhrUrl | xhr | - |
 | jQuery | - | - | scriptSrc |
 | jQuery BlockUI | requires, scriptSrc | npm | cats |

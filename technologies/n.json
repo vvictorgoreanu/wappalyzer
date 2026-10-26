@@ -280,6 +280,15 @@
     ],
     "website": "https://narrativ.com/"
   },
+  "Narrative": {
+    "cats": [
+      97
+    ],
+    "website": "https://narrative.io",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*narrative\\.io(?:[:/?#]|$)"
+    ]
+  },
   "Narvar": {
     "cats": [
       102,
@@ -722,6 +731,15 @@
     "saas": true,
     "website": "https://neonone.com"
   },
+  "NEORY": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.neory.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*ad-srv\\.net(?:[:/?#]|$)"
+    ]
+  },
   "Neos CMS": {
     "cats": [
       1
@@ -1102,6 +1120,15 @@
       "X-Powered-By": "NetSuite"
     }
   },
+  "NetTalk": {
+    "cats": [
+      22
+    ],
+    "website": "https://www.capesoft.com/accessories/netsp.htm",
+    "headers": {
+      "Server": "^nettalk-webserver"
+    }
+  },
   "Nette Framework": {
     "cats": [
       18
@@ -1205,7 +1232,10 @@
       "recurring"
     ],
     "saas": true,
-    "website": "https://newrelic.com"
+    "website": "https://newrelic.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*nr-data\\.net(?:[:/?#]|$)"
+    ]
   },
   "New UI": {
     "cats": [
@@ -1943,6 +1973,13 @@
     ],
     "website": "https://ninjaforms.com"
   },
+  "Ninja Tables": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/ninja-tables/",
+    "html": "/wp-content/plugins/ninja-tables/"
+  },
   "NinjaCat": {
     "cats": [
       10,
@@ -2537,6 +2574,13 @@
     "oss": true,
     "website": "https://github.com/jaredreich/notie"
   },
+  "NotificationX": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/notificationx/",
+    "html": "/wp-content/plugins/notificationx"
+  },
   "Notifly": {
     "cats": [
       32
@@ -2618,6 +2662,17 @@
       "api\\.novabusca\\.com\\.br"
     ],
     "website": "https://novabusca.com.br"
+  },
+  "Nova Studio": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.novastudio.ai/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*polarcdn-engine\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*polarcdn-terrax\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*polarcdn\\.com(?:[:/?#]|$)"
+    ]
   },
   "NovaDB": {
     "cats": [

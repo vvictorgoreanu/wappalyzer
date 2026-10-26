@@ -136,6 +136,13 @@
     ],
     "website": "https://www.kadencewp.com/product/virtue-free-theme"
   },
+  "Kaipuyun Search": {
+    "cats": [
+      29
+    ],
+    "website": "https://www.kaipuyun.cn/",
+    "html": "src=\"http://so\\.kaipuyun\\.cn\\?sitecode="
+  },
   "Kaira Vogue": {
     "cats": [
       80
@@ -167,6 +174,15 @@
       "\\.freespee\\.com/js/external/fs\\.(?:min\\.)?js"
     ],
     "website": "https://www.kaisa.io"
+  },
+  "Kaizen Platform": {
+    "cats": [
+      74
+    ],
+    "website": "https://kaizenplatform.net",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*kaizenplatform\\.net(?:[:/?#]|$)"
+    ]
   },
   "Kajabi": {
     "cats": [
@@ -278,7 +294,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "api\\.kaltura\\.(?:nordu\\.net|com)/"
+      "api\\.kaltura\\.(?:nordu\\.net|com)/",
+      "^https?://(?:[a-z0-9-]+\\.)*kaltura\\.com(?:[:/?#]|$)"
     ],
     "scripts": [
       "kalturaPlayer"
@@ -323,7 +340,9 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.kameleoon\\.\\w+/kameleoon\\.js"
+      "\\.kameleoon\\.\\w+/kameleoon\\.js",
+      "^https?://(?:[a-z0-9-]+\\.)*kameleoon\\.eu(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*kameleoon\\.io(?:[:/?#]|$)"
     ],
     "website": "https://kameleoon.com/"
   },
@@ -468,6 +487,15 @@
       "\\.kapturecrm\\.com/.+\\?ver=([\\d\\.]+)\\;version:\\1"
     ],
     "website": "https://www.kapturecrm.com"
+  },
+  "Kargo": {
+    "cats": [
+      36
+    ],
+    "website": "https://kargo.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*kargo\\.com(?:[:/?#]|$)"
+    ]
   },
   "Karma": {
     "cats": [
@@ -962,6 +990,15 @@
       "WWW-Authenticate": "^Kerberos"
     },
     "website": "https://tools.ietf.org/html/rfc4559"
+  },
+  "Kerio Connect": {
+    "cats": [
+      30
+    ],
+    "website": "https://www.gfi.com/products-and-solutions/email-and-messaging-solutions/kerioconnect",
+    "headers": {
+      "Server": "^kerio connect"
+    }
   },
   "KerningJS": {
     "cats": [
@@ -2173,6 +2210,15 @@
       "api\\.knoma\\.io/"
     ],
     "website": "https://www.knoma.io"
+  },
+  "Knorex XPO": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.knorex.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*brand-display\\.com(?:[:/?#]|$)"
+    ]
   },
   "Knorish": {
     "cats": [
