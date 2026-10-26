@@ -5548,5 +5548,195 @@
       "generator": "GX WebManager(?: ([\\d.]+))?\\;version:\\1"
     },
     "website": "https://www.gxsoftware.com/en/products/web-content-management.htm"
+  },
+  "Genlook Virtual try-on": {
+    "cats": [
+      100
+    ],
+    "description": "Genlook Virtual try-on is an AI-powered virtual fitting room app for Shopify stores.",
+    "icon": "Genlook.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "cdn\\.shopify\\.com/extensions/[^/]+/genlook-[^/]+/assets/",
+    "website": "https://genlook.app"
+  },
+  "Gensolve": {
+    "cats": [
+      55
+    ],
+    "description": "Gensolve is a practice management software developed in New Zealand for managing appointments, billing, clinical records, and administrative workflows.",
+    "icon": "Gensolve.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.gensolve\\.com",
+    "scripts": "\\.gensolve\\.com",
+    "website": "https://www.gensolve.com"
+  },
+  "GetComplied": {
+    "cats": [
+      67
+    ],
+    "description": "GetComplied is a GDPR compliance platform for ecommerce platforms that supports the management of data protection requirements and regulatory obligations.",
+    "icon": "GetComplied.svg",
+    "js": {
+      "getComplied.api": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.getcomplied\\.com/",
+    "website": "https://www.getcomplied.com"
+  },
+  "Giftnote": {
+    "cats": [
+      100
+    ],
+    "description": "Giftnote is a Shopify application that enables personalized gift messaging and digital voucher creation for online retail transactions.",
+    "icon": "Giftnote.svg",
+    "js": {
+      "Giftnote.currency": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "website": "https://giftnote.com"
+  },
+  "Givy": {
+    "cats": [
+      100
+    ],
+    "description": "Givy is a Shopify app that supports custom gift card amounts and product gifting, enabling online stores to offer flexible gifting options beyond standard fixed-value gift cards.",
+    "icon": "Givy.svg",
+    "js": {
+      "GIVY.config": ""
+    },
+    "pricing": [],
+    "saas": true,
+    "website": "https://www.givy.ai"
+  },
+  "GoHire": {
+    "cats": [
+      101
+    ],
+    "description": "GoHire is an AI-first hiring platform that uses AI-driven matching and automated workflows to streamline candidate sourcing, screening, and hiring processes.",
+    "icon": "GoHire.svg",
+    "js": {
+      "gohire": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.gohire\\.io/",
+    "website": "https://gohire.io"
+  },
+  "GoVoto": {
+    "cats": [
+      74
+    ],
+    "description": "GoVoto is a platform that improves website performance through conversion rate optimization, increasing the likelihood that visitors complete desired actions and become customers.",
+    "icon": "GoVoto.svg",
+    "saas": true,
+    "scriptSrc": "app\\.govoto\\.com",
+    "website": "https://www.govoto.com"
+  },
+  "Google for WooCommerce": {
+    "cats": [
+      87
+    ],
+    "description": "Google for WooCommerce is a WordPress plugin for connecting WooCommerce stores with Google Merchant Center and Google Ads.",
+    "icon": "Google.svg",
+    "implies": "Google Ads",
+    "oss": true,
+    "requires": [
+      "WordPress",
+      "WooCommerce"
+    ],
+    "scriptSrc": "/wp-content/plugins/google-listings-and-ads/js/build/gtag-events\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1",
+    "scripts": "developer_id\\.dOGY3NW",
+    "website": "https://wordpress.org/plugins/google-listings-and-ads/"
+  },
+  "Gosuslugi": {
+    "cats": [
+      73
+    ],
+    "description": "Gosuslugi is a government-provided feedback widget that enables citizens to submit appeals and participate in polls directly on official agency websites through the Russian Public Services portal.",
+    "icon": "Gosuslugi.svg",
+    "saas": true,
+    "scriptSrc": "pos\\.gosuslugi\\.ru/",
+    "website": "https://www.gosuslugi.ru"
+  },
+  "Gradual": {
+    "cats": [
+      2
+    ],
+    "description": "Gradual is a community platform for hosting events, publishing content and courses, and connecting members.",
+    "icon": "Gradual.png",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "GradualPublicLayout",
+    "website": "https://www.gradual.com"
+  },
+  "Growthstack": {
+    "cats": [
+      32
+    ],
+    "description": "Growthstack is a growth management platform for healthcare practices, providing centralized tools to manage operations, patient engagement, and practice growth within a single system.",
+    "icon": "Growthstack.svg",
+    "meta": {
+      "generator": "^Growthstack by Influx$"
+    },
+    "saas": true,
+    "website": "https://www.growthstack.app"
+  },
+  "Gubagoo": {
+    "cats": [
+      52
+    ],
+    "description": "Gubagoo is a website chat software platform that provides messaging and engagement tools designed to interact with visitors and support conversion of web traffic.",
+    "icon": "Gubagoo.svg",
+    "saas": true,
+    "scriptSrc": "cdn\\.gubagoo\\.io",
+    "website": "https://www.gubagoo.com"
+  },
+  "Gunosy": {
+    "cats": [
+      36
+    ],
+    "description": "Gunosy is a Japan-based readable news summary advertising system that delivers sponsored content in a format designed to resemble concise news articles within digital media platforms.",
+    "icon": "Gunosy.svg",
+    "saas": true,
+    "scripts": "ad\\.gunosy\\.com",
+    "website": "https://gunosy.com"
+  },
+  "Gupy": {
+    "cats": [
+      101
+    ],
+    "description": "Gupy is a Brazilian-based recruitment software platform that provides tools for managing hiring processes, including candidate sourcing, selection, and recruitment workflow automation.",
+    "icon": "Gupy.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "\\.gupy\\.io",
+    "website": "https://www.gupy.io"
   }
 }

@@ -6,23 +6,25 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 
 |  | Before | After |
 | --- | --- | --- |
-| Technologies | 7911 | 8677 |
+| Technologies | 7911 | 9033 |
 | Categories | 111 | 124 |
 
 | Change | Count |
 | --- | --- |
-| Added | 766 |
+| Added | 1122 |
 | **Removed** | **0** |
 | Changed | 348 |
 
 Nothing was removed from the catalog.
 
-## Added (766)
+## Added (1122)
 
-### From upstream (566)
+### From upstream (922)
 
 <details><summary>List</summary>
 
+- 220Marketing
+- 2people
 - 321 CMS
 - 3Q
 - 53KF
@@ -30,12 +32,18 @@ Nothing was removed from the catalog.
 - AAX
 - ACTV8
 - AIDEM Technologies
+- ANDCommerce
+- APILayer
+- AXENTRA OS
 - AbanteCart
 - Ably
 - AboutMyClinic
+- Accelevents
+- AccessGo
 - AccessiWay
 - ActivEngage
 - ActiveCollab
+- ActiveNow
 - AcyMailing
 - Ad6Media
 - AdKernel
@@ -56,51 +64,81 @@ Nothing was removed from the catalog.
 - Adwise
 - Adwos CMS
 - Agendize
+- Agnicart
+- Aimharder
+- Airwallex
 - Akia
+- Akoova
 - Alibaba Cloud OSS
 - Alibaba Mail
 - AllMyLinks
+- AlloIncognito
 - AlphaSSL
 - Altervista Platform
+- Amondo
 - Anedot
 - Angular Notitia
 - Anthropic
 - Anubis
+- Anviara EU Widerrufsbutton
+- Anybot
 - Apache Struts
 - Apanio
 - Apester
+- Appfolio
+- Approcket
 - Apruvd
 - Apusic Application Server
 - Armin
 - Artifi
 - ArtsAI
 - AskHandle
+- Assoconnect
+- Assortion
+- Atarim
 - Athos Commerce
 - Atlas AI Digital Assistant
 - Atmail
+- Audienceful
+- Audigent
 - Audioboom
 - Audion
+- Autegro
 - AvantLink
 - Avasam
 - AvidAI
+- B Cart
 - BBB Accredited Business Seal
 - BITE
+- BLR
+- BSS Commerce
 - Balance
 - BannerFlow
+- Baseet
+- Baycloud
 - Bear Blog
 - BedBooking
+- Beepworld
 - Belliza
 - Benchmark
 - BidTheatre
 - Bidswitch
 - Bidtellect
+- Big Tuna
+- BigBlueButton
+- Bisup
+- Bit Assist
+- Bit Form
 - Bitbucket
 - Bitmovin
+- Bits UI
 - Bizrate Insights
 - Blankshield
+- Blanxer
 - Blockly
 - BlogHunch
 - Blue Corona
+- BoardDocs
 - Boberdoo
 - BokaBord
 - Bomb Bomb
@@ -109,24 +147,44 @@ Nothing was removed from the catalog.
 - Booker
 - BookingKoala
 - Booklux
+- Booljs
+- Botco.ai
+- Botfaqtor
 - Botsplash
+- BounceHelp
 - Brafton
+- BrandRep
 - Brandmetrics
+- Brandnamic
+- Brella
 - Brivity
 - Broken Link Notifier
 - Bsport
+- BuckyDrop
+- Buddy eCommerce
+- BudgetGuard
+- Buildify
+- Buildium
+- Buildout
 - CHIIRP
 - Callgear
+- CampusGroups
+- Canvify
 - Canyon
+- Capital Turbine
 - Capsule CRM
 - CarWeb
 - Caremerge
+- Carepatron
 - Cartline
 - Cartylabs
+- Casablanca
 - Casdoor
 - Catchpoint
 - Celtra
 - Chimpify
+- Chiromatrix
+- ChurchDesk
 - Citadel
 - CitrusLime
 - Clientexec
@@ -135,29 +193,53 @@ Nothing was removed from the catalog.
 - Cloudflare Turnstile for WooCommerce
 - CmsEasy
 - CmsTop
+- Coassemble
 - Codigo
+- CommBox
 - Commercy
+- Commrz
 - CommuniGate Pro
 - ComplyAuto
+- ComplyDog
 - Conduze
+- Configio
 - Confluence
+- Contrib
+- Contribly
 - Convious
 - CookieBAR
+- CookieTractor
 - Cool Popup
 - Coral
 - CoreMedia
 - Coremail
 - Council Advertising Network
+- CrystalCommerce
+- CssUserAgent
 - Curated
+- CusRev
+- D4 Core
 - DMCA.com Protection
+- DMVCFramework
+- DZBuild
 - Dapta
 - DataGrail
 - Databuddy
 - Datawrapper
+- Dearnex
+- Dehasoft E-Ticaret
+- Delta Commerce
+- DevBlox Hub
 - Devuelving
+- Dezrez
 - DialogTab
+- Dioxus
 - Divide
+- Docebo
+- Dockview
+- Dockvine
 - Doctena
+- Docus
 - DouPHP
 - Download Manager
 - DrChrono
@@ -166,18 +248,29 @@ Nothing was removed from the catalog.
 - Droplabs
 - Dynamic Converter
 - Eaglecart
+- Ecer
+- Ecom
 - EdgeOne
 - EduSoho
+- Eflorista
+- Elephantfy
 - Elloha
 - EmailOctopus
 - Employment Hero
+- Enllax
+- EnvialoSimple
 - Enzuzo
+- Equalbrowse
+- Equalture
 - Euroland IR
+- Euroweb
 - Eventin
 - Everest Forms Pro
 - Eviivo
+- Experiture
 - EyeFitU
 - Face Age
+- FalakCart
 - Famous.ai
 - Farazi Bilişim
 - FeatherPanel
@@ -186,90 +279,161 @@ Nothing was removed from the catalog.
 - Fieldd
 - FinConnect
 - Fixer
+- Flare
 - Flexmail
+- Flotiq
 - ForeUP
 - FormBucket
+- FormCraft
 - Formalize CSS
+- Formbricks
 - Formtoro
+- Forsid
 - Forumbee
+- FoxAppy
 - Foxentry
+- FrankenPHP
 - FreeWheel
 - Freetobook
+- Froomle
 - Full On Sport
+- Funil de Vendas
 - G2
 - GEO my WP
 - GOb2b
 - GOrendezvous
 - Genially
 - Geniuslink
+- Genlook Virtual try-on
+- Gensolve
 - GeoEdge
 - GeoNode
+- GetComplied
 - Gift Cards For WooCommerce Pro
+- Giftnote
+- Givy
 - Gnatta
+- GoHire
+- GoVoto
+- Google for WooCommerce
+- Gosuslugi
 - GovMetric
 - Gradio
+- Gradual
 - Grappos
 - Group-Office
+- Growthstack
+- Gubagoo
 - GuildQuality
+- Gunosy
 - GuppY
+- Gupy
+- HR Hotlink
 - Hackle
 - Hanweb JCMS
 - Happierleads
+- HappyOrNot
+- Harmonizely
+- Harri
+- HatenaCMS
 - Hearth
+- Helipod
 - Help.com
 - HelpCrunch
+- Heureka Conversion Measurement
 - HigherMe HR
+- HomeJunction
 - Horde
 - HostBill
+- HostChefs
 - Hotbot
 - Hubvisor
 - HumHub
 - Hybrid
+- Hypersoft
 - IBM CICS Transaction Server
 - IBM WebSEAL
+- ISO100
+- Iconify
+- ImobiBrasil
+- Impel
 - Improve Digital
 - Improvely
 - InZynk
+- Incomaker
 - Indeed
 - Infinity Call Tracking
 - Influenster
 - Informizely
+- Ingresse
+- Inkybay
 - Innovorder
 - Inplayer
 - Inso
+- InstanteStore
+- Intelliplan
 - Interago
+- Interspire Shopping Cart
 - Intervo
+- Interwow
+- Intlayer
+- Inwink
 - Ipsos DotMetrics
 - Iteras
+- Iyong
 - JamFeed
+- Jaspr
+- Jetimob
+- Jimo
 - Job Boardly
+- Jscrambler
+- K50
+- KOMERO
+- KPA
 - KRT CDN
 - KVCore
 - KYKLO
+- Kaily.ai
 - Kaipuyun Search
 - Kaizen Platform
 - KaliCart Bridge
 - Kapa.ai
 - Kargo
 - Kauz
+- KePixel
 - Kerio Connect
+- Keycloak
 - Kiprotect
 - Kit
 - Kiwify
 - Kleecks
+- Kleep
+- Knoku
 - Knorex XPO
+- Kobisi
+- Komerza
+- Kx AI Search & Discovery Agent
+- LLK Analytics
 - LTK
 - LaRecipe
+- Laioutr
+- LaunchLMS
+- LaunchMyStore
+- Lead Recorder
 - LeadConnector
 - Leads2b
 - LeadsLeap
 - Leaky Paywall
 - LearnPress
 - Learnbase
+- LegitFit
+- LerenTools
 - LightWidget
+- Lindo.ai
 - Line-Up
 - Liscio
 - ListingPro
+- LiveChatAI
 - LiveHelpNow
 - LocalSignal
 - LogMeIn
@@ -278,17 +442,29 @@ Nothing was removed from the catalog.
 - Loop11
 - Lotame
 - Lovi
+- Loyalistic
 - MCMS
 - MVD Studio
 - MacCMS
+- Madgex
+- Mage Loyalty
 - Maguru
+- MaidCentral
 - Mail Mint
 - Mailshake
 - Makeplans
 - Mangomint
 - MasterStudy LMS
+- Masthead CMS
+- Material for MkDocs
 - Mather Economics
+- Mavrck
+- Mayson
+- Mazeed+
 - Mega
+- Meiqia
+- Meku
+- MemberPress
 - Membership Toolkit
 - MembershipWorks
 - Menuu
@@ -298,12 +474,20 @@ Nothing was removed from the catalog.
 - Mexty
 - Mico
 - Microsoft Fabric
+- MingCute
 - MiniBC
+- Mirra
+- Momants
 - MonetizeMore
 - Moofx
 - MoreVago
+- Moya
+- Moyasar
+- Moyasar Plugin
 - Multiview
+- Musictoday
 - MyCred
+- MyNewTerm
 - MyPersonas
 - MyPlay
 - NEORY
@@ -313,111 +497,198 @@ Nothing was removed from the catalog.
 - NeoAsist
 - Nepcha Analytics
 - NetTalk
+- Nevuto
 - Nexxtmove
 - Ninja Tables
 - NinjaCat
+- Nlet School
+- NoShow
 - Norse Env
+- NorthWhistle
 - NotificationX
 - Nova Studio
 - NovaDB
 - Novaresa
+- Nsin
+- Oat UI
+- Odometer.js
 - Omago
 - Omega Commerce
+- OmniWallet
 - OnChat
+- One Church Software
+- Onjax
 - Online Succes
 - Ontame
+- Open Game Panel
+- OpenAI Ads Measurement Pixel
 - OpenAM
 - OpenConf
+- OpenDXP
+- OpenWeatherMap
+- Operoo
 - Opinion Stage
 - OpnForm
+- OptKit
 - Opta
 - Optinopoli
+- Oracle Linux
+- Orange CDB
 - Orbit Commerce
+- Orioly
+- OwnerRez
 - Page Builder CK
+- PageLines
 - PageNudge
+- Pagefind
 - PagineGialle
 - Pancake
 - Partner Fleet
 - PatientLoop
 - Paycove
 - Paymattic
+- PaymentForm.io
 - Payva
+- Payzito
 - PbootCMS
 - Peachie
 - Peer39
 - Performax
 - Personyze
 - Pilera
+- Pitchero
 - Pixeleze
 - Podbean
 - Podscribe
+- Pointat
 - Popads
+- Popsixle
+- Populi
 - Post Timeline
+- PostFinance Checkout
+- Pozvonim
 - Prefixbox
 - Premion
 - Print Invoice & Delivery Notes for WooCommerce
 - Printify
 - Printlane
+- Profile Builder
 - Profitshare
+- PropertyMeld
 - Prosperous AI
 - PubNation
 - Publive
+- Pushnews
 - Quadran
 - Qualitando
 - Qualva
 - Quantyoo
 - Qubely
+- Quickly
 - Quicksprout
+- QuinBook
+- RAMP Interactive
 - RE-OS.com
 - REsimpli
+- RVGlobalSoft
+- Rackspace
+- RapiDoc
+- RateAbiz
+- RaveCapture
 - Rcode Vision
+- ReQruiting
 - ReSpec
+- React Aria
 - Read the Docs
+- Readdy
 - Recommy
+- Recranet
 - Recras
+- Recruitics
+- Referrizer
 - Refix
+- RegistrationMagic
 - Relevanssi
 - Remedo
+- Reniwn
+- Rentware
+- RepairDesk
 - ReplyBox
+- ReplySuite
 - Request a Quote for WooCommerce
 - Resonate
 - Returnflows
+- Revotas
 - Rezku
 - RhinoFit
 - Rispose
+- Rivo
+- Rivyo
 - Robarov
+- Robocote
 - Rofofk
 - RomanCart
 - Roya
 - Ruttl
 - Ruzuku
+- SEOJuice
+- STRIGHT
+- Sadrhub
+- Salam
+- SalesDrip
+- Salesforce Data 360
+- Salesgear
+- Salonkee
 - Samba TV
 - Sameday
 - Sanity.io
 - Satūs
+- Schudio
 - Scrapive
 - Seafile
 - SeedGrow
 - Seedtag
 - Segmetrics
+- Sekolahku
+- Seldit
 - SelectMedia
+- Selify
+- Sellauth
 - Selligent
+- Sensei LMS
 - SeoToaster CMS
+- Sepid
+- Shakebug
 - ShopStyle
 - ShopWise
+- Shopaccino
 - Shopiteka
 - Shopsys
+- Shorthand
+- Silk
 - Simple Job Board
 - Singenuity
 - Site Blindado
 - SiteGPT
 - SiteGalore
+- SiteNano
+- Sitepins
 - Sketchanet
+- Skillspace
 - SkyCMS by Netkoncept
+- Sleak.chat
+- Slim Framework
+- Slotted
 - Smadex
 - Smart Wishlist
+- SmartEditor2
 - SmartEmailing
 - SmartFront
+- Smartjobboard
+- Smartypilot
+- Smink
+- Smith.ai
+- SnapApp
 - SnatchBot
 - SociableKIT
 - Socialphotos
@@ -429,59 +700,97 @@ Nothing was removed from the catalog.
 - SourceKnowledge
 - Sourcey
 - Speed Shift Media
+- SplashThat
 - Sporcle
 - Sportradar
 - SproutStudio
 - SquadUP
 - Stampede
+- Stebby
+- StepFORM
 - Stockist
 - StoragePug
 - Store Vantage
 - Storenvy
+- Streak.js
 - StreamAMG
 - StreamingVideoProvider
 - StyleSeat
 - Subscrimia
 - SuiteDash
+- SupaDupa
+- Supermetrics
+- SupportBox
+- Supportly
+- SureCritic
+- SweetCode Pixel Manager for WooCommerce
+- Système de Design de l'État
 - THEADX
+- TMW Shield
 - TPMN
+- Tabler Icons
+- Tachyon Forge
 - Tag Groups
 - Tagalys
 - Taggstar
 - Tanx
 - Targito
+- Teletype App
 - Tempus
+- That Open Engine
 - The Media Trust
+- The Newsletter Plugin
 - ThemeGrill Demo Importer
+- TheraPsy Bookings
 - ThinkCMF
 - ThinkJS
 - Thinkstack
+- Tiendana
+- Tijara Plus
 - TimeTap
 - Timepad
 - TongWeb
 - TrackFox
 - Traffective
 - TrafficJunky
+- Transpond
 - Travello
+- Treatwell
+- Trello
 - TruConversion
 - Trust Guard
 - TrustX
+- Trustmary
 - Tulo
 - TuoTempo
 - TurboMail
 - TutorCruncher
 - Tutorbird
+- Twipla
 - Twsaa
+- Typedream
 - U-Mail
 - UXSniff
+- Uappi
+- Ucraft
+- Uebfaqe
 - Unblu Virtual Agent
 - Underdog Media
 - Uniform Digital Experience
+- UnifyDesk
 - Uniqodo
+- UpCloud Object Storage
+- UpContent
 - Ureserv
+- UseClick
+- UseResponse
 - Useberry
 - Vagaro
 - Valorsic Studio
+- VdoCipher
+- Vectera
+- Vee
+- VenueSumo
 - Vera
 - VeraCore
 - Verificado
@@ -490,14 +799,24 @@ Nothing was removed from the catalog.
 - VertaFlow Booking
 - VertaFlow Chat
 - VertaFlow Forms
+- Vertical Booking
+- VideoAsk
 - Vidyard
 - VikaOn
+- Vinext
 - VirtFusion
 - VisBook
+- VisitorTracking
+- Vista HCM
 - Vizium
 - Vizzit
+- VoetbalAssist
 - Voizee
+- Volument
+- Vortala
+- Vost Veter
 - Voucherify
+- Voyado
 - W3 Ataiva
 - WP Directory Kit
 - WP Fast Total Search
@@ -505,18 +824,27 @@ Nothing was removed from the catalog.
 - WP Hotel Booking
 - WP Maps Pro
 - WP SEO AI
+- WP Stratos
+- WP ULike
 - WPBookit
 - WPMobile.App
 - WPS Hide Login
 - WPZOOM Portfolio
 - WPvivid Backup & Migration
+- WaveRez
+- Wavoto
+- Weasy
 - WebAdministrator CMS
 - WebAwesome
 - WebIssues
+- WebToffee EU Order Withdrawal Button for WooCommerce
 - WebinarGeek
 - Weblate
+- Webmercs
 - Weborama
+- Webstorio
 - Weezevent
+- Wegic
 - Wehaa
 - Werkzeug
 - Whelp
@@ -524,47 +852,68 @@ Nothing was removed from the catalog.
 - WhosOn
 - Wing FTP Server
 - Winmail Server
+- Wirsindhandwerk
 - Wishloop
 - Wishpond
+- Wobily
 - Woosmap
 - Workplace by Meta
 - Wowza Streaming Engine
 - Wx3
 - Wyre
 - Wysistat
+- WzShop
 - X-Clacks-Overhead
+- XCompliant
+- Xendit
+- Yacla
+- Yaghoot Web
 - Yell eCommerce
 - Yomdel
+- YouCanBookMe
 - YouDraw
 - YouLead
 - YourGPT
 - YzmCMS
 - Z-Blog
+- ZClouding
+- ZOYEQ
 - Zad
 - Zadarma
 - Zammad
+- Zapia
 - Zapier
 - Zapnito
 - Zeeg
 - Zensical
+- Zephyr Cloud
 - Zeta Zync
 - Zevioo
 - Ziber
+- Zigaform
 - Zipleads
 - Znode
 - Zoomd
 - Zotonic
 - Zozi
+- Zucks
 - Zulip
+- Zyncro
 - Zyratalk
+- alugha
 - audienzz
 - autoship
+- b10cks
 - b2evolution
+- bValidator
+- beseller
 - bun
 - cituro
 - digi·access
+- docmd
 - doxo
 - eKonsilio
+- eTermin
 - eZCater
 - emetriq
 - eola
@@ -575,11 +924,17 @@ Nothing was removed from the catalog.
 - iMagaza
 - iPROM
 - iTCHYROBOT
+- inCMS
+- inPowered
+- jrni
+- kDrive
 - mediarithmics
 - miniBB
+- miniOrange SAML SSO
 - n8n
 - opentelemetry
 - phpList
+- privIQ
 - streaMonkey
 - tagDiv Composer
 - teachworks
@@ -588,6 +943,7 @@ Nothing was removed from the catalog.
 - true
 - uSocial
 - wpDiscuz
+- wpForo
 - |related| Natív Hirdetés Kft
 
 </details>
