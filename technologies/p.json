@@ -197,6 +197,13 @@
     ],
     "website": "https://pagar.me"
   },
+  "Page Builder CK": {
+    "cats": [
+      51
+    ],
+    "website": "https://www.joomlack.fr/",
+    "html": "com_pagebuilderck"
+  },
   "Page Builder Framework": {
     "cats": [
       80
@@ -1908,6 +1915,15 @@
     ],
     "website": "https://app.paywhirl.com/"
   },
+  "PbootCMS": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.pbootcms.com/",
+    "cookies": {
+      "pbootsystem": ""
+    }
+  },
   "PCI Proxy": {
     "cats": [
       41
@@ -2743,6 +2759,15 @@
     },
     "website": "https://wordpress.org/plugins/performant-translations/"
   },
+  "Performax": {
+    "cats": [
+      36
+    ],
+    "website": "https://performax.cz",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*performax\\.cz(?:[:/?#]|$)"
+    ]
+  },
   "PerimeterX": {
     "cats": [
       16
@@ -3522,6 +3547,13 @@
     "oss": true,
     "website": "https://phpfusion.com"
   },
+  "phpList": {
+    "cats": [
+      32
+    ],
+    "website": "https://www.phplist.org/",
+    "html": "^(?=[\\s\\S]{0,}?content=\"michiel dethmers - http://www\\.phplist\\.com)(?=[\\s\\S]{0,}?content=\"phplist version)"
+  },
   "phpMyAdmin": {
     "cats": [
       3
@@ -3678,7 +3710,8 @@
     "saas": true,
     "scriptSrc": [
       "\\.tinypass\\.com",
-      "\\.piano\\.io"
+      "\\.piano\\.io",
+      "^https?://(?:[a-z0-9-]+\\.)*npttech\\.com(?:[:/?#]|$)"
     ],
     "website": "https://piano.io"
   },
@@ -3860,7 +3893,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.picreel\\.com"
+      "\\.picreel\\.com",
+      "^https?://(?:[a-z0-9-]+\\.)*pcrl\\.co(?:[:/?#]|$)"
     ],
     "website": "https://www.picreel.com"
   },
@@ -6069,6 +6103,15 @@
     ],
     "website": "https://polymer-project.org"
   },
+  "Popads": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.popads.net/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*popads\\.net(?:[:/?#]|$)"
+    ]
+  },
   "Popcorn CRM": {
     "cats": [
       53
@@ -6484,6 +6527,13 @@
       "metashop\\.dolphinsuite\\.com"
     ],
     "website": "https://metashop.dolphinsuite.com"
+  },
+  "Post Timeline": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/post-timeline/",
+    "html": "wp-content/plugins/post-timeline/"
   },
   "Postach": {
     "cats": [
@@ -7165,6 +7215,15 @@
     ],
     "website": "https://leaverou.github.io/prefixfree/"
   },
+  "Prefixbox": {
+    "cats": [
+      19
+    ],
+    "website": "https://www.prefixbox.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*prefixbox\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Preline UI": {
     "cats": [
       66
@@ -7716,6 +7775,13 @@
       "\\.sekindo\\.com"
     ]
   },
+  "Print Invoice & Delivery Notes for WooCommerce": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/woocommerce-delivery-notes/",
+    "html": "wp-content/plugins/woocommerce-delivery-notes/"
+  },
   "Printful": {
     "cats": [
       76
@@ -8157,6 +8223,15 @@
       "app\\.profitflo\\.io"
     ],
     "website": "https://profitflo.io"
+  },
+  "Profitshare": {
+    "cats": [
+      71
+    ],
+    "website": "https://profitshare.ro",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*profitshare\\.ro(?:[:/?#]|$)"
+    ]
   },
   "Profitwell": {
     "cats": [
@@ -9256,6 +9331,15 @@
     "website": "https://www.pubmatic.com/",
     "xhr": [
       "\\.pubmatic\\.com"
+    ]
+  },
+  "PubNation": {
+    "cats": [
+      36
+    ],
+    "website": "https://pubnation.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*pubnation\\.com(?:[:/?#]|$)"
     ]
   },
   "PubNub": {

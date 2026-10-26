@@ -856,6 +856,15 @@
     "saas": true,
     "website": "https://datatrics.com"
   },
+  "Datawrapper": {
+    "cats": [
+      19
+    ],
+    "website": "https://datawrapper.de",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*dwcdn\\.net(?:[:/?#]|$)"
+    ]
+  },
   "DatHuis": {
     "cats": [
       32
@@ -2807,7 +2816,8 @@
       "recurring"
     ],
     "scriptSrc": [
-      "disqus_url"
+      "disqus_url",
+      "^https?://(?:[a-z0-9-]+\\.)*disquscdn\\.com(?:[:/?#]|$)"
     ],
     "website": "https://disqus.com"
   },
@@ -3062,6 +3072,15 @@
       "Java"
     ],
     "website": "https://www.atex.com/products/dm-polopoly"
+  },
+  "DMCA.com Protection": {
+    "cats": [
+      16
+    ],
+    "website": "https://www.dmca.com/badges.aspx",
+    "scriptSrc": [
+      "^https?://images\\.dmca\\.com/badges/dmcabadgehelper\\.min\\.js(?:[?#]|$)"
+    ]
   },
   "DNN": {
     "cats": [
@@ -3628,7 +3647,9 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "js/_dmptv([\\d.]+)\\.js\\;version:\\1"
+      "js/_dmptv([\\d.]+)\\.js\\;version:\\1",
+      "^https?://(?:[a-z0-9-]+\\.)*trackedlink\\.net(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*trackedweb\\.net(?:[:/?#]|$)"
     ],
     "website": "https://dotdigital.com"
   },
@@ -3876,6 +3897,13 @@
     "saas": true,
     "website": "https://doubleverify.com"
   },
+  "DouPHP": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.douphp.com",
+    "html": "^(?=[\\s\\S]{0,}?Powered by DouPHP)(?=[\\s\\S]{0,}?DouPHP)(?=[\\s\\S]{0,}?theme)"
+  },
   "Dover": {
     "cats": [
       101
@@ -3905,6 +3933,13 @@
       "dttrk\\.com"
     ],
     "website": "https://dovetale.com/"
+  },
+  "Download Manager": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/download-manager/",
+    "html": "wp-content/plugins/download-manager/"
   },
   "Download Monitor": {
     "cats": [
@@ -4890,6 +4925,15 @@
     ],
     "website": "https://wordpress.org/plugins/dynamicconditions"
   },
+  "Dynamic Converter": {
+    "cats": [
+      19
+    ],
+    "website": "https://dynamicconverter.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*dynamicconverter\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Dynamic Yield": {
     "cats": [
       74,
@@ -4968,7 +5012,10 @@
     "website": "https://www.dynatrace.com",
     "dns": {
       "TXT": "dynatrace-site-verification="
-    }
+    },
+    "scriptSrc": [
+      "^https?://js-cdn\\.dynatrace\\.com(?:[:/?#]|$)"
+    ]
   },
   "Dynatrace Application Monitoring": {
     "cats": [

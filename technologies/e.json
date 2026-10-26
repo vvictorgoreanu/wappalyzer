@@ -1332,6 +1332,16 @@
     ],
     "website": "https://edugram.com"
   },
+  "EduSoho": {
+    "cats": [
+      21
+    ],
+    "website": "https://www.edusoho.com/",
+    "html": [
+      "powered by <a href=\"http://www\\.edusoho\\.com/\" target=\"_blank\">edusoho",
+      "powered by edusoho"
+    ]
+  },
   "Edwiser Bridge": {
     "cats": [
       21,
@@ -1499,7 +1509,10 @@
       "poa"
     ],
     "saas": true,
-    "website": "https://www.ekomi.de"
+    "website": "https://www.ekomi.de",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*ekomi\\.com(?:[:/?#]|$)"
+    ]
   },
   "eKonsilio": {
     "cats": [
@@ -2558,6 +2571,15 @@
       "assets\\.emergent\\.sh"
     ],
     "website": "https://app.emergent.sh/"
+  },
+  "emetriq": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.emetriq.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*xplosion\\.de(?:[:/?#]|$)"
+    ]
   },
   "Emfont": {
     "cats": [
@@ -4058,7 +4080,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.etracker\\.com"
+      "\\.etracker\\.com",
+      "^https?://(?:[a-z0-9-]+\\.)*etracker\\.de(?:[:/?#]|$)"
     ],
     "website": "https://www.etracker.com"
   },
@@ -4084,6 +4107,15 @@
     ],
     "website": "https://www.eucookie.eu/"
   },
+  "Euroland IR": {
+    "cats": [
+      5
+    ],
+    "website": "https://tools.euroland.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*euroland\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Eveho": {
     "cats": [
       6
@@ -4099,6 +4131,13 @@
       "app\\.eveho\\.io"
     ],
     "website": "https://eveho.io"
+  },
+  "Eventin": {
+    "cats": [
+      87
+    ],
+    "website": "https://themewinter.com/eventin/",
+    "html": "/wp-content/plugins/eventin"
   },
   "Eventlink": {
     "cats": [
@@ -4126,6 +4165,14 @@
     ],
     "icon": "eventon.svg",
     "website": "https://www.myeventon.com"
+  },
+  "Everest Forms Pro": {
+    "cats": [
+      87,
+      110
+    ],
+    "website": "https://everestforms.net/",
+    "html": "/wp-content/plugins/everest-forms-pro/"
   },
   "Everflow": {
     "cats": [
@@ -4982,7 +5029,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.(?:extole|xtlo)\\.(?:com|net)/"
+      "\\.(?:extole|xtlo)\\.(?:com|net)/",
+      "^https?://(?:[a-z0-9-]+\\.)*extole\\.io(?:[:/?#]|$)"
     ],
     "website": "https://www.extole.com"
   },

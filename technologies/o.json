@@ -1569,6 +1569,15 @@
     ],
     "website": "https://onsitesupport.io"
   },
+  "Ontame": {
+    "cats": [
+      10
+    ],
+    "website": "https://talentech.com/products/data-analytics/ontame/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*ontame\\.io(?:[:/?#]|$)"
+    ]
+  },
   "OnUniverse": {
     "cats": [
       51
@@ -1829,6 +1838,13 @@
       "TXT": "openai-domain-verification="
     }
   },
+  "OpenAM": {
+    "cats": [
+      69
+    ],
+    "website": "https://www.openidentityplatform.org/openam",
+    "html": "action=\"/openam/ui/login\""
+  },
   "OpenBSD httpd": {
     "cats": [
       22
@@ -1913,6 +1929,19 @@
       "opencms"
     ],
     "website": "https://www.opencms.org"
+  },
+  "OpenConf": {
+    "cats": [
+      19
+    ],
+    "website": "https://www.openconf.org/",
+    "html": [
+      "powered by <a href=\"http://www\\.openconf\\.org",
+      "src=\"openconf\\.js\\?"
+    ],
+    "cookies": {
+      "openconf": ""
+    }
   },
   "OpenCV": {
     "cats": [
@@ -2306,7 +2335,8 @@
     "saas": true,
     "scriptSrc": [
       "https?://[^/]*\\.openx\\.net",
-      "https?://[^/]*\\.servedbyopenx\\.com"
+      "https?://[^/]*\\.servedbyopenx\\.com",
+      "^https?://(?:[a-z0-9-]+\\.)*openxcdn\\.net(?:[:/?#]|$)"
     ],
     "website": "https://openx.com"
   },
@@ -2354,6 +2384,16 @@
       "opigno_(?:commerce|wtp_app|scorm|learning_path)"
     ],
     "website": "https://www.opigno.org"
+  },
+  "Opinion Stage": {
+    "cats": [
+      73,
+      5
+    ],
+    "website": "https://opinionstage.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*opinionstage\\.com(?:[:/?#]|$)"
+    ]
   },
   "OpinionBar": {
     "cats": [
@@ -2419,6 +2459,15 @@
       "app\\.opscalendar\\.com/"
     ],
     "website": "https://opscalendar.com"
+  },
+  "Opta": {
+    "cats": [
+      5
+    ],
+    "website": "https://www.statsperform.com/products/opta-data/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*opta\\.net(?:[:/?#]|$)"
+    ]
   },
   "Optibase": {
     "cats": [
@@ -2661,7 +2710,12 @@
       "low",
       "recurring"
     ],
-    "website": "https://optinmonster.com"
+    "website": "https://optinmonster.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*opmnstr\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*optmnstr\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*optmstr\\.com(?:[:/?#]|$)"
+    ]
   },
   "OptinMonster plugin": {
     "cats": [

@@ -51,6 +51,14 @@
     ],
     "website": "https://www.b2chat.io"
   },
+  "b2evolution": {
+    "cats": [
+      1,
+      11
+    ],
+    "website": "https://b2evolution.net/",
+    "html": "powered by b2evolution"
+  },
   "Babel": {
     "cats": [
       19
@@ -280,7 +288,8 @@
     "description": "Baidu Analytics (百度统计) is a free tool for tracking and reporting traffic data of users visiting your site.",
     "icon": "Baidu Tongji.png",
     "scriptSrc": [
-      "hm\\.baidu\\.com/hm?\\.js"
+      "hm\\.baidu\\.com/hm?\\.js",
+      "^https?://hmcdn\\.baidu\\.com(?:[:/?#]|$)"
     ],
     "website": "https://tongji.baidu.com/"
   },
@@ -431,6 +440,15 @@
       "\\.bannerboo\\.com/"
     ],
     "website": "https://bannerboo.com"
+  },
+  "BannerFlow": {
+    "cats": [
+      36
+    ],
+    "website": "https://bannerflow.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*bannerflow\\.com(?:[:/?#]|$)"
+    ]
   },
   "Banno Banking": {
     "cats": [
@@ -851,6 +869,15 @@
       "\\.bazo\\.io/"
     ],
     "website": "https://bazo.io"
+  },
+  "BBB Accredited Business Seal": {
+    "cats": [
+      5
+    ],
+    "website": "https://www.bbb.org/business/accreditation/download-the-seal",
+    "scriptSrc": [
+      "^https?://seal-[a-z0-9-]+\\.bbb\\.org/badge/badge\\.min\\.js(?:[?#]|$)"
+    ]
   },
   "bbPress": {
     "cats": [
@@ -1793,6 +1820,33 @@
     ],
     "website": "https://bidmatic.io"
   },
+  "Bidswitch": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.bidswitch.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*bidswitch\\.net(?:[:/?#]|$)"
+    ]
+  },
+  "Bidtellect": {
+    "cats": [
+      36
+    ],
+    "website": "https://bidtellect.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*bttrack\\.com(?:[:/?#]|$)"
+    ]
+  },
+  "BidTheatre": {
+    "cats": [
+      36
+    ],
+    "website": "https://bidtheatre.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*bidtheatre\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Big Cartel": {
     "cats": [
       6
@@ -2225,6 +2279,13 @@
     ],
     "website": "https://biskoui.ch"
   },
+  "Bitbucket": {
+    "cats": [
+      47
+    ],
+    "website": "https://bitbucket.org/",
+    "html": "bitbucket\\.page\\.login"
+  },
   "Bitcoin": {
     "cats": [
       41
@@ -2366,6 +2427,16 @@
       "Server": ".*?(Open|Secure)\\b"
     },
     "website": "http://www.konicaminolta.com/"
+  },
+  "Bizrate Insights": {
+    "cats": [
+      73,
+      90
+    ],
+    "website": "https://bizrateinsights.com/",
+    "scriptSrc": [
+      "^https?://insights\\.bizrate\\.com/js/init\\.js(?:[?#]|$)"
+    ]
   },
   "BizSpring": {
     "cats": [
@@ -5224,7 +5295,10 @@
       "recurring"
     ],
     "saas": true,
-    "website": "https://bow-now.jp"
+    "website": "https://bow-now.jp",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*bownow\\.jp(?:[:/?#]|$)"
+    ]
   },
   "bowser": {
     "cats": [
@@ -5439,6 +5513,15 @@
       "cdn\\.brandfolder\\.com/"
     ],
     "website": "https://brandfolder.com"
+  },
+  "Brandmetrics": {
+    "cats": [
+      10
+    ],
+    "website": "https://www.brandmetrics.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*brandmetrics\\.com(?:[:/?#]|$)"
+    ]
   },
   "Brandquiz": {
     "cats": [
@@ -5985,6 +6068,13 @@
     "headers": {
       "Server": "BWS"
     }
+  },
+  "Broken Link Notifier": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/broken-link-notifier/",
+    "html": "blnotifier_front_end"
   },
   "Bronto": {
     "cats": [
@@ -6798,7 +6888,8 @@
     },
     "scriptSrc": [
       "^https?://s\\d\\.buysellads\\.com/",
-      "servedby-buysellads\\.com/monetization(?:\\.[\\w\\d]+)?\\.js"
+      "servedby-buysellads\\.com/monetization(?:\\.[\\w\\d]+)?\\.js",
+      "^https?://(?:[a-z0-9-]+\\.)*buysellads\\.net(?:[:/?#]|$)"
     ],
     "website": "https://buysellads.com"
   },

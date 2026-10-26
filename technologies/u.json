@@ -17,6 +17,13 @@
     "saas": true,
     "website": "https://u-komi.com/en/"
   },
+  "U-Mail": {
+    "cats": [
+      30
+    ],
+    "website": "http://www.comingchina.com/",
+    "html": "power by <a href=\"http://www\\.comingchina\\.com\">u-mail邮件服务器</a>"
+  },
   "Ubercart": {
     "cats": [
       6
@@ -797,6 +804,15 @@
       "version": "\\1"
     }
   },
+  "Underdog Media": {
+    "cats": [
+      36
+    ],
+    "website": "https://underdogmedia.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*underdog\\.media(?:[:/?#]|$)"
+    ]
+  },
   "Underscore.js": {
     "cats": [
       59
@@ -857,7 +873,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "cmp\\.uniconsent\\.mgr\\.consensu\\.org/"
+      "cmp\\.uniconsent\\.mgr\\.consensu\\.org/",
+      "^https?://cmp\\.uniconsent\\.com(?:[:/?#]|$)"
     ],
     "website": "https://www.uniconsent.com/"
   },
@@ -947,6 +964,15 @@
       "cdn\\.unipag\\.com"
     ],
     "website": "https://www.unipag.com"
+  },
+  "Uniqodo": {
+    "cats": [
+      76
+    ],
+    "website": "https://uniqodo.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*uniqodo\\.com(?:[:/?#]|$)"
+    ]
   },
   "Unito Hub": {
     "cats": [

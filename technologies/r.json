@@ -1483,7 +1483,10 @@
     "js": {
       "REBELMOUSE_ACTIVE_TASKS_QUEUE": ""
     },
-    "website": "https://www.rebelmouse.com/"
+    "website": "https://www.rebelmouse.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*rbl\\.ms(?:[:/?#]|$)"
+    ]
   },
   "Rebuy": {
     "cats": [
@@ -2774,6 +2777,13 @@
     "saas": true,
     "website": "https://releva.ai"
   },
+  "Relevanssi": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/relevanssi/",
+    "html": "/wp-content/plugins/relevanssi/"
+  },
   "Relewise": {
     "cats": [
       76
@@ -3178,6 +3188,14 @@
       "\\.reputon\\.com/"
     ],
     "website": "https://reputon.com"
+  },
+  "Request a Quote for WooCommerce": {
+    "cats": [
+      6,
+      87
+    ],
+    "website": "https://woocommerce.com/products/request-a-quote-plugin/",
+    "html": "/wp-content/plugins/woocommerce-request-a-quote/"
   },
   "Request Metrics": {
     "cats": [

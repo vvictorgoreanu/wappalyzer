@@ -537,7 +537,10 @@
       "recurring"
     ],
     "saas": true,
-    "website": "https://www.calltrackingmetrics.com"
+    "website": "https://www.calltrackingmetrics.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*tctm\\.co(?:[:/?#]|$)"
+    ]
   },
   "CamanJS": {
     "cats": [
@@ -1696,6 +1699,13 @@
     },
     "website": "https://www.hannonhill.com/products/cascade-cms/"
   },
+  "Casdoor": {
+    "cats": [
+      69
+    ],
+    "website": "https://casdoor.org/",
+    "html": "^(?=[\\s\\S]{0,}?<title>casdoor)(?=[\\s\\S]{0,}?casdoor/manifest\\.json)"
+  },
   "Casewise": {
     "cats": [
       11
@@ -1868,6 +1878,15 @@
       "cdn\\.catchjs\\.com"
     ],
     "website": "https://catchjs.com"
+  },
+  "Catchpoint": {
+    "cats": [
+      78
+    ],
+    "website": "https://www.catchpoint.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*3gl\\.net(?:[:/?#]|$)"
+    ]
   },
   "CATS": {
     "cats": [
@@ -2060,6 +2079,15 @@
       "\\.cellxpert\\.com/"
     ],
     "website": "https://www.cellxpert.com"
+  },
+  "Celtra": {
+    "cats": [
+      36
+    ],
+    "website": "https://celtra.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*celtra\\.com(?:[:/?#]|$)"
+    ]
   },
   "Celum": {
     "cats": [
@@ -2661,7 +2689,8 @@
       "_sf_endpt": ""
     },
     "scriptSrc": [
-      "chartbeat\\.js"
+      "chartbeat\\.js",
+      "^https?://(?:[a-z0-9-]+\\.)*chartbeat\\.net(?:[:/?#]|$)"
     ],
     "website": "https://chartbeat.com"
   },
@@ -3882,6 +3911,16 @@
     "icon": "Cisco.svg",
     "website": "https://www.cisco.com/"
   },
+  "Citadel": {
+    "cats": [
+      30
+    ],
+    "website": "https://www.citadel.org/",
+    "html": [
+      "/styles/webcit\\.css",
+      "<div class=\"boxlabel\">citadel server - powered by"
+    ]
+  },
   "Citizen Space": {
     "cats": [
       1
@@ -4758,7 +4797,10 @@
       "recurring"
     ],
     "saas": true,
-    "website": "https://clevertap.com"
+    "website": "https://clevertap.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*wzrkt\\.com(?:[:/?#]|$)"
+    ]
   },
   "Clevy": {
     "cats": [
@@ -5310,6 +5352,13 @@
     ],
     "website": "https://www.clientacquisition.io"
   },
+  "Clientexec": {
+    "cats": [
+      6
+    ],
+    "website": "https://www.clientexec.com/",
+    "html": "powered by clientexec"
+  },
   "Clientify": {
     "cats": [
       32
@@ -5483,6 +5532,16 @@
       "clipboard(?:-([\\d.]+))?(?:\\.min)?\\.js\\;version:\\1"
     ],
     "website": "https://clipboardjs.com/"
+  },
+  "ClipBucket": {
+    "cats": [
+      1
+    ],
+    "website": "https://github.com/MacWarrior/clipbucket-v5",
+    "html": [
+      "^(?=[\\s\\S]{0,}?<!-- clipbucket)(?=[\\s\\S]{0,}?content=\"clipbucket)",
+      "<!-- forged by clipbucket"
+    ]
   },
   "Clock PMS": {
     "cats": [
@@ -6212,6 +6271,13 @@
     },
     "website": "https://cmsmadesimple.org"
   },
+  "CmsEasy": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.cmseasy.cn",
+    "html": "content=[\"']CmsEasy"
+  },
   "CMSimple": {
     "cats": [
       1
@@ -6224,6 +6290,17 @@
       "generator": "CMSimple( [\\d.]+)?\\;version:\\1"
     },
     "website": "https://www.cmsimple.org/en"
+  },
+  "CmsTop": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.cmstop.com/",
+    "html": [
+      "^(?=[\\s\\S]{0,}?<a class=\"poweredby\" href=\"http://www\\.cmstop\\.com\")(?=[\\s\\S]{0,}?cmstop-list-text\\.css)",
+      "/css/cmstop-common\\.css",
+      "/js/cmstop-common\\.js"
+    ]
   },
   "Cnvert": {
     "cats": [
@@ -6507,6 +6584,15 @@
       "codetipi-"
     ],
     "website": "https://codetipi.com"
+  },
+  "Codigo": {
+    "cats": [
+      10
+    ],
+    "website": "https://www.codigo.se",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*codigo\\.se(?:[:/?#]|$)"
+    ]
   },
   "Coffee Script": {
     "cats": [
@@ -7435,6 +7521,15 @@
     ],
     "website": "https://comms.dev"
   },
+  "CommuniGate Pro": {
+    "cats": [
+      30
+    ],
+    "website": "https://www.communigate.com/",
+    "headers": {
+      "Server": "^communigatepro"
+    }
+  },
   "Community": {
     "cats": [
       2
@@ -7771,6 +7866,13 @@
       "recurring"
     ],
     "website": "https://www.confiant.com"
+  },
+  "Confluence": {
+    "cats": [
+      8
+    ],
+    "website": "https://www.atlassian.com/software/confluence",
+    "html": "^(?=[\\s\\S]{0,}?id=\"com-atlassian-confluence)(?=[\\s\\S]{0,}?name=\"confluence-base-url\")"
   },
   "Congressus": {
     "cats": [
@@ -9309,6 +9411,15 @@
     ],
     "website": "https://copypoison.com/"
   },
+  "Coral": {
+    "cats": [
+      15
+    ],
+    "website": "https://coralproject.net",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*coral\\.coralproject\\.net(?:[:/?#]|$)"
+    ]
+  },
   "Cordial": {
     "cats": [
       76,
@@ -9396,6 +9507,18 @@
       "assets\\.corebook\\.io/"
     ],
     "website": "https://www.corebook.io"
+  },
+  "Coremail": {
+    "cats": [
+      30
+    ],
+    "website": "https://www.coremail.cn/",
+    "html": [
+      "/coremail/bundle/",
+      "action=\"/coremail/index\\.jsp",
+      "coremail/common",
+      "fmt_logoalt: \"coremail 电子邮件系统"
+    ]
   },
   "CoreMedia": {
     "cats": [
@@ -9635,6 +9758,15 @@
     },
     "icon": "CouchDB.svg",
     "website": "https://couchdb.apache.org"
+  },
+  "Council Advertising Network": {
+    "cats": [
+      36
+    ],
+    "website": "https://counciladvertising.net",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*counciladvertising\\.net(?:[:/?#]|$)"
+    ]
   },
   "Counseling Kit": {
     "cats": [

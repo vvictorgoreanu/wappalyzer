@@ -268,6 +268,13 @@
     },
     "website": "https://laravel.com/docs/broadcasting#client-side-installation"
   },
+  "LaRecipe": {
+    "cats": [
+      4
+    ],
+    "website": "https://larecipe.saleem.dev/",
+    "html": "/binarytorch/larecipe/"
+  },
   "Lasso CRM": {
     "cats": [
       53
@@ -743,6 +750,14 @@
       "(?://|\\.)chatsystem\\.io/"
     ],
     "website": "https://www.leadchat.com"
+  },
+  "LeadConnector": {
+    "cats": [
+      32,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/leadconnector/",
+    "html": "/wp-content/plugins/leadconnector/"
   },
   "LeadDyno": {
     "cats": [
@@ -1226,6 +1241,14 @@
       "WordPress"
     ],
     "website": "https://www.learndash.com"
+  },
+  "LearnPress": {
+    "cats": [
+      21,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/learnpress/",
+    "html": "/wp-content/plugins/learnpress"
   },
   "LearnUpon": {
     "cats": [
@@ -2003,6 +2026,15 @@
     "oss": true,
     "website": "https://www.lighttpd.net"
   },
+  "LightWidget": {
+    "cats": [
+      5
+    ],
+    "website": "https://lightwidget.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*lightwidget\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Ligna": {
     "cats": [
       53
@@ -2659,6 +2691,13 @@
     ],
     "website": "https://www.listagram.com"
   },
+  "ListingPro": {
+    "cats": [
+      80
+    ],
+    "website": "https://listingprowp.com/",
+    "html": "/wp-content/plugins/listingpro"
+  },
   "Listrak": {
     "cats": [
       32,
@@ -2985,7 +3024,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "cdn\\.livechatinc\\.com/.*tracking\\.js"
+      "cdn\\.livechatinc\\.com/.*tracking\\.js",
+      "^https?://(?:[a-z0-9-]+\\.)*livechat-static\\.com(?:[:/?#]|$)"
     ],
     "website": "https://www.livechat.com/"
   },
@@ -3039,6 +3079,15 @@
     ],
     "saas": true,
     "website": "https://www.livehelp.it"
+  },
+  "LiveHelpNow": {
+    "cats": [
+      52
+    ],
+    "website": "https://livehelpnow.net",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*livehelpnow\\.net(?:[:/?#]|$)"
+    ]
   },
   "LiveIntent": {
     "cats": [
@@ -3106,7 +3155,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.(?:liveperson|contactatonce)?\\.(?:com|net|co\\.uk)/"
+      "\\.(?:liveperson|contactatonce)?\\.(?:com|net|co\\.uk)/",
+      "^https?://(?:[a-z0-9-]+\\.)*lpsnmedia\\.net(?:[:/?#]|$)"
     ],
     "website": "https://www.liveperson.com"
   },
@@ -4013,6 +4063,15 @@
     ],
     "website": "https://www.loopweb.net"
   },
+  "Loop11": {
+    "cats": [
+      73
+    ],
+    "website": "https://loop11.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*loop11\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Loop54": {
     "cats": [
       29,
@@ -4416,6 +4475,15 @@
     ],
     "saas": true,
     "website": "https://ltheme.com"
+  },
+  "LTK": {
+    "cats": [
+      71
+    ],
+    "website": "https://rewardstyle.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*rewardstyle\\.com(?:[:/?#]|$)"
+    ]
   },
   "Lua": {
     "cats": [

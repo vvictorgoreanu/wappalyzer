@@ -60,6 +60,13 @@
     ],
     "website": "https://go-macaron.com"
   },
+  "MacCMS": {
+    "cats": [
+      1
+    ],
+    "website": "https://github.com/magicblack/maccms10",
+    "html": "<script>var maccms=\\{\"path"
+  },
   "MachoThemes NewsMag": {
     "cats": [
       80
@@ -571,6 +578,14 @@
     ],
     "website": "https://mahocommerce.com"
   },
+  "Mail Mint": {
+    "cats": [
+      32,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/mail-mint/",
+    "html": "/wp-content/plugins/mail-mint/"
+  },
   "Mail.Ru Share": {
     "cats": [
       5
@@ -819,7 +834,10 @@
       "freemium"
     ],
     "saas": true,
-    "website": "https://www.mailmunch.com"
+    "website": "https://www.mailmunch.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*mailmunch\\.co(?:[:/?#]|$)"
+    ]
   },
   "Mailocator": {
     "cats": [
@@ -1501,7 +1519,13 @@
       "poa"
     ],
     "saas": true,
-    "website": "https://mapp.com"
+    "website": "https://mapp.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*wbtrk\\.net(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*webtrekk\\.net(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*wt-eu02\\.net(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*wt-safetag\\.com(?:[:/?#]|$)"
+    ]
   },
   "Mappedin": {
     "cats": [
@@ -1653,7 +1677,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.marchex\\.io/"
+      "\\.marchex\\.io/",
+      "^https?://(?:[a-z0-9-]+\\.)*voicestar\\.com(?:[:/?#]|$)"
     ],
     "website": "https://www.marchex.com"
   },
@@ -2101,6 +2126,14 @@
     },
     "website": "https://masterking32.com"
   },
+  "MasterStudy LMS": {
+    "cats": [
+      21,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/masterstudy-lms-learning-management-system/",
+    "html": "/wp-content/plugins/masterstudy-lms-learning-management-system/"
+  },
   "Mastery Manager": {
     "cats": [
       21
@@ -2244,6 +2277,15 @@
     ],
     "website": "https://mathjs.org"
   },
+  "Mather Economics": {
+    "cats": [
+      10
+    ],
+    "website": "https://www.mathereconomics.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*matheranalytics\\.com(?:[:/?#]|$)"
+    ]
+  },
   "MathJax": {
     "cats": [
       25
@@ -2303,7 +2345,8 @@
       "payg"
     ],
     "scriptSrc": [
-      "piwik\\.js|piwik\\.php"
+      "piwik\\.js|piwik\\.php",
+      "^https?://(?:[a-z0-9-]+\\.)*matomo\\.cloud(?:[:/?#]|$)"
     ],
     "scripts": [
       "matomo\\.js",
@@ -2626,6 +2669,13 @@
       "server": "Web Proxy"
     }
   },
+  "MCMS": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.mingsoft.net/",
+    "html": "/mcms/search\\.do\" method="
+  },
   "MDaemon": {
     "cats": [
       34
@@ -2862,6 +2912,15 @@
     },
     "saas": true,
     "website": "https://www.mediaplatform.com"
+  },
+  "mediarithmics": {
+    "cats": [
+      97
+    ],
+    "website": "https://www.mediarithmics.io/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*mediarithmics\\.com(?:[:/?#]|$)"
+    ]
   },
   "Mediavine": {
     "cats": [
@@ -3683,6 +3742,16 @@
       "analytics\\.metikular\\.ch"
     ],
     "website": "https://www.metikular.ch"
+  },
+  "MetInfo": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.metinfo.cn/",
+    "html": [
+      "<div class=\"powered_by_metinfo\"></div>",
+      "<meta name=\"generator\" content=\"metinfo"
+    ]
   },
   "metisMenu": {
     "cats": [
@@ -5431,6 +5500,16 @@
     "icon": "mini_httpd.png",
     "website": "https://acme.com/software/mini_httpd"
   },
+  "miniBB": {
+    "cats": [
+      2
+    ],
+    "website": "https://www.minibb.com/",
+    "html": [
+      "<!--minibb copyright link",
+      "powered by <a href=\"http://www\\.minibb\\."
+    ]
+  },
   "MiniBC": {
     "cats": [
       41
@@ -6995,6 +7074,15 @@
     ],
     "website": "https://monetizepro.ai"
   },
+  "MonetizeMore": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.monetizemore.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*m2\\.ai(?:[:/?#]|$)"
+    ]
+  },
   "MongoDB": {
     "cats": [
       34
@@ -7656,7 +7744,10 @@
       "poa"
     ],
     "saas": true,
-    "website": "https://movableink.com"
+    "website": "https://movableink.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*micpn\\.com(?:[:/?#]|$)"
+    ]
   },
   "Movable Type": {
     "cats": [
@@ -8037,6 +8128,15 @@
     "xhr": [
       "anypoint\\.mulesoft\\.com",
       "[a-z0-9-]+\\.cloudhub\\.io"
+    ]
+  },
+  "Multiview": {
+    "cats": [
+      19
+    ],
+    "website": "https://multiview.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*multiview\\.com(?:[:/?#]|$)"
     ]
   },
   "Mura CMS": {

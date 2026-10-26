@@ -647,6 +647,14 @@
     ],
     "website": "https://quasar.dev"
   },
+  "Qubely": {
+    "cats": [
+      51,
+      87
+    ],
+    "website": "https://wordpress.org/plugins/qubely/",
+    "html": "qubely_urls"
+  },
   "Qubit": {
     "cats": [
       76

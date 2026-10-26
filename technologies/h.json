@@ -289,6 +289,13 @@
     ],
     "website": "https://hantana.org/"
   },
+  "Hanweb JCMS": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.hanweb.com/",
+    "html": "/jcms_files/jcms"
+  },
   "Hapana": {
     "cats": [
       53
@@ -2501,6 +2508,16 @@
     ],
     "website": "https://www.hoowla.com"
   },
+  "Horde": {
+    "cats": [
+      30
+    ],
+    "website": "https://www.horde.org/",
+    "html": [
+      "_sethordetitle",
+      "imp: copyright 2001-2009 the horde project"
+    ]
+  },
   "Horoshop": {
     "cats": [
       6
@@ -2517,6 +2534,13 @@
     ],
     "saas": true,
     "website": "https://horoshop.ua"
+  },
+  "HostBill": {
+    "cats": [
+      6
+    ],
+    "website": "https://hostbillapp.com/",
+    "html": "powered by <a href=\"http://hostbillapp\\.com"
   },
   "Hostens": {
     "cats": [
@@ -3398,6 +3422,15 @@
     "saas": true,
     "website": "https://hubtiger.com"
   },
+  "Hubvisor": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.hubvisor.io",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*hubvisor\\.io(?:[:/?#]|$)"
+    ]
+  },
   "Huckabuy": {
     "cats": [
       54
@@ -3785,6 +3818,15 @@
       "\\.hushly\\.com/"
     ],
     "website": "https://www.hushly.com"
+  },
+  "Hybrid": {
+    "cats": [
+      36
+    ],
+    "website": "https://hybrid.ai/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*hybrid\\.ai(?:[:/?#]|$)"
+    ]
   },
   "Hydra-Shield": {
     "cats": [

@@ -1302,6 +1302,15 @@
     "saas": true,
     "website": "https://saly.pl"
   },
+  "Samba TV": {
+    "cats": [
+      36
+    ],
+    "website": "https://samba.tv",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*samba\\.tv(?:[:/?#]|$)"
+    ]
+  },
   "Sameday": {
     "cats": [
       52
@@ -2420,6 +2429,13 @@
     "icon": "SDL Tridion.svg",
     "website": "https://www.sdl.com/products/tridion"
   },
+  "Seafile": {
+    "cats": [
+      19
+    ],
+    "website": "https://www.seafile.com/",
+    "html": "css/seahub\\.min\\.css"
+  },
   "Seal Subscriptions": {
     "cats": [
       100
@@ -2803,6 +2819,15 @@
     ],
     "website": "https://www.seedprod.com/features/coming-soon-page-templates-for-wordpress"
   },
+  "Seedtag": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.seedtag.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*seedtag\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Seel": {
     "cats": [
       102
@@ -3044,6 +3069,15 @@
     },
     "oss": true,
     "website": "https://selectize.dev"
+  },
+  "SelectMedia": {
+    "cats": [
+      36
+    ],
+    "website": "https://selectmedia.asia",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*selectmedia\\.asia(?:[:/?#]|$)"
+    ]
   },
   "Seline": {
     "cats": [
@@ -3798,7 +3832,8 @@
     },
     "scriptSrc": [
       "browser\\.sentry\\-cdn\\.com/([0-9.]+)/bundle(?:\\.tracing)?(?:\\.min)?\\.js\\;version:\\1",
-      "\\.sentry-cdn\\.com/"
+      "\\.sentry-cdn\\.com/",
+      "^https?://(?:[a-z0-9-]+\\.)*ravenjs\\.com(?:[:/?#]|$)"
     ],
     "website": "https://sentry.io/"
   },
@@ -8158,7 +8193,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "cdn\\.sift(?:science)?\\.com/s\\.js"
+      "cdn\\.sift(?:science)?\\.com/s\\.js",
+      "^https?://(?:[a-z0-9-]+\\.)*siftscience\\.com(?:[:/?#]|$)"
     ],
     "website": "https://sift.com/"
   },
@@ -8576,6 +8612,13 @@
     ],
     "saas": true,
     "website": "https://simplegoods.co"
+  },
+  "Simple Job Board": {
+    "cats": [
+      87
+    ],
+    "website": "https://wordpress.org/plugins/simple-job-board/",
+    "html": "/wp-content/plugins/simple-job-board"
   },
   "Simple Machines Forum": {
     "cats": [
@@ -9094,6 +9137,15 @@
     ],
     "website": "https://sistem.ai"
   },
+  "Site Blindado": {
+    "cats": [
+      16
+    ],
+    "website": "https://siteblindado.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*siteblindado\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Site Kit": {
     "cats": [
       10,
@@ -9448,7 +9500,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "(?:\\.|//)siteimprove(?:analytics)?\\.com/js/siteanalyze"
+      "(?:\\.|//)siteimprove(?:analytics)?\\.com/js/siteanalyze",
+      "^https?://(?:[a-z0-9-]+\\.)*siteimproveanalytics\\.com(?:[:/?#]|$)"
     ],
     "website": "https://www.siteimprove.com"
   },
@@ -10728,6 +10781,15 @@
     ],
     "website": "https://smsold.com"
   },
+  "Smadex": {
+    "cats": [
+      36
+    ],
+    "website": "https://smadex.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*smadex\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Smaily": {
     "cats": [
       32
@@ -10851,6 +10913,15 @@
       "/wp-content/plugins/smart-slider-3(?:-pro)?/"
     ],
     "website": "https://smartslider3.com"
+  },
+  "Smart Wishlist": {
+    "cats": [
+      100
+    ],
+    "website": "https://webmarked.net",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*smartwishlist\\.webmarked\\.net(?:[:/?#]|$)"
+    ]
   },
   "SmartDX": {
     "cats": [
@@ -11428,7 +11499,8 @@
     },
     "saas": true,
     "scriptSrc": [
-      "intg\\.snapchat\\.com/"
+      "intg\\.snapchat\\.com/",
+      "^https?://sc-static\\.net/scevent\\.min\\.js(?:[?#]|$)"
     ],
     "scripts": [
       "_snapchat_pixel_id"
@@ -12027,6 +12099,15 @@
     ],
     "website": "https://socialladderapp.com"
   },
+  "Socialphotos": {
+    "cats": [
+      5
+    ],
+    "website": "https://socialphotosapp.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*slpht\\.com(?:[:/?#]|$)"
+    ]
+  },
   "SocialShopWave": {
     "cats": [
       6
@@ -12396,6 +12477,15 @@
       "cdn\\.soisy\\.it/"
     ],
     "website": "https://www.soisy.it"
+  },
+  "Sojern": {
+    "cats": [
+      36
+    ],
+    "website": "https://sojern.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*sojern\\.com(?:[:/?#]|$)"
+    ]
   },
   "Sokrati": {
     "cats": [
@@ -12843,6 +12933,15 @@
     "saas": true,
     "website": "https://www.mathereconomics.com/sophi-start"
   },
+  "Sophus3": {
+    "cats": [
+      10
+    ],
+    "website": "https://sophus3.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*sophus3\\.com(?:[:/?#]|$)"
+    ]
+  },
   "SOPlanning": {
     "cats": [
       13
@@ -13019,7 +13118,8 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "\\.sndcdn\\.com/"
+      "\\.sndcdn\\.com/",
+      "^https?://(?:[a-z0-9-]+\\.)*soundcloud\\.com(?:[:/?#]|$)"
     ],
     "website": "https://developers.soundcloud.com/docs/api/html5-widget"
   },
@@ -13048,6 +13148,15 @@
     "dns": {
       "TXT": "amp-by-sourcegraph-domain-verification-[a-z0-9]{6}="
     }
+  },
+  "SourceKnowledge": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.sourceknowledge.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*provenpixel\\.com(?:[:/?#]|$)"
+    ]
   },
   "Sourcepoint": {
     "cats": [
@@ -13390,6 +13499,15 @@
     ],
     "saas": true,
     "website": "https://www.speedkit.com"
+  },
+  "Speed Shift Media": {
+    "cats": [
+      36
+    ],
+    "website": "https://speedshiftmedia.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*speedshiftmedia\\.com(?:[:/?#]|$)"
+    ]
   },
   "SpeedCurve": {
     "cats": [
@@ -13992,6 +14110,15 @@
       "www\\.sporcle\\.com/"
     ],
     "website": "https://www.sporcle.com"
+  },
+  "Sportradar": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.sportradar.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*sportradarserving\\.com(?:[:/?#]|$)"
+    ]
   },
   "SpotHopper": {
     "cats": [
@@ -16358,6 +16485,24 @@
       "www\\.strava\\.com"
     ],
     "website": "https://www.strava.com"
+  },
+  "StreamAMG": {
+    "cats": [
+      19
+    ],
+    "website": "https://streamamg.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*streamamg\\.com(?:[:/?#]|$)"
+    ]
+  },
+  "StreamingVideoProvider": {
+    "cats": [
+      14
+    ],
+    "website": "https://www.streamingvideoprovider.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*webvideocore\\.net(?:[:/?#]|$)"
+    ]
   },
   "Streamlit": {
     "cats": [

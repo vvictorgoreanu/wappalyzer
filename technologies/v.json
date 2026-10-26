@@ -1542,7 +1542,11 @@
     "pricing": [
       "poa"
     ],
-    "website": "https://viafoura.com"
+    "website": "https://viafoura.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*viafoura\\.co(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*viafoura\\.net(?:[:/?#]|$)"
+    ]
   },
   "ViArt Shop": {
     "cats": [
@@ -1763,6 +1767,15 @@
       "\\.vidscrip\\.com"
     ],
     "website": "https://studio.vidscrip.com"
+  },
+  "Vidyard": {
+    "cats": [
+      14
+    ],
+    "website": "https://www.vidyard.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*vidyard\\.com(?:[:/?#]|$)"
+    ]
   },
   "Vigbo": {
     "cats": [
@@ -2660,6 +2673,15 @@
       "\\.vizury\\.com"
     ],
     "website": "https://www.vizury.com"
+  },
+  "Vizzit": {
+    "cats": [
+      10
+    ],
+    "website": "https://www.vizzit.se",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*vizzit\\.se(?:[:/?#]|$)"
+    ]
   },
   "VK Pixel": {
     "cats": [

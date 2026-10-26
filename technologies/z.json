@@ -1,4 +1,12 @@
 {
+  "Z-Blog": {
+    "cats": [
+      1,
+      11
+    ],
+    "website": "https://www.zblogcn.com/",
+    "html": "generator\" content=\"z-blog"
+  },
   "Zabbix": {
     "cats": [
       19
@@ -973,6 +981,15 @@
     "saas": true,
     "website": "https://www.zeta-producer.com"
   },
+  "Zeta Zync": {
+    "cats": [
+      36
+    ],
+    "website": "https://zetaglobal.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*rezync\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Zeus Technology": {
     "cats": [
       36
@@ -1805,6 +1822,13 @@
       "recurring"
     ],
     "website": "https://info.zotabox.com"
+  },
+  "Zotonic": {
+    "cats": [
+      1
+    ],
+    "website": "https://zotonic.com/",
+    "html": "^(?=[\\s\\S]{0,}?/lib/js/apps/zotonic-1\\.0)(?=[\\s\\S]{0,}?powered by: zotonic)"
   },
   "Zowie": {
     "cats": [

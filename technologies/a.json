@@ -139,6 +139,15 @@
     ],
     "website": "https://aasaan.app"
   },
+  "AAX": {
+    "cats": [
+      36
+    ],
+    "website": "https://acceptableads.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*aaxads\\.com(?:[:/?#]|$)"
+    ]
+  },
   "AB Tasty": {
     "cats": [
       74
@@ -220,6 +229,15 @@
       "app\\.ablecdp\\.com"
     ],
     "website": "https://www.ablecdp.com"
+  },
+  "Ably": {
+    "cats": [
+      19
+    ],
+    "website": "https://www.ably.io/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*ably\\.io(?:[:/?#]|$)"
+    ]
   },
   "ABLyft": {
     "cats": [
@@ -424,7 +442,9 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "acsbapp?\\.com/.*/acsb\\.js"
+      "acsbapp?\\.com/.*/acsb\\.js",
+      "^https?://(?:[a-z0-9-]+\\.)*acsbapp\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*acsbap\\.com(?:[:/?#]|$)"
     ],
     "website": "https://accessibe.com"
   },
@@ -922,7 +942,10 @@
       "payg"
     ],
     "saas": true,
-    "website": "https://secure.actblue.com"
+    "website": "https://secure.actblue.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*actblue\\.com(?:[:/?#]|$)"
+    ]
   },
   "actionhero.js": {
     "cats": [
@@ -1024,13 +1047,24 @@
       "plugins/activecampaign-subscription-forms/site_tracking\\.js",
       "\\.activehosted\\.com",
       "\\.app-us1\\.com",
-      "\\.ac-page\\.com"
+      "\\.ac-page\\.com",
+      "^https?://(?:[a-z0-9-]+\\.)*trackcmp\\.net(?:[:/?#]|$)"
     ],
     "url": [
       "\\.activehosted\\.com",
       "\\.ac-page\\.com"
     ],
     "website": "https://www.activecampaign.com"
+  },
+  "ActiveCollab": {
+    "cats": [
+      13
+    ],
+    "website": "https://activecollab.com/",
+    "html": [
+      "<p id=\"powered_by\"><a href=\"http://www\\.activecollab\\.com/\"",
+      "powered by activecollab"
+    ]
   },
   "ActivEngage": {
     "cats": [
@@ -1109,6 +1143,13 @@
     "saas": true,
     "website": "https://www.acuityads.com"
   },
+  "AcyMailing": {
+    "cats": [
+      32
+    ],
+    "website": "https://www.acymailing.com/",
+    "html": "com_acym"
+  },
   "AD EBiS": {
     "cats": [
       36,
@@ -1146,6 +1187,15 @@
       "\\.adlightning\\.com"
     ],
     "website": "https://www.adlightning.com"
+  },
+  "Ad6Media": {
+    "cats": [
+      36
+    ],
+    "website": "https://ad6media.fr",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*ad6media\\.fr(?:[:/?#]|$)"
+    ]
   },
   "Ada": {
     "cats": [
@@ -1188,6 +1238,15 @@
     "website": "https://www.adabra.com",
     "xhr": [
       "my\\.adabra\\.com"
+    ]
+  },
+  "Adacado": {
+    "cats": [
+      36
+    ],
+    "website": "https://adacado.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*adacado\\.com(?:[:/?#]|$)"
     ]
   },
   "Adally": {
@@ -1712,6 +1771,15 @@
     "saas": true,
     "website": "https://www.adjust.com"
   },
+  "AdKernel": {
+    "cats": [
+      36
+    ],
+    "website": "https://adkernel.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*adkernel\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Adline": {
     "cats": [
       10,
@@ -1743,6 +1811,15 @@
       "\\.adlooxtracking\\.com/"
     ],
     "website": "https://www.adloox.com"
+  },
+  "AdMan Media": {
+    "cats": [
+      36
+    ],
+    "website": "https://admanmedia.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*admanmedia\\.com(?:[:/?#]|$)"
+    ]
   },
   "Admatic": {
     "cats": [
@@ -1906,6 +1983,15 @@
       "/adnabu-shopify"
     ],
     "website": "https://www.adnabu.com"
+  },
+  "Adnami": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.adnami.io/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*adnami\\.io(?:[:/?#]|$)"
+    ]
   },
   "Adnegah": {
     "cats": [
@@ -2552,6 +2638,14 @@
     "saas": true,
     "website": "https://www.adroll.com/features/consent-management"
   },
+  "Ads Pro Plugin": {
+    "cats": [
+      36,
+      87
+    ],
+    "website": "https://codecanyon.net/user/scripteo",
+    "html": "/wp-content/plugins/ap-plugin-scripteo"
+  },
   "AdScale": {
     "cats": [
       36
@@ -2574,6 +2668,24 @@
     ],
     "website": "https://www.adscale.com"
   },
+  "AdScore": {
+    "cats": [
+      16
+    ],
+    "website": "https://www.adscore.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*adsco\\.re(?:[:/?#]|$)"
+    ]
+  },
+  "AdSpeed": {
+    "cats": [
+      36
+    ],
+    "website": "https://www.adspeed.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*adspeed\\.net(?:[:/?#]|$)"
+    ]
+  },
   "AdStir": {
     "cats": [
       36
@@ -2585,6 +2697,15 @@
     },
     "website": "https://ad-stir.com/",
     "scriptSrc": "/js/adstir\\.(?:m|s)\\.js"
+  },
+  "AdsWizz": {
+    "cats": [
+      36
+    ],
+    "website": "https://adswizz.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*adswizz\\.com(?:[:/?#]|$)"
+    ]
   },
   "AdThrive": {
     "cats": [
@@ -2722,6 +2843,15 @@
     ],
     "website": "https://adverticum.net"
   },
+  "AdvertServe": {
+    "cats": [
+      36
+    ],
+    "website": "https://advertserve.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*advertserve\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Advin": {
     "cats": [
       6
@@ -2751,6 +2881,15 @@
       "//cdn\\.advisible\\.com"
     ],
     "website": "https://www.advisible.com"
+  },
+  "Adwise": {
+    "cats": [
+      36
+    ],
+    "website": "https://adwise.bg",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*adwise\\.bg(?:[:/?#]|$)"
+    ]
   },
   "Adwos CMS": {
     "cats": [
@@ -3632,7 +3771,9 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "urbanairship\\.\\w+/notify/v([\\d.]+)\\;version:\\1"
+      "urbanairship\\.\\w+/notify/v([\\d.]+)\\;version:\\1",
+      "^https?://(?:[a-z0-9-]+\\.)*urbanairship\\.com(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*aswpsdkus\\.com(?:[:/?#]|$)"
     ],
     "website": "https://www.airship.com"
   },
@@ -4395,6 +4536,15 @@
     ],
     "website": "https://www.alibabacloud.com/product/object-storage-service"
   },
+  "Alibaba Cloud OSS": {
+    "cats": [
+      31
+    ],
+    "website": "https://www.alibabacloud.com/product/object-storage-service",
+    "headers": {
+      "Server": "^aliyunoss"
+    }
+  },
   "Alibaba Cloud Verification Code": {
     "cats": [
       16
@@ -4405,6 +4555,16 @@
       "cf\\.aliyun\\.com/"
     ],
     "website": "https://help.aliyun.com/document_detail/193141.html"
+  },
+  "Alibaba Mail": {
+    "cats": [
+      30
+    ],
+    "website": "https://qiye.aliyun.com/",
+    "html": [
+      "^(?=[\\s\\S]{0,}?action=\"/alimail/error/browserlog)(?=[\\s\\S]{0,}?content=\"阿里企业邮箱)",
+      "action=\"/alimail/error/browserlog"
+    ]
   },
   "Alimama": {
     "cats": [
@@ -4790,6 +4950,15 @@
       "api\\.alpharank\\.io/"
     ],
     "website": "https://www.alpharank.ai"
+  },
+  "AlphaSSL": {
+    "cats": [
+      16
+    ],
+    "website": "https://alphassl.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*alphassl\\.com(?:[:/?#]|$)"
+    ]
   },
   "Alpine Linux": {
     "cats": [
@@ -6197,7 +6366,12 @@
       "poa"
     ],
     "saas": true,
-    "website": "https://amplience.com"
+    "website": "https://amplience.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*amplience\\.net(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*bigcontent\\.io(?:[:/?#]|$)",
+      "^https?://(?:[a-z0-9-]+\\.)*adis\\.ws(?:[:/?#]|$)"
+    ]
   },
   "Amplify JS": {
     "cats": [
@@ -6451,6 +6625,15 @@
       "/wp-content/themes/lovecraft/"
     ],
     "website": "https://andersnoren.se/teman/lovecraft-wordpress-theme"
+  },
+  "Anedot": {
+    "cats": [
+      41
+    ],
+    "website": "https://anedot.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*anedot\\.com(?:[:/?#]|$)"
+    ]
   },
   "Anetwork": {
     "cats": [
@@ -7378,6 +7561,13 @@
       "class=\"spark-logo\""
     ]
   },
+  "Apache Struts": {
+    "cats": [
+      18
+    ],
+    "website": "https://struts.apache.org/",
+    "html": "=\"struts\\.token\\.name\""
+  },
   "Apache Superset": {
     "cats": [
       204,
@@ -7494,6 +7684,15 @@
     ],
     "oss": true,
     "website": "https://www.apereo.org/projects/cas"
+  },
+  "Apester": {
+    "cats": [
+      5
+    ],
+    "website": "https://apester.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*apester\\.com(?:[:/?#]|$)"
+    ]
   },
   "ApexCharts.js": {
     "cats": [
@@ -8354,6 +8553,15 @@
       "onetime"
     ],
     "website": "https://www.aptusshop.pl"
+  },
+  "Apusic Application Server": {
+    "cats": [
+      22
+    ],
+    "website": "https://www.apusic.com/",
+    "headers": {
+      "Server": "^apusic application server"
+    }
   },
   "Apxium": {
     "cats": [
@@ -9786,6 +9994,15 @@
     ],
     "website": "https://athoscommerce.com/"
   },
+  "Atlas AI Digital Assistant": {
+    "cats": [
+      52
+    ],
+    "website": "https://atlas.verse.ai/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*atlasrtx\\.com(?:[:/?#]|$)"
+    ]
+  },
   "Atlasmic": {
     "cats": [
       52
@@ -10038,6 +10255,13 @@
     "icon": "Atlassian Statuspage.svg",
     "website": "https://www.atlassian.com/software/statuspage"
   },
+  "Atmail": {
+    "cats": [
+      30
+    ],
+    "website": "https://www.atmail.com/",
+    "html": "powered by atmail"
+  },
   "Atome": {
     "cats": [
       91
@@ -10192,6 +10416,15 @@
       "audienzz": ""
     },
     "website": "https://audienzz.ch"
+  },
+  "Audioboom": {
+    "cats": [
+      5
+    ],
+    "website": "https://audioboom.com",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*audioboom\\.com(?:[:/?#]|$)"
+    ]
   },
   "AudioEye": {
     "cats": [
@@ -11000,6 +11233,15 @@
     ],
     "saas": true,
     "website": "https://www.avanser.com"
+  },
+  "AvantLink": {
+    "cats": [
+      71
+    ],
+    "website": "https://www.avantlink.com/",
+    "scriptSrc": [
+      "^https?://(?:[a-z0-9-]+\\.)*avmws\\.com(?:[:/?#]|$)"
+    ]
   },
   "Avasam": {
     "cats": [

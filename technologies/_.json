@@ -413,6 +413,13 @@
     ],
     "website": "https://51degrees.com"
   },
+  "53KF": {
+    "cats": [
+      52
+    ],
+    "website": "https://www.53kf.com/",
+    "html": "powered by 53kf"
+  },
   "5centsCDN": {
     "cats": [
       31
@@ -478,6 +485,13 @@
       "6valley_cookie_consent"
     ],
     "website": "https://6valley.app"
+  },
+  "74cms": {
+    "cats": [
+      1
+    ],
+    "website": "https://www.74cms.com/",
+    "html": "powered by <a href=\"http://www\\.74cms\\.com/\""
   },
   "7moor": {
     "cats": [
