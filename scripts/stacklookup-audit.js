@@ -228,6 +228,18 @@ function forkWorker(index, env) {
     return require('child_process').fork(__filename, ['--worker'], { env, serialization: 'advanced' })
 }
 
+/**
+ * Kill any Chromium still using a worker's profile. A launch that times out
+ * waiting for the WS endpoint can leave its browser running in its own
+ * process group, out of reach of the worker's own teardown.
+ */
+function killProfileBrowsers(dataDir) {
+    const pattern = `user-data-dir=${dataDir}`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        // Profile 1 must not match profile 10.
+        + '( |$)'
+    require('child_process').spawnSync('pkill', ['-KILL', '-f', pattern])
+}
+
 /** One scan at a time per worker; a worker that dies fails only its host. */
 function workerScanner(worker) {
     let current = null
@@ -291,7 +303,9 @@ function printSummary(summary, log) {
 }
 
 /* eslint-disable no-console */
-async function main(args = process.argv.slice(2), { root = ROOT, Driver, lookup, spawnWorker = forkWorker, log = console.log } = {}) {
+async function main(args = process.argv.slice(2), {
+    root = ROOT, Driver, lookup, spawnWorker = forkWorker, killBrowsers = killProfileBrowsers, log = console.log,
+} = {}) {
     const options = parseArgs(args)
     if (options.help) {
         log('Usage: node scripts/stacklookup-audit.js [--check] [--force] [--limit N] [--concurrency N]\n' +
@@ -331,15 +345,19 @@ async function main(args = process.argv.slice(2), { root = ROOT, Driver, lookup,
             // injected Driver scans in-process (tests); otherwise each worker
             // is a child process with its own Chromium profile.
             const workers = []
-            const killWorkers = () => workers.forEach((worker) => worker.kill())
+            const dataDirs = []
+            // SIGKILL: Puppeteer's SIGTERM handler can keep a worker alive.
+            const killWorkers = () => {
+                workers.forEach((worker) => worker.kill('SIGKILL'))
+                dataDirs.forEach(killBrowsers)
+            }
             const scanners = Array.from({ length: Math.min(options.concurrency, pending.length) }, (_, index) => {
                 if (Driver) {
                     return (domain) => scanDomain(domain, Driver, lookup)
                 }
-                const worker = spawnWorker(index, {
-                    ...process.env,
-                    CHROMIUM_DATA_DIR: path.join(os.tmpdir(), `stacklookup-chromium-${index}`),
-                })
+                const dataDir = path.join(os.tmpdir(), `stacklookup-chromium-${index}`)
+                dataDirs.push(dataDir)
+                const worker = spawnWorker(index, { ...process.env, CHROMIUM_DATA_DIR: dataDir })
                 workers.push(worker)
                 return workerScanner(worker)
             })

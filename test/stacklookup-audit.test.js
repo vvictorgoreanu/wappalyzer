@@ -230,17 +230,22 @@ test('without an injected driver each worker is a separate process with its own 
                     technologies: [], patterns: {}, errors: [], error: null,
                 } }))
             },
-            kill() { worker.killed = true },
+            kill(signal) { worker.killed = signal },
         }
         spawned.push(worker)
         return worker
     }
-    const result = await main(['--concurrency', '2'], { root, spawnWorker, log() {} })
+    const swept = []
+    const killBrowsers = (dataDir) => swept.push(dataDir)
+    const result = await main(['--concurrency', '2'], { root, spawnWorker, killBrowsers, log() {} })
 
     assert.equal(spawned.length, 2)
     assert.equal(new Set(spawned.map(({ env }) => env.CHROMIUM_DATA_DIR)).size, 2)
     assert.deepEqual(scanned.map(([, domain]) => domain).sort(), ['a.com', 'b.com', 'c.com'])
-    assert.ok(spawned.every(({ killed }) => killed))
+    // A worker whose Chromium launch failed can ignore SIGTERM and leave that
+    // browser running, so workers are killed outright and their profiles swept.
+    assert.ok(spawned.every(({ killed }) => killed === 'SIGKILL'))
+    assert.deepEqual(swept.sort(), spawned.map(({ env }) => env.CHROMIUM_DATA_DIR).sort())
     assert.equal(result.rows.length, 3)
 })
 
@@ -261,7 +266,7 @@ test('a worker that exits mid-scan fails only its host', async (t) => {
             kill() {},
         }
     }
-    await main(['--concurrency', '1'], { root, spawnWorker, log() {} })
+    await main(['--concurrency', '1'], { root, spawnWorker, killBrowsers() {}, log() {} })
     const read = (host) => JSON.parse(fs.readFileSync(path.join(root, `data/stacklookup-scans/${host}.json`)))
 
     assert.match(read('a.com').error, /worker exited/i)

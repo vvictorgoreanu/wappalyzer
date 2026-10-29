@@ -216,3 +216,13 @@ person can check the call in seconds.
   timeout this time (7), and one probe with an empty regex `(?:)` for
   Microsoft Azure Table storage did not fire again. Full run estimate
   ~35–45 min.
+- 50-host trial on the faster settings (hosts 51–100, 2026-10-29): all 50
+  scanned in ~1.5 min (median 7 s per host), but the run never exited. One
+  Chromium launch timed out waiting for the WS endpoint and stayed alive; its
+  worker ignored SIGTERM (Puppeteer's handler), so the parent waited on it.
+  Fixed test-first: workers get SIGKILL at teardown, then any Chromium still
+  using a worker profile is killed by `user-data-dir` (checked on real Chrome:
+  profile 7 killed, profile 70 untouched). A 6-host run then exited in 18 s
+  with no leftover processes. Across 106 hosts (1,532 claims): confirmed 525,
+  unreviewed 444, unverifiable 321, suspect-pattern 119, implied-only 80,
+  not-detected 39, not-in-catalog 4.
