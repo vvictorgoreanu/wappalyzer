@@ -5,7 +5,7 @@ const Wappalyzer = require('../../wappalyzer')
 const { extractPatterns } = require('./pattern-triage')
 
 const VERDICTS = [
-    'confirmed', 'suspect-pattern', 'implied-only', 'not-detected',
+    'confirmed', 'suspect-pattern', 'unreviewed', 'implied-only', 'not-detected',
     'not-in-catalog', 'unverifiable',
 ]
 
@@ -218,6 +218,8 @@ function evidenceFor(technology, pattern, record, reviews) {
         matchedText: pattern.match ?? pattern.value ?? '',
         context: contextFor(pattern, record),
         credible: credible && vendorMatch,
+        // Neither confirmed nor suspect: nothing yet says whether it is sound.
+        unreviewed: !candidates.length && vendorMatch,
         reason: !vendorMatch ? 'Matched text is not the vendor' :
             candidates.length ? candidates.map(({ verdict }) => verdict).join(', ') : 'No pattern review; needs evidence',
     }
@@ -315,7 +317,9 @@ function verdictForClaim(claimed, record, catalog, reviews = new Map()) {
     const patterns = (record.patterns || {})[technology] || []
     if (detected && patterns.length) {
         const evidence = patterns.map((pattern) => evidenceFor(technology, pattern, record, reviews))
-        return { verdict: evidence.some(({ credible }) => credible) ? 'confirmed' : 'suspect-pattern', evidence }
+        const verdict = evidence.some(({ credible }) => credible) ? 'confirmed'
+            : evidence.every(({ unreviewed }) => unreviewed) ? 'unreviewed' : 'suspect-pattern'
+        return { verdict, evidence }
     }
     if (detected) {
         const chain = implicationChain(technology, record, catalog)
@@ -344,7 +348,7 @@ function summarize(rows, weights = new Map()) {
     }
     return [...summary.values()].map((item) => {
         const suspects = item.counts['suspect-pattern'] + item.counts['not-detected']
-        const verifiable = item.claims - item.counts.unverifiable - item.counts['not-in-catalog']
+        const verifiable = item.claims - item.counts.unverifiable - item.counts.unreviewed - item.counts['not-in-catalog']
         const liveCompanies = weights.get(String(item.technology).toLowerCase()) ?? null
         return {
             ...item, suspects, verifiable, liveCompanies,

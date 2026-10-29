@@ -115,9 +115,18 @@ test('suspect-pattern includes regex, matched text and about 200 characters of c
 })
 
 test('missing reviews cannot confirm a repeated match, nor can an explicit vendor mismatch', () => {
-    assert.equal(judge(scan(), []).verdict, 'suspect-pattern')
+    assert.equal(judge(scan(), []).verdict, 'unreviewed')
     assert.match(judge(scan(), []).evidence[0].reason, /review|evidence/i)
     assert.equal(judge(scan({ patterns: { Vendor: [detection({ vendorMatch: false })] } })).verdict, 'suspect-pattern')
+    assert.equal(judge(scan({ patterns: { Vendor: [detection({ vendorMatch: false })] } }), []).verdict, 'suspect-pattern')
+})
+
+test('a reviewed bad pattern makes the claim suspect even beside an unreviewed one', () => {
+    const record = scan({ patterns: { Vendor: [detection(), detection({ regex: 'other-marker', match: 'other-marker' })] } })
+
+    assert.equal(judge(record, [review('too-broad')]).verdict, 'suspect-pattern')
+    assert.equal(judge(record, [review('credible')]).verdict, 'confirmed')
+    assert.equal(judge(record, []).verdict, 'unreviewed')
 })
 
 test('second-pass overturn is credible; confirm retains bad verdict; needs-evidence remains pending', () => {
@@ -204,11 +213,12 @@ test('errors, timeouts, parked pages, non-2xx and missing cache are unverifiable
     }
 })
 
-test('summaries exclude unverifiable and unknown claims from rates and rank suspects by live companies', () => {
+test('summaries exclude unverifiable, unreviewed and unknown claims from rates and rank suspects by live companies', () => {
     const rows = [
         { technology: 'Vendor', verdict: 'confirmed' },
         { technology: 'Vendor', verdict: 'suspect-pattern' },
         { technology: 'Vendor', verdict: 'unverifiable' },
+        { technology: 'Vendor', verdict: 'unreviewed' },
         { technology: 'Parent', verdict: 'not-detected' },
         { technology: null, claimed: 'missing', verdict: 'not-in-catalog' },
     ]
@@ -218,7 +228,8 @@ test('summaries exclude unverifiable and unknown claims from rates and rank susp
     assert.equal(result[0].weightedSuspects, 1000)
     const vendor = result.find(({ technology }) => technology === 'Vendor')
 
-    assert.equal(vendor.claims, 3)
+    assert.equal(vendor.claims, 4)
+    assert.equal(vendor.counts.unreviewed, 1)
     assert.equal(vendor.verifiable, 2)
     assert.equal(vendor.suspectRate, 0.5)
     assert.equal(result.find(({ technology }) => technology === 'missing').suspectRate, null)

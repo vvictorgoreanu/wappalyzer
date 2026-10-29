@@ -87,6 +87,7 @@ that page snippet becomes the regression fixture for its fix.
 | --- | --- | --- |
 | `confirmed` | Detected now by a pattern reviewed `credible`, and the matched text is the vendor's | none |
 | `suspect-pattern` | Detected now, but by a pattern reviewed `too-broad`/`wrong`, or the matched text is not the vendor's | the regex → fix candidate |
+| `unreviewed` | Detected now, but only by patterns no review covered (mostly generic tags outside the top 500: HTML, CSS, JavaScript, Open Graph) | none yet; excluded from rates |
 | `implied-only` | Not seen directly; present only because another technology implies it (e.g. MySQL from WordPress) | the `implies` rule, or the technology that implies it |
 | `not-detected` | Page loads fine and nothing fires for it now | stale row, or a rule the crawler has and we lack; the page's HTML, headers and script URLs are searched for the technology's patterns to tell which |
 | `not-in-catalog` | No catalog entry with that name | crawler-only rule (DNS-based, likely) |
@@ -197,3 +198,11 @@ person can check the call in seconds.
   hosts; no leftover Chrome processes. Full run of 1,262 hosts estimated ~4 h at
   concurrency 3.
 - `probe: 'full'` kept: StackLookup claims can come from probe-only patterns.
+- 50-host trial (45 scanned in 7 min, ~27 s per host per worker): 711 claims.
+  223 of the first 297 `suspect-pattern` rows had only unreviewed patterns on
+  generic tags (HTML, CSS, JavaScript, HTML5, Open Graph, HTTP/3, HSTS), which
+  the verdict table never called suspect. Added verdict `unreviewed`, excluded
+  from rates. Now: confirmed 282, unreviewed 223, unverifiable 75,
+  suspect-pattern 74, implied-only 44, not-detected 13. Top suspects (core-js,
+  Apache HTTP Server, Schannel, Nunjucks, Google Campaign Manager 360, Lodash,
+  IBM WebSphere) match the second-pass findings.
