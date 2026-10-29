@@ -18,7 +18,12 @@
         "sweep:check": "node scripts/dns-sweep.js --check",
         "audit:xhr": "node scripts/xhr-audit.js",
         "audit:xhr:check": "node scripts/xhr-audit.js --check",
-        "check:whitespace": "node scripts/check-whitespace.js"
+        "check:whitespace": "node scripts/check-whitespace.js",
+        "triage:patterns": "node scripts/pattern-triage.js",
+        "review:patterns": "node scripts/pattern-review.js",
+        "audit:stacklookup": "node scripts/stacklookup-audit.js",
+        "audit:stacklookup:check": "node scripts/stacklookup-audit.js --check",
+        "report:stacklookup": "node scripts/stacklookup-report.js"
     },
     "keywords": [
         "analyze",
