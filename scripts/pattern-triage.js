@@ -14,6 +14,7 @@
  *   node scripts/pattern-triage.js            # top-500 technologies
  *   node scripts/pattern-triage.js --all      # every technology
  *   node scripts/pattern-triage.js --batch=150
+ *   node scripts/pattern-triage.js --force    # rewrite batches despite answers
  *
  * Writes (local-only, gitignored):
  *   data/pattern-triage.json             every pattern with its verdict
@@ -34,6 +35,7 @@ const REVIEW_DIR = path.join(DATA, 'pattern-review')
 
 const args = process.argv.slice(2)
 const ALL = args.includes('--all')
+const FORCE = args.includes('--force')
 const batchArg = args.find((value) => value.startsWith('--batch='))
 const BATCH = batchArg ? Number(batchArg.split('=')[1]) : 150
 
@@ -147,8 +149,22 @@ function main() {
             a.id - b.id
         )
 
-    fs.rmSync(REVIEW_DIR, { recursive: true, force: true })
     fs.mkdirSync(REVIEW_DIR, { recursive: true })
+
+    // Answers refer to pattern ids, which shift when the catalog changes, so
+    // rewriting the batches under existing answers would misattribute them.
+    const answered = fs.readdirSync(REVIEW_DIR).filter((file) => /^answers-\d+\.jsonl$/.test(file))
+
+    if (answered.length && !FORCE) {
+        throw new Error(
+            `data/pattern-review/ holds reviewer answers (${answered.join(', ')}); ` +
+                'move them aside or rerun with --force to rewrite the batches'
+        )
+    }
+
+    fs.readdirSync(REVIEW_DIR)
+        .filter((file) => /^batch-\d+\.jsonl$/.test(file))
+        .forEach((file) => fs.rmSync(path.join(REVIEW_DIR, file)))
 
     for (let start = 0; start < review.length; start += BATCH) {
         const lines = review.slice(start, start + BATCH).map((item) =>

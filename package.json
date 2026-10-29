@@ -19,7 +19,8 @@
         "audit:xhr": "node scripts/xhr-audit.js",
         "audit:xhr:check": "node scripts/xhr-audit.js --check",
         "check:whitespace": "node scripts/check-whitespace.js",
-        "triage:patterns": "node scripts/pattern-triage.js"
+        "triage:patterns": "node scripts/pattern-triage.js",
+        "review:patterns": "node scripts/pattern-review.js"
     },
     "keywords": [
         "analyze",

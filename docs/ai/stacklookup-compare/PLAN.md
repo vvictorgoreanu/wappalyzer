@@ -152,8 +152,9 @@ person can check the call in seconds.
       full confidence).
 - [ ] 0b review of the 724 suspect + unclear patterns, done in ChatGPT to save
       Claude usage: `data/pattern-review/batch-001..005.jsonl` with
-      `chatgpt-review-prompt.md`; answers go to `answers-NNN.jsonl`, then a
-      small importer merges them and lists `too-broad`/`wrong` for your check
+      `chatgpt-review-prompt.md`; answers go to `answers-NNN.jsonl`, then
+      `npm run review:patterns` merges them and lists `too-broad`/`wrong` for
+      your check (importer ready, waiting on answers)
 - [ ] 0c spot-check: you review a random 5 % of `credible` and every
       `too-broad`/`wrong`
 - [ ] 1 helpers + tests
