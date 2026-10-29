@@ -3477,7 +3477,9 @@
     {
       "name": "IBM WebSphere Application Server",
       "fieldsAdded": [],
-      "fieldsRemoved": [],
+      "fieldsRemoved": [
+        "headers"
+      ],
       "valuesChanged": [
         "html"
       ]

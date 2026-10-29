@@ -320,14 +320,10 @@
     ],
     "icon": "IBM WebSphere Application Server.svg",
     "website": "https://www.ibm.com/products/websphere-application-server",
-    "headers": {
-      "X-Powered-By": "^Servlet/\\d{2}\\.\\d{2}$|PHP/?",
-      "Server": "^(?:IBM )?HTTP Server/\\d+(?:\\.\\d+)?(?:\\.\\d+)?(?:.?[ \\(\\w\\)]+)?"
-    },
     "meta": {
       "generator": "^(?:IBM )?WebSphere Application Server$"
     },
-    "html": "<!-- Created by IBM -->|[\\w\\s]IBM"
+    "html": "\\bIBM\\s+WebSphere\\s+Application\\s+Server\\b"
   },
   "IBM WebSphere DataPower": {
     "cats": [
