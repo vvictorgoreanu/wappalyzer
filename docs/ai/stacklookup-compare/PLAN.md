@@ -259,3 +259,26 @@ person can check the call in seconds.
   AdSense 65 → 2. Unchanged at 100 %: IBM WebSphere, Apache HTTP Server,
   Google Campaign Manager 360, Schannel, Cloudflare Bot Management,
   Nunjucks, BlueKai.
+- Report (2026-10-29): `npm run report:stacklookup` writes the gitignored
+  `data/stacklookup-report.md`: technologies ranked by weighted suspects, the
+  regexes behind each suspect with up to three example hosts, and unreviewed
+  claims split by StackLookup's `is_countable` (read from
+  `../stack-lookup-app/data/technology_v0.csv` or `--catalog`): 5,050 are web
+  basics, about 360 are technologies without a pattern review.
+  Hand check of 10 rows:
+  - Suspect patterns that are real false positives: IBM WebSphere (`IBM`
+    inside a base64 favicon; `PHP/` in X-Powered-By), Google Campaign Manager
+    360 (`fls.doubleclick.net` is a string inside every gtag.js), Schannel
+    (any X-Powered-By value, e.g. `Next.js`), BlueKai (`bkr` matching a Vite
+    bundle, case-insensitive). Apache HTTP Server is the exception: the
+    `Server: Apache` matches are genuine, so its review is stricter than the
+    hosts warrant.
+  - Not detected: two hosts were Chromium's own ERR_BLOCKED_BY_CLIENT page
+    cached as HTTP 200 (10 hosts in all, 111 claims; probably redirects
+    aborted by `noRedirect`). Such pages are now unverifiable. The other
+    misses show no trace of the technology on the homepage (CM360, GTM,
+    BlueKai, Apache behind nginx); a consent-gated tag or another page could
+    explain them.
+  Totals after that fix: confirmed 6,830, unreviewed 5,411, unverifiable
+  4,308, suspect-pattern 1,452, implied-only 895, not-detected 424,
+  not-in-catalog 40; suspect rate 19.5 % of 9,601 verifiable claims.

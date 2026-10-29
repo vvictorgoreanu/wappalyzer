@@ -318,6 +318,10 @@ function verdictForClaim(claimed, record, catalog, reviews = new Map()) {
     if (!record || record.error || parked || !(record.status >= 200 && record.status < 300)) {
         return { verdict: 'unverifiable', reason: !record ? 'No cached scan' : record.error || (parked ? 'Parked page' : `HTTP ${record.status}`) }
     }
+    // A blocked navigation leaves Chromium's error page, still with HTTP 200.
+    if (/^chrome-error:/.test(record.finalUrl || '')) {
+        return { verdict: 'unverifiable', reason: `Browser error page (${record.finalUrl})` }
+    }
     const detected = (record.technologies || []).some((item) => (typeof item === 'string' ? item : item.name) === technology)
     const patterns = (record.patterns || {})[technology] || []
     if (detected && patterns.length) {

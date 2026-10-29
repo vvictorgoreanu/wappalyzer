@@ -22,7 +22,8 @@
         "triage:patterns": "node scripts/pattern-triage.js",
         "review:patterns": "node scripts/pattern-review.js",
         "audit:stacklookup": "node scripts/stacklookup-audit.js",
-        "audit:stacklookup:check": "node scripts/stacklookup-audit.js --check"
+        "audit:stacklookup:check": "node scripts/stacklookup-audit.js --check",
+        "report:stacklookup": "node scripts/stacklookup-report.js"
     },
     "keywords": [
         "analyze",

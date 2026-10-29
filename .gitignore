@@ -17,6 +17,7 @@ data/zeppelin/
 # StackLookup audit scan cache and verdicts. Regenerate with `npm run audit:stacklookup`:
 data/stacklookup-scans/
 data/stacklookup-audit.json
+data/stacklookup-report.md
 #
 # Bulky generated measurements. Regenerate with `npm run sweep` / `npm run audit:xhr`:
 data/dns-sweep-domains.txt

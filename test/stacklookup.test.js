@@ -240,6 +240,11 @@ test('errors, timeouts, parked pages, non-2xx and missing cache are unverifiable
     }
 })
 
+test("Chromium's own error page is not the site, even when it reports HTTP 200", () => {
+    const record = scan({ finalUrl: 'chrome-error://chromewebdata/' })
+    assert.deepEqual(judge(record), { verdict: 'unverifiable', reason: 'Browser error page (chrome-error://chromewebdata/)' })
+})
+
 test('summaries exclude unverifiable, unreviewed and unknown claims from rates and rank suspects by live companies', () => {
     const rows = [
         { technology: 'Vendor', verdict: 'confirmed' },
