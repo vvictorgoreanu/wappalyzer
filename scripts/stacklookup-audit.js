@@ -7,7 +7,7 @@
  *
  *   CHROMIUM_BIN=/path/to/chrome npm run audit:stacklookup -- --limit 5
  *   npm run audit:stacklookup -- --check       # cache only, no driver loaded
- *   npm run audit:stacklookup -- --force --concurrency 3
+ *   npm run audit:stacklookup -- --force --concurrency 6
  *
  * Each concurrent scan runs in its own worker process: driver.js reads
  * CHROMIUM_DATA_DIR once at load, so Chromium profiles cannot differ within
@@ -35,13 +35,17 @@ const SCAN_OPTIONS = {
     noRedirect: true,
     maxUrls: 1,
     recursive: false,
+    // The driver staggers its ~50 probe requests by `delay` ms each, so the
+    // default 500 held every host for ~26 s. Each probe keeps its own 3 s
+    // timeout; the audit checks patterns, not crawler politeness.
+    delay: 0,
     // Keep the complete HTML for subsequent offline evidence inspection.
     htmlMaxCols: 0,
     htmlMaxRows: 0,
 }
 
 function parseArgs(args) {
-    const options = { check: false, force: false, limit: Infinity, concurrency: 3, help: false }
+    const options = { check: false, force: false, limit: Infinity, concurrency: 6, help: false }
     for (let index = 0; index < args.length; index++) {
         const [flag, inline, extra] = args[index].split('=')
         if (extra !== undefined) {
@@ -126,7 +130,7 @@ async function bounded(work, milliseconds, message) {
     }
 }
 
-async function scanDomain(domain, Driver) {
+async function scanDomain(domain, Driver, lookup) {
     const url = `https://${hostName(domain)}/`
     const record = {
         domain, url, finalUrl: url, status: null, headers: {}, html: '',
@@ -136,6 +140,19 @@ async function scanDomain(domain, Driver) {
     const started = Date.now()
     let driver
     let site
+    // Exported hosts include mail and cPanel subdomains that no longer exist;
+    // Chromium would spend a full scan on each. Only a definite NXDOMAIN skips.
+    if (lookup) {
+        try {
+            await lookup(hostName(domain))
+        } catch (error) {
+            if (error.code === 'ENOTFOUND') {
+                record.error = `Hostname could not be resolved (${hostName(domain)})`
+                record.elapsedMs = Date.now() - started
+                return record
+            }
+        }
+    }
     try {
         driver = new Driver(SCAN_OPTIONS)
         await bounded(async () => {
@@ -235,7 +252,7 @@ function workerScanner(worker) {
 async function runWorker() {
     const Driver = require('../driver')
     process.on('message', async ({ domain }) => {
-        process.send({ domain, record: await scanDomain(domain, Driver) })
+        process.send({ domain, record: await scanDomain(domain, Driver, require('dns').promises.lookup) })
     })
 }
 
@@ -274,11 +291,11 @@ function printSummary(summary, log) {
 }
 
 /* eslint-disable no-console */
-async function main(args = process.argv.slice(2), { root = ROOT, Driver, spawnWorker = forkWorker, log = console.log } = {}) {
+async function main(args = process.argv.slice(2), { root = ROOT, Driver, lookup, spawnWorker = forkWorker, log = console.log } = {}) {
     const options = parseArgs(args)
     if (options.help) {
         log('Usage: node scripts/stacklookup-audit.js [--check] [--force] [--limit N] [--concurrency N]\n' +
-            '--check rebuilds the audit from cached scans without network. Default concurrency: 3.')
+            '--check rebuilds the audit from cached scans without network. Default concurrency: 6.')
         return null
     }
     const data = path.join(root, 'data')
@@ -317,7 +334,7 @@ async function main(args = process.argv.slice(2), { root = ROOT, Driver, spawnWo
             const killWorkers = () => workers.forEach((worker) => worker.kill())
             const scanners = Array.from({ length: Math.min(options.concurrency, pending.length) }, (_, index) => {
                 if (Driver) {
-                    return (domain) => scanDomain(domain, Driver)
+                    return (domain) => scanDomain(domain, Driver, lookup)
                 }
                 const worker = spawnWorker(index, {
                     ...process.env,

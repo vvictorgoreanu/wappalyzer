@@ -206,3 +206,13 @@ person can check the call in seconds.
   suspect-pattern 74, implied-only 44, not-detected 13. Top suspects (core-js,
   Apache HTTP Server, Schannel, Nunjucks, Google Campaign Manager 360, Lodash,
   IBM WebSphere) match the second-pass findings.
+- Speed-up (goal: much faster, ~90–95 % same output; the audit checks
+  patterns, not crawler politeness). Every host took 26–31 s because the driver
+  starts its ~53 probe requests `delay` (500 ms) apart. Now `delay: 0` (each
+  probe keeps its 3 s timeout), hosts with NXDOMAIN are recorded without
+  launching Chromium (other resolver errors still scan), default concurrency 6.
+  Rescan of 12 cached hosts: 26 s wall (was ~27 s per host); per host 5–19 s;
+  157 of 165 detections kept (95.2 %). Losses: one host hit a navigation
+  timeout this time (7), and one probe with an empty regex `(?:)` for
+  Microsoft Azure Table storage did not fire again. Full run estimate
+  ~35–45 min.

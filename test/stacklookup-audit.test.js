@@ -22,7 +22,7 @@ function fixture(t) {
 test('audit flags accept spaced and equals values and reject invalid options before scanning', () => {
     assert.deepEqual(parseArgs(['--check', '--limit', '5', '--concurrency=2']),
         { check: true, force: false, limit: 5, concurrency: 2, help: false })
-    assert.equal(parseArgs([]).concurrency, 3)
+    assert.equal(parseArgs([]).concurrency, 6)
     for (const args of [['--limit', '0'], ['--concurrency=-1'], ['--limit=NaN'], ['--unknown'], ['--limit=1.5']]) {
         assert.throws(() => parseArgs(args), /option|positive integer/i)
     }
@@ -67,6 +67,8 @@ test('scanner retains page evidence, limits hosts, reuses cache and rescans only
             assert.equal(options.maxWait, 15000)
             assert.equal(options.maxUrls, 1)
             assert.equal(options.recursive, false)
+            // Probes start together; each is still bounded by its own 3 s timeout.
+            assert.equal(options.delay, 0)
         }
         async init() {}
         async open(url) {
@@ -264,4 +266,34 @@ test('a worker that exits mid-scan fails only its host', async (t) => {
 
     assert.match(read('a.com').error, /worker exited/i)
     assert.equal(read('b.com').error, null)
+})
+
+test('a host that does not resolve is recorded without launching a browser', async (t) => {
+    const root = fixture(t)
+    let constructed = 0
+    class Driver {
+        constructor() { constructed++ }
+        async init() {}
+        async open(url) {
+            return { on() {}, async analyze() { return { urls: [{ url, status: 200 }], technologies: [], patterns: {} } } }
+        }
+        async destroy() {}
+    }
+    const lookup = async (host) => {
+        if (host === 'a.com') {
+            throw Object.assign(new Error(`getaddrinfo ENOTFOUND ${host}`), { code: 'ENOTFOUND' })
+        }
+        if (host === 'b.com') {
+            throw Object.assign(new Error(`getaddrinfo EAI_AGAIN ${host}`), { code: 'EAI_AGAIN' })
+        }
+        return { address: '192.0.2.1' }
+    }
+    const result = await main(['--concurrency', '1'], { root, Driver, lookup, log() {} })
+    const read = (host) => JSON.parse(fs.readFileSync(path.join(root, `data/stacklookup-scans/${host}.json`)))
+
+    assert.match(read('a.com').error, /could not be resolved/i)
+    // A transient resolver failure is not proof the host is gone, so it is scanned.
+    assert.equal(read('b.com').error, null)
+    assert.equal(constructed, 1)
+    assert.equal(result.rows.find(({ domain }) => domain === 'a.com').verdict, 'unverifiable')
 })
