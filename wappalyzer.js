@@ -834,6 +834,9 @@ const Wappalyzer = {
                             pattern: {
                                 ...pattern,
                                 type,
+                                // One regex can sit under several keys; this
+                                // names the one that matched.
+                                key,
                                 value,
                                 match: matches[0],
                             },

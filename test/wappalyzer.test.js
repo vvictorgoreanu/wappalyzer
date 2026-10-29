@@ -499,6 +499,19 @@ test('analyzeJs treats an empty pattern as an existence check', () => {
     assert.equal(detections.length, 1)
 })
 
+test('keyed detections name the key that matched', () => {
+    // One regex can sit under several keys of a technology; only the key says
+    // which one fired (`core` vs `__core-js_shared__`).
+    load({ Example: { cats: [1], js: { Example: '', ExampleShared: '' }, headers: { 'X-Example': '' } } })
+
+    const [js] = Wappalyzer.analyzeJs([{ name: 'Example', chain: 'ExampleShared', value: true }])
+    const [header] = Wappalyzer.analyzeManyToMany(
+        Wappalyzer.technologies.find(({ name }) => name === 'Example'), 'headers', { 'x-example': ['1'] })
+
+    assert.equal(js.pattern.key, 'ExampleShared')
+    assert.equal(header.pattern.key, 'x-example')
+})
+
 test('analyzeJs ignores a chain whose technology is not loaded', () => {
     load({ Example: { cats: [1], js: { Example: '' } } })
 

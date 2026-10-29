@@ -21,7 +21,9 @@ function fixture(t) {
 
 test('audit flags accept spaced and equals values and reject invalid options before scanning', () => {
     assert.deepEqual(parseArgs(['--check', '--limit', '5', '--concurrency=2']),
-        { check: true, force: false, retry: false, limit: 5, concurrency: 2, help: false })
+        { check: true, force: false, retry: false, refreshKeys: false, limit: 5, concurrency: 2, help: false })
+    assert.equal(parseArgs(['--refresh-keys']).refreshKeys, true)
+    assert.throws(() => parseArgs(['--refresh-keys', '--retry']), /refresh-keys/i)
     assert.equal(parseArgs(['--retry']).retry, true)
     assert.throws(() => parseArgs(['--retry', '--check']), /retry/i)
     assert.equal(parseArgs([]).concurrency, 6)
@@ -79,7 +81,7 @@ test('scanner retains page evidence, limits hosts, reuses cache and rescans only
             return {
                 on(event, listener) { listeners[event] = listener },
                 detections: [{ technology: { name: 'Vendor', implies: [] }, pattern: {
-                    type: 'html', regex: /vendor-marker/i, value: `${'a'.repeat(300)}vendor-marker`, match: 'vendor-marker',
+                    type: 'html', key: 'main', regex: /vendor-marker/i, value: `${'a'.repeat(300)}vendor-marker`, match: 'vendor-marker',
                 } }],
                 async analyze() {
                     await listeners.response({ response: { url: () => url, status: () => 200, headers: () => ({ server: 'vendor' }) } })
@@ -101,6 +103,7 @@ test('scanner retains page evidence, limits hosts, reuses cache and rescans only
     assert.equal(cached.headers.server, 'vendor')
     assert.equal(cached.html, 'vendor-marker')
     assert.ok(cached.patterns.Vendor[0].value.length > 250)
+    assert.equal(cached.patterns.Vendor[0].key, 'main')
     await main(['--limit=1'], options)
     assert.equal(opened, 1)
     await main(['--limit=1', '--force'], options)
@@ -336,4 +339,30 @@ test('--retry rescans only hosts that failed to load in time, with a longer wait
 
     assert.deepEqual(opened.sort(), ['https://a.com/', 'https://b.com/'])
     assert.equal(JSON.parse(fs.readFileSync(path.join(root, 'data/stacklookup-scans/a.com.json'))).options.maxWait, 30000)
+})
+
+test('--refresh-keys rescans loaded hosts cached without detection keys and keeps them if the rescan fails', async (t) => {
+    const root = fixture(t)
+    fs.writeFileSync(path.join(root, 'data/stacklookup-sample-part2.csv'),
+        'root_domain,domain,time,crawls,technologies\nc.com,c.com,2026-10-29,1,vendor\n')
+    const cache = (host, fields) => fs.writeFileSync(path.join(root, `data/stacklookup-scans/${host}.json`), JSON.stringify({
+        domain: host, finalUrl: `https://${host}/`, status: 200, html: 'old', technologies: [], patterns: {}, errors: [], error: null, ...fields,
+    }))
+    cache('a.com', { patterns: { Vendor: [{ type: 'js', regex: '', match: '', value: 'true' }] } })
+    cache('b.com', { patterns: { Vendor: [{ type: 'js', key: 'Vendor', regex: '', match: '', value: 'true' }] } })
+    cache('c.com', { error: 'HTTP 404', patterns: { Vendor: [{ type: 'js', regex: '', match: '', value: 'true' }] } })
+    const opened = []
+    class Driver {
+        async init() {}
+        async open(url) {
+            opened.push(url)
+            return { on() {}, async analyze() { return { urls: [{ url, error: 'Navigation timeout of 15000 ms exceeded' }], technologies: [], patterns: {} } } }
+        }
+        async destroy() {}
+    }
+    await main(['--refresh-keys'], { root, Driver, log() {} })
+
+    assert.deepEqual(opened, ['https://a.com/'])
+    // A refresh that fails must not replace evidence the earlier scan had.
+    assert.equal(JSON.parse(fs.readFileSync(path.join(root, 'data/stacklookup-scans/a.com.json'))).html, 'old')
 })

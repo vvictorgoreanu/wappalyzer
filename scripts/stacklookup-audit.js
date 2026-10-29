@@ -9,6 +9,7 @@
  *   npm run audit:stacklookup -- --check       # cache only, no driver loaded
  *   npm run audit:stacklookup -- --force --concurrency 6
  *   npm run audit:stacklookup -- --retry --concurrency 4   # slow loads only, 30 s
+ *   npm run audit:stacklookup -- --refresh-keys          # caches without detection keys
  *
  * Each concurrent scan runs in its own worker process: driver.js reads
  * CHROMIUM_DATA_DIR once at load, so Chromium profiles cannot differ within
@@ -47,17 +48,21 @@ const SCAN_OPTIONS = {
 // A retry gives slow pages twice the navigation budget.
 const RETRY_OPTIONS = { ...SCAN_OPTIONS, maxWait: 30000 }
 // Failures that say the page or browser was slow, not that the host is broken.
+// Channels whose detections carry the key that matched (JS chain, header,
+// cookie, meta name, DNS type, DOM selector). Caches from before keys were
+// recorded cannot tell same-regex patterns on different keys apart.
+const KEYED = new Set(['js', 'headers', 'cookies', 'meta', 'dns', 'dom'])
 const RETRYABLE = /^(?:Navigation timeout|Timed out after \d+ ms while waiting for the WS endpoint|Scan watchdog expired|Scan worker exited)/
 
 function parseArgs(args) {
-    const options = { check: false, force: false, retry: false, limit: Infinity, concurrency: 6, help: false }
+    const options = { check: false, force: false, retry: false, refreshKeys: false, limit: Infinity, concurrency: 6, help: false }
     for (let index = 0; index < args.length; index++) {
         const [flag, inline, extra] = args[index].split('=')
         if (extra !== undefined) {
             throw new Error(`Invalid option: ${args[index]}`)
         }
-        if (['--check', '--force', '--retry', '--help'].includes(flag) && inline === undefined) {
-            options[flag.slice(2)] = true
+        if (['--check', '--force', '--retry', '--refresh-keys', '--help'].includes(flag) && inline === undefined) {
+            options[flag === '--refresh-keys' ? 'refreshKeys' : flag.slice(2)] = true
         } else if (['--limit', '--concurrency'].includes(flag)) {
             const value = inline === undefined ? args[++index] : inline
             if (!/^\d+$/.test(value || '') || !Number.isSafeInteger(Number(value)) || Number(value) < 1) {
@@ -70,6 +75,9 @@ function parseArgs(args) {
     }
     if (options.retry && options.check) {
         throw new Error('--retry scans and cannot be combined with --check')
+    }
+    if (options.refreshKeys && (options.check || options.retry)) {
+        throw new Error('--refresh-keys cannot be combined with --check or --retry')
     }
     return options
 }
@@ -206,7 +214,7 @@ async function scanDomain(domain, Driver, lookup, scanOptions = SCAN_OPTIONS) {
             for (const { technology, pattern } of site.detections) {
                 const bucket = record.patterns[technology.name] || []
                 bucket.push({
-                    type: pattern.type, regex: pattern.regex.source,
+                    type: pattern.type, key: pattern.key, regex: pattern.regex.source,
                     value: pattern.value, match: pattern.match,
                     confidence: pattern.confidence, version: pattern.version,
                     implies: (technology.implies || []).map(({ name }) => name),
@@ -319,9 +327,10 @@ async function main(args = process.argv.slice(2), {
 } = {}) {
     const options = parseArgs(args)
     if (options.help) {
-        log('Usage: node scripts/stacklookup-audit.js [--check] [--force] [--retry] [--limit N] [--concurrency N]\n' +
+        log('Usage: node scripts/stacklookup-audit.js [--check] [--force] [--retry] [--refresh-keys] [--limit N] [--concurrency N]\n' +
             '--check rebuilds the audit from cached scans without network.\n' +
             '--retry rescans hosts that timed out or whose browser failed to start, with a 30 s wait.\n' +
+            '--refresh-keys rescans loaded hosts cached before detection keys were recorded.\n' +
             'Default concurrency: 6.')
         return null
     }
@@ -352,9 +361,12 @@ async function main(args = process.argv.slice(2), {
     if (!options.check) {
         fs.mkdirSync(cacheDirectory, { recursive: true })
         const cacheFile = (domain) => path.join(cacheDirectory, `${hostName(domain)}.json`)
+        const keyless = (record) => record && !record.error && Object.values(record.patterns || {})
+            .some((patterns) => patterns.some(({ type, key }) => KEYED.has(type) && key === undefined))
         const pending = domains.filter((domain) => options.retry
             ? RETRYABLE.test((readCache(cacheFile(domain)) || {}).error || '')
-            : options.force || !fs.existsSync(cacheFile(domain)))
+            : options.refreshKeys ? keyless(readCache(cacheFile(domain)))
+                : options.force || !fs.existsSync(cacheFile(domain)))
         const scanOptions = options.retry ? RETRY_OPTIONS : SCAN_OPTIONS
         log(`${domains.length} hosts selected; ${pending.length} to scan, ${domains.length - pending.length} cached.`)
         if (pending.length) {
@@ -387,6 +399,10 @@ async function main(args = process.argv.slice(2), {
                     while (next < pending.length) {
                         const domain = pending[next++]
                         const record = await scan(domain)
+                        if (options.refreshKeys && record.error) {
+                            log(`${domain}: kept previous scan (${record.error})`)
+                            continue
+                        }
                         const target = path.join(cacheDirectory, `${hostName(domain)}.json`)
                         fs.writeFileSync(`${target}.tmp`, `${JSON.stringify(record, null, 2)}\n`)
                         fs.renameSync(`${target}.tmp`, target)

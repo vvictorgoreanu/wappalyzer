@@ -151,6 +151,33 @@ test('review keys prevent identical regexes on different headers from borrowing 
     assert.equal(judge(record, patterns).verdict, 'suspect-pattern')
 })
 
+test('a detection key selects its own review, ignoring the case the engine lowercases', () => {
+    const patterns = [
+        review('credible', { channel: 'js', key: 'Vendor_shared', pattern: '' }),
+        review('too-broad', { id: 2, channel: 'js', key: 'core', pattern: '' }),
+        review('credible', { id: 3, channel: 'headers', key: 'X-Vendor', pattern: '' }),
+    ]
+    const js = (key) => scan({ patterns: { Vendor: [detection({ type: 'js', regex: '(?:)', key, match: '', value: 'true' })] } })
+    const header = scan({ patterns: { Vendor: [detection({ type: 'headers', regex: '(?:)', key: 'x-vendor', match: '', value: '1' })] } })
+
+    assert.equal(judge(js('Vendor_shared'), patterns).verdict, 'confirmed')
+    assert.equal(judge(js('core'), patterns).verdict, 'suspect-pattern')
+    assert.equal(judge(header, patterns).verdict, 'confirmed')
+})
+
+test('DOM reviews are matched by selector, which the engine reports as the key', () => {
+    const record = scan({ patterns: { Vendor: [detection({ type: 'dom', regex: '(?:)', key: '.vendor-app', match: '', value: '' })] } })
+    const patterns = [
+        review('credible', { channel: 'dom', key: null, pattern: '.vendor-app' }),
+        review('too-broad', { id: 2, channel: 'dom', key: null, pattern: '.slider' }),
+    ]
+
+    assert.equal(judge(record, patterns).verdict, 'confirmed')
+    // Without a key (older caches) every selector stays a candidate.
+    delete record.patterns.Vendor[0].key
+    assert.equal(judge(record, patterns).verdict, 'suspect-pattern')
+})
+
 test('regex attributes are stripped using the engine parser when matching reviews', () => {
     assert.equal(judge(scan(), [review('credible', { pattern: 'vendor-marker\\;confidence:50' })]).verdict, 'confirmed')
 })

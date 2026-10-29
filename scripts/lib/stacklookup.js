@@ -206,8 +206,13 @@ function contextFor(pattern, record) {
 
 function evidenceFor(technology, pattern, record, reviews) {
     let candidates = reviews.get(reviewKey(technology, pattern.type, pattern.regex)) || []
-    if (pattern.key !== undefined) {
-        candidates = candidates.filter((candidate) => candidate.key === pattern.key)
+    if (pattern.key !== undefined && pattern.key !== null) {
+        // The engine lowercases header, cookie, meta and DNS keys; reviews keep
+        // the catalog's case. DOM reviews hold the selector, the engine's key.
+        const same = (a, b) => String(a).toLowerCase() === String(b).toLowerCase()
+        candidates = candidates.filter((candidate) => candidate.key != null
+            ? same(candidate.key, pattern.key)
+            : pattern.type !== 'dom' || candidate.pattern === pattern.key)
     }
     const credible = candidates.length > 0 && candidates.every(({ verdict }) => verdict === 'credible')
     const vendorMatch = pattern.vendorMatch !== false
