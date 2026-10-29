@@ -381,27 +381,39 @@ async function main(args = process.argv.slice(2), {
         }
     }
 
-    const scans = new Map(domains.map((domain) => [domain, readCache(path.join(cacheDirectory, `${hostName(domain)}.json`))]))
-    const claims = new Map()
+    const samplesByDomain = new Map(domains.map((domain) => [domain, []]))
     for (const sample of samples.filter(({ domain }) => selected.has(domain))) {
-        for (const { claimed, technology } of mapNames(sample.technologies, catalog)) {
-            const key = JSON.stringify([sample.domain, claimed])
-            if (!claims.has(key)) {
-                claims.set(key, {
-                    domain: sample.domain, rootDomains: [], claimed, technology,
-                    ...verdictForClaim(technology || claimed, scans.get(sample.domain), catalog, reviews),
-                })
-            }
-            const roots = claims.get(key).rootDomains
-            if (!roots.includes(sample.root_domain)) {
-                roots.push(sample.root_domain)
+        samplesByDomain.get(sample.domain).push(sample)
+    }
+    const claims = new Map()
+    const missingCache = []
+    // One cache at a time: each holds a full page, and 1,261 of them (2.5 GB)
+    // exhausted the heap when read together.
+    for (const [domain, domainSamples] of samplesByDomain) {
+        const scan = readCache(path.join(cacheDirectory, `${hostName(domain)}.json`))
+        if (!scan) {
+            missingCache.push(domain)
+        }
+        for (const sample of domainSamples) {
+            for (const { claimed, technology } of mapNames(sample.technologies, catalog)) {
+                const key = JSON.stringify([sample.domain, claimed])
+                if (!claims.has(key)) {
+                    claims.set(key, {
+                        domain: sample.domain, rootDomains: [], claimed, technology,
+                        ...verdictForClaim(technology || claimed, scan, catalog, reviews),
+                    })
+                }
+                const roots = claims.get(key).rootDomains
+                if (!roots.includes(sample.root_domain)) {
+                    roots.push(sample.root_domain)
+                }
             }
         }
     }
     const rows = [...claims.values()]
     const result = {
         generatedAt: new Date().toISOString(), sources: files, inputErrors,
-        hosts: domains.length, missingCache: domains.filter((domain) => !scans.get(domain)),
+        hosts: domains.length, missingCache,
         rows, summary: summarize(rows, weights),
     }
     fs.writeFileSync(output, `${JSON.stringify(result, null, 2)}\n`)

@@ -226,3 +226,15 @@ person can check the call in seconds.
   with no leftover processes. Across 106 hosts (1,532 claims): confirmed 525,
   unreviewed 444, unverifiable 321, suspect-pattern 119, implied-only 80,
   not-detected 39, not-in-catalog 4.
+- Full run (2026-10-29): 1,155 new hosts scanned in ~28 min (median 6 s,
+  p90 16 s per host), 2.5 GB of cache, no leftover Chromium. The parent then
+  ran out of heap building verdicts, because it read every cache at once. It
+  now reads one cache per host; `--check` over all 1,261 hosts takes 39 s.
+  No unit test reproduces the out-of-memory failure; the output is unchanged
+  and covered by the existing tests.
+  Result: 19,360 claims — confirmed 5,975, unreviewed 5,052, unverifiable
+  5,458, suspect-pattern 1,564, implied-only 826, not-detected 445,
+  not-in-catalog 40; suspect rate 22.8 % of 8,810 verifiable claims.
+  Hosts: 829 loaded with 2xx; failures led by navigation timeout (91), HTTP
+  404 (51), NXDOMAIN (45), Chromium launch timeout (45, load from six
+  browsers), HTTP 403 (41).
