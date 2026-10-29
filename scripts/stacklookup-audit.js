@@ -82,11 +82,11 @@ function parseArgs(args) {
     return options
 }
 
-function loadReviews(directory, log) {
+/** The pattern reviews and second-pass answers as stored, or null without merged.json. */
+function readReviewData(directory) {
     const merged = path.join(directory, 'merged.json')
     if (!fs.existsSync(merged)) {
-        log('No local pattern-review/merged.json; direct matches will need evidence review.')
-        return buildReviews([])
+        return null
     }
     const patterns = JSON.parse(fs.readFileSync(merged, 'utf8'))
     if (!Array.isArray(patterns)) {
@@ -105,7 +105,16 @@ function loadReviews(directory, log) {
             }
         }
     }
-    return buildReviews(patterns, answers)
+    return { patterns, answers }
+}
+
+function loadReviews(directory, log) {
+    const data = readReviewData(directory)
+    if (!data) {
+        log('No local pattern-review/merged.json; direct matches will need evidence review.')
+        return buildReviews([])
+    }
+    return buildReviews(data.patterns, data.answers)
 }
 
 function loadWeights(data, log) {
@@ -467,4 +476,4 @@ if (require.main === module && process.argv[2] === '--worker') {
 }
 /* eslint-enable no-console */
 
-module.exports = { main, parseArgs }
+module.exports = { main, parseArgs, readReviewData }

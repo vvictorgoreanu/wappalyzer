@@ -282,3 +282,60 @@ person can check the call in seconds.
   Totals after that fix: confirmed 6,830, unreviewed 5,411, unverifiable
   4,308, suspect-pattern 1,452, implied-only 895, not-detected 424,
   not-in-catalog 40; suspect rate 19.5 % of 9,601 verifiable claims.
+- Replay (2026-10-29): `npm run replay:stacklookup [-- --base <rev>]` matches
+  every technology whose definition differs from the base revision against
+  the loaded cached pages, old rules and new, and writes the gitignored
+  `data/stacklookup-replay.md`: hosts lost, gained and kept, each with its
+  StackLookup verdict and matched text. Page channels the cache holds in full
+  are analyzed again; values kept only in detections (external script
+  bodies, JavaScript globals) are matched again. New matches in those, and in
+  DOM, XHR, DNS or probe rules, need a rescan; the replay names those
+  channels. Trial with Codex's second-pass fix for IBM WebSphere (complete
+  product name in HTML, both header rules removed): 160 → 0 hosts in 16 s;
+  137 of the lost hosts were suspect claims, 23 unclaimed, none confirmed.
+
+## Decision records, one per technology (approved 2026-10-29)
+
+Before any regex changes, each technology gets a record that argues the
+change with evidence, so "why did we change IBM WebSphere?" has a single
+answer to open. Records live in the gitignored `data/decisions/<slug>.md`
+(they name customer hosts); only the generator is tracked.
+
+`npm run decision:stacklookup -- "<technology>"` writes or refreshes one
+record. Sections:
+
+1. **Verdict at a glance**: the decision (change / keep / remove / needs
+   evidence), claims by verdict, suspect rate, live companies.
+2. **Current definition**: every rule as it is in `technologies/*.json`.
+3. **Per rule, the evidence**:
+   - Codex first review (verdict, why, fix) and second pass (verdict, why,
+     action, fix, shouldMatch / shouldNotMatch) from `data/pattern-review/`;
+   - what the rule matched on our scans: hosts by StackLookup verdict and up
+     to 5 examples with host, channel, matched text and context;
+   - how to see it yourself: the cache file and the exact command that
+     prints the match.
+4. **Missed claims**: not-detected hosts and what their pages contain.
+5. **Proposed change and its replay**: the working-tree edit if there is
+   one, otherwise Codex's second-pass fix applied in memory (the catalog is
+   not touched); hosts lost, kept and added, confirmed claims lost.
+6. **Argument**: written by hand (by me, for you to check). It covers the
+   cause, the proof, the alternatives considered, the risk, and the tests to add. It is kept between
+   `<!-- decision:start -->` and `<!-- decision:end -->`, so regenerating the
+   evidence never overwrites it.
+
+Steps:
+1. `scripts/lib/stacklookup-decision.js` + tests (record from fixtures:
+   sections, examples, preserved argument block, in-memory fix replay).
+   Check: `npm test`.
+2. `scripts/stacklookup-decision.js` CLI, `package.json` script,
+   `.gitignore` `data/decisions/`. Check: CLI test with a temp root.
+3. First record, IBM WebSphere, with the argument written, for you to review
+   before the format is used for the rest. Check: you read it.
+4. Then one record per technology in fix order (Schannel, IBM WebSphere,
+   CM360, BlueKai, Nunjucks, Cloudflare Bot Management, Apache), each
+   before its fix PR.
+
+Progress (2026-10-29): steps 1–3 done. `npm run decision:stacklookup -- "<tech>"`
+writes `data/decisions/<slug>.md`; `--show <host>` prints what the current
+rules match on one cached page. The IBM WebSphere record has its argument
+written and is waiting for review; no other record has been made.
