@@ -28,6 +28,9 @@ const PATHS = {
     sweepResults: path.join(ROOT, 'data/dns-sweep-results.json'),
     auditUrls: path.join(ROOT, 'data/xhr-audit-urls.txt'),
     auditResults: path.join(ROOT, 'data/xhr-audit-results.json'),
+    stacklookupScans: path.join(ROOT, 'data/stacklookup-scans'),
+    stacklookupAudit: path.join(ROOT, 'data/stacklookup-audit.json'),
+    zeppelin: path.join(ROOT, 'data/zeppelin'),
 }
 
 const present = (...keys) => keys.every((key) => fs.existsSync(PATHS[key]))

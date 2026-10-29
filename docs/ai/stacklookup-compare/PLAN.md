@@ -150,14 +150,50 @@ person can check the call in seconds.
       suspect 107, unclear 617 (319 distinctive but not naming the vendor, 282
       naming only a parent brand shared with other technologies, 16 below
       full confidence).
-- [ ] 0b review of the 724 suspect + unclear patterns, done in ChatGPT to save
-      Claude usage: `data/pattern-review/batch-001..005.jsonl` with
+- [x] 0b review of the 724 suspect + unclear patterns, delegated to Codex
+      through the Claude–Codex Bridge to save Claude usage:
+      `data/pattern-review/batch-001..005.jsonl` with
       `chatgpt-review-prompt.md`; answers go to `answers-NNN.jsonl`, then
       `npm run review:patterns` merges them and lists `too-broad`/`wrong` for
-      your check (importer ready, waiting on answers)
+      your check. All 5 batches imported on 2026-10-29 (724 answers: credible
+      452, too-broad 203, wrong 24, needs-evidence 45); report in
+      `data/pattern-review/review-report.txt`.
+      Note: the bridge only lets Codex read the approved project root, and
+      macOS blocks it from `~/Desktop`, so repos live in `~/Developer`.
 - [ ] 0c spot-check: you review a random 5 % of `credible` and every
-      `too-broad`/`wrong`
-- [ ] 1 helpers + tests
-- [ ] 2 scanner + cache
+      `too-broad`/`wrong`. A Codex second pass over the 227 `too-broad`/`wrong`
+      (2026-10-29, `data/pattern-review/second-pass-report.md`): remove 107,
+      narrow 47, lower confidence 7, overturned 33, needs evidence 33. Every
+      narrowed regex compiles and passes its own match / no-match examples;
+      DOM selectors are not yet checked.
+- [x] 1 helpers + tests — `scripts/lib/stacklookup.js`, `test/stacklookup.test.js`
+      (written by Codex; Codex had no Node, so the suite was first run here).
+- [x] 2 scanner + cache — `scripts/stacklookup-audit.js`,
+      `test/stacklookup-audit.test.js`. `npm run test:unit`: 334 tests, 312 pass,
+      0 fail, 22 skipped (pre-existing untracked-data skips).
 - [ ] 3 report
-- [ ] 4 gitignore, untracked.js, npm script
+- [x] 4 gitignore, untracked.js, npm scripts `audit:stacklookup` and
+      `audit:stacklookup:check`.
+
+### Track B notes (2026-10-29)
+
+- Classification is conservative: missing or `needs-evidence` pattern reviews
+  give `suspect-pattern` with a stated reason. A second-pass `overturn` makes a
+  pattern credible; `confirm` keeps its bad verdict.
+- CSV truncation is caught for a short last row or an unclosed quote; a cut
+  inside an unquoted final field cannot be detected from the CSV alone.
+- Hostnames are validated before building URLs or cache paths.
+- First 5-host trial found two defects, both fixed test-first:
+  1. driver.js reads `CHROMIUM_DATA_DIR` once at load, so concurrent drivers in
+     one process shared `/tmp/chromium` and all but one failed ("browser is
+     already running"). Each worker is now a forked process with its own
+     profile in `os.tmpdir()/stacklookup-chromium-<n>`; driver.js unchanged.
+  2. Any timeout made the whole host `unverifiable` (4 of 5 hosts). Failed
+     secondary probes now go to `probeErrors`; `Timeout (<channel>)` sets
+     `partial`, and only an undetected technology with patterns on that channel
+     becomes `unverifiable`. Each cache records `elapsedMs`.
+- Trial after the fixes (`--limit 5 --force`, system Chrome, unsandboxed): 56 s
+  with 3 workers (was 3m16s sequential); unverifiable only on the two HTTP 404
+  hosts; no leftover Chrome processes. Full run of 1,262 hosts estimated ~4 h at
+  concurrency 3.
+- `probe: 'full'` kept: StackLookup claims can come from probe-only patterns.

@@ -10,8 +10,13 @@ data/requested-products.json
 docs/coverage.json
 docs/coverage.md
 scripts/lib/requested-mapping.js
-# StackLookup exports (top-500 list, per-domain samples):
+# StackLookup exports (top-500 list, per-domain samples) and the Zeppelin
+# queries that produce them (they list customer domains):
 data/stacklookup-*.csv
+data/zeppelin/
+# StackLookup audit scan cache and verdicts. Regenerate with `npm run audit:stacklookup`:
+data/stacklookup-scans/
+data/stacklookup-audit.json
 #
 # Bulky generated measurements. Regenerate with `npm run sweep` / `npm run audit:xhr`:
 data/dns-sweep-domains.txt
