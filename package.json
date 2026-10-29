@@ -23,7 +23,8 @@
         "review:patterns": "node scripts/pattern-review.js",
         "audit:stacklookup": "node scripts/stacklookup-audit.js",
         "audit:stacklookup:check": "node scripts/stacklookup-audit.js --check",
-        "report:stacklookup": "node scripts/stacklookup-report.js"
+        "report:stacklookup": "node scripts/stacklookup-report.js",
+        "replay:stacklookup": "node scripts/stacklookup-replay.js"
     },
     "keywords": [
         "analyze",

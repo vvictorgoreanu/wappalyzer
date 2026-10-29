@@ -282,3 +282,14 @@ person can check the call in seconds.
   Totals after that fix: confirmed 6,830, unreviewed 5,411, unverifiable
   4,308, suspect-pattern 1,452, implied-only 895, not-detected 424,
   not-in-catalog 40; suspect rate 19.5 % of 9,601 verifiable claims.
+- Replay (2026-10-29): `npm run replay:stacklookup [-- --base <rev>]` matches
+  every technology whose definition differs from the base revision against
+  the loaded cached pages, old rules and new, and writes the gitignored
+  `data/stacklookup-replay.md`: hosts lost, gained and kept, each with its
+  StackLookup verdict and matched text. Page channels the cache holds in full
+  are analyzed again; values kept only in detections (external script
+  bodies, JavaScript globals) are matched again. New matches in those, and in
+  DOM, XHR, DNS or probe rules, need a rescan; the replay names those
+  channels. Trial with Codex's second-pass fix for IBM WebSphere (complete
+  product name in HTML, both header rules removed): 160 → 0 hosts in 16 s;
+  137 of the lost hosts were suspect claims, 23 unclaimed, none confirmed.
