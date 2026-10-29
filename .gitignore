@@ -10,12 +10,17 @@ data/requested-products.json
 docs/coverage.json
 docs/coverage.md
 scripts/lib/requested-mapping.js
+# StackLookup exports (top-500 list, per-domain samples):
+data/stacklookup-*.csv
 #
 # Bulky generated measurements. Regenerate with `npm run sweep` / `npm run audit:xhr`:
 data/dns-sweep-domains.txt
 data/dns-sweep-results.json
 data/xhr-audit-urls.txt
 data/xhr-audit-results.json
+# Pattern triage output and its review batches. Regenerate with `npm run triage:patterns`:
+data/pattern-triage.json
+data/pattern-review/
 
 # Puppeteer's downloaded browser.
 /chrome
