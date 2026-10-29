@@ -60,15 +60,8 @@ function catalogAt(root, revision) {
 const loaded = (record) => !record.error && record.status >= 200 && record.status < 300 &&
     !/^chrome-error:/.test(record.finalUrl || '')
 
-function main(args = process.argv.slice(2), { root = ROOT, log = console.log, readBase = catalogAt } = {}) {
-    const options = parseArgs(args)
-    const before = readBase(root, options.base)
-    const after = loadCatalog(path.join(root, 'technologies')).technologies
-    const names = changedTechnologies(before, after)
-    if (!names.length) {
-        log(`No technology differs from ${options.base}; nothing to replay.`)
-        return []
-    }
+/** StackLookup's verdict per [host, technology], from the audit if it was run. */
+function loadClaims(root, log) {
     const claims = new Map()
     const audit = path.join(root, 'data/stacklookup-audit.json')
     if (fs.existsSync(audit)) {
@@ -78,6 +71,10 @@ function main(args = process.argv.slice(2), { root = ROOT, log = console.log, re
     } else {
         log('No data/stacklookup-audit.json; hosts are listed without their StackLookup claim.')
     }
+    return claims
+}
+
+function replayCaches(root, names, before, after, claims) {
     const entries = new Map(names.map((name) => [name, []]))
     const directory = path.join(root, 'data/stacklookup-scans')
     // One cache at a time; together they do not fit in memory.
@@ -94,7 +91,20 @@ function main(args = process.argv.slice(2), { root = ROOT, log = console.log, re
             }
         }
     }
-    const summaries = names.map((name) => summarizeReplay(name, entries.get(name), rescanChannels(before[name], after[name])))
+    return names.map((name) => summarizeReplay(name, entries.get(name), rescanChannels(before[name], after[name])))
+}
+
+function main(args = process.argv.slice(2), { root = ROOT, log = console.log, readBase = catalogAt } = {}) {
+    const options = parseArgs(args)
+    const before = readBase(root, options.base)
+    const after = loadCatalog(path.join(root, 'technologies')).technologies
+    const names = changedTechnologies(before, after)
+    if (!names.length) {
+        log(`No technology differs from ${options.base}; nothing to replay.`)
+        return []
+    }
+    const claims = loadClaims(root, log)
+    const summaries = replayCaches(root, names, before, after, claims)
     const output = path.join(root, 'data/stacklookup-replay.md')
     fs.writeFileSync(output, renderReplay(summaries))
     for (const summary of summaries) {
@@ -115,4 +125,4 @@ if (require.main === module) {
     }
 }
 
-module.exports = { main, parseArgs }
+module.exports = { main, parseArgs, catalogAt, loadClaims, replayCaches, loaded }

@@ -198,4 +198,4 @@ function renderReplay(summaries, { limit = 25 } = {}) {
     return lines.join('\n')
 }
 
-module.exports = { changedTechnologies, replayHost, rescanChannels, summarizeReplay, renderReplay }
+module.exports = { changedTechnologies, replayHost, rescanChannels, summarizeReplay, renderReplay, cell, evidence }

@@ -19,6 +19,8 @@ data/stacklookup-scans/
 data/stacklookup-audit.json
 data/stacklookup-report.md
 data/stacklookup-replay.md
+# Decision records per technology; they name customer hosts:
+data/decisions/
 #
 # Bulky generated measurements. Regenerate with `npm run sweep` / `npm run audit:xhr`:
 data/dns-sweep-domains.txt
