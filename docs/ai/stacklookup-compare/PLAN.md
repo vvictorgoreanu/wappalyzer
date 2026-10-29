@@ -246,3 +246,16 @@ person can check the call in seconds.
   30 s. Totals: confirmed 6,646, unreviewed 5,472, unverifiable 4,122 (was
   5,458), suspect-pattern 1,700, implied-only 908, not-detected 472,
   not-in-catalog 40; suspect rate 22.3 % of 9,726 verifiable claims.
+- Detection keys (2026-10-29): the engine dropped which key a keyed
+  detection matched, so a host matching one credible key of a technology
+  was judged against every review of that technology, including too-broad
+  ones. Detections now carry `key`; verdicts match the review for that key
+  (case-insensitive; DOM by selector). `--refresh-keys` rescanned the 1,079
+  loaded hosts whose cache had no keys in 28 min; 80 failed this time and
+  kept their previous scan. Totals: confirmed 6,836, unreviewed 5,445,
+  unverifiable 4,197, suspect-pattern 1,460, implied-only 900, not-detected
+  482, not-in-catalog 40; suspect rate 20.1 % of 9,678 verifiable claims.
+  Most of the change: core-js suspects 141 → 13, Sentry 32 → 2, Google
+  AdSense 65 → 2. Unchanged at 100 %: IBM WebSphere, Apache HTTP Server,
+  Google Campaign Manager 360, Schannel, Cloudflare Bot Management,
+  Nunjucks, BlueKai.
