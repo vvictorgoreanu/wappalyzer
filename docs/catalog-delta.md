@@ -1311,7 +1311,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | HiChina DNS | - | - | dns |
 | Hostpoint DNS | - | - | dns |
 | IBM Cloudant | - | excludes | - |
-| IBM WebSphere Application Server | - | - | html |
+| IBM WebSphere Application Server | - | headers | html |
 | IFS Enterprise Asset Management | - | - | probe |
 | INFOnline | - | - | scriptSrc |
 | IPinfo | xhrUrl | xhr | - |
