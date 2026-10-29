@@ -8,6 +8,7 @@
  *   CHROMIUM_BIN=/path/to/chrome npm run audit:stacklookup -- --limit 5
  *   npm run audit:stacklookup -- --check       # cache only, no driver loaded
  *   npm run audit:stacklookup -- --force --concurrency 6
+ *   npm run audit:stacklookup -- --retry --concurrency 4   # slow loads only, 30 s
  *
  * Each concurrent scan runs in its own worker process: driver.js reads
  * CHROMIUM_DATA_DIR once at load, so Chromium profiles cannot differ within
@@ -43,15 +44,19 @@ const SCAN_OPTIONS = {
     htmlMaxCols: 0,
     htmlMaxRows: 0,
 }
+// A retry gives slow pages twice the navigation budget.
+const RETRY_OPTIONS = { ...SCAN_OPTIONS, maxWait: 30000 }
+// Failures that say the page or browser was slow, not that the host is broken.
+const RETRYABLE = /^(?:Navigation timeout|Timed out after \d+ ms while waiting for the WS endpoint|Scan watchdog expired|Scan worker exited)/
 
 function parseArgs(args) {
-    const options = { check: false, force: false, limit: Infinity, concurrency: 6, help: false }
+    const options = { check: false, force: false, retry: false, limit: Infinity, concurrency: 6, help: false }
     for (let index = 0; index < args.length; index++) {
         const [flag, inline, extra] = args[index].split('=')
         if (extra !== undefined) {
             throw new Error(`Invalid option: ${args[index]}`)
         }
-        if (['--check', '--force', '--help'].includes(flag) && inline === undefined) {
+        if (['--check', '--force', '--retry', '--help'].includes(flag) && inline === undefined) {
             options[flag.slice(2)] = true
         } else if (['--limit', '--concurrency'].includes(flag)) {
             const value = inline === undefined ? args[++index] : inline
@@ -62,6 +67,9 @@ function parseArgs(args) {
         } else {
             throw new Error(`Unknown option: ${args[index]}`)
         }
+    }
+    if (options.retry && options.check) {
+        throw new Error('--retry scans and cannot be combined with --check')
     }
     return options
 }
@@ -130,14 +138,16 @@ async function bounded(work, milliseconds, message) {
     }
 }
 
-async function scanDomain(domain, Driver, lookup) {
+async function scanDomain(domain, Driver, lookup, scanOptions = SCAN_OPTIONS) {
     const url = `https://${hostName(domain)}/`
     const record = {
         domain, url, finalUrl: url, status: null, headers: {}, html: '',
         technologies: [], patterns: {}, scriptSrc: [], scripts: [], cookies: {}, meta: {},
-        errors: [], error: null, scannedAt: new Date().toISOString(), options: SCAN_OPTIONS,
+        errors: [], error: null, scannedAt: new Date().toISOString(), options: scanOptions,
     }
     const started = Date.now()
+    // 60 s at the default 15 s wait: navigation, probes and teardown in turn.
+    const watchdog = 2 * scanOptions.maxWait + 30000
     let driver
     let site
     // Exported hosts include mail and cPanel subdomains that no longer exist;
@@ -154,7 +164,7 @@ async function scanDomain(domain, Driver, lookup) {
         }
     }
     try {
-        driver = new Driver(SCAN_OPTIONS)
+        driver = new Driver(scanOptions)
         await bounded(async () => {
             await driver.init()
             site = await driver.open(url)
@@ -185,7 +195,7 @@ async function scanDomain(domain, Driver, lookup) {
             // timeout leaves the rest of the evidence usable; verdicts treat
             // that channel as possibly missed.
             Object.assign(record, scanHealth(record.errors))
-        }, 60000, 'Scan watchdog expired after 60000ms')
+        }, watchdog, `Scan watchdog expired after ${watchdog}ms`)
     } catch (error) {
         record.error = String(error.message || error)
     } finally {
@@ -241,7 +251,7 @@ function killProfileBrowsers(dataDir) {
 }
 
 /** One scan at a time per worker; a worker that dies fails only its host. */
-function workerScanner(worker) {
+function workerScanner(worker, scanOptions) {
     let current = null
     const settle = (record) => {
         const { resolve } = current
@@ -257,14 +267,14 @@ function workerScanner(worker) {
     })
     return (domain) => new Promise((resolve) => {
         current = { domain, resolve }
-        worker.send({ domain })
+        worker.send({ domain, options: scanOptions })
     })
 }
 
 async function runWorker() {
     const Driver = require('../driver')
-    process.on('message', async ({ domain }) => {
-        process.send({ domain, record: await scanDomain(domain, Driver, require('dns').promises.lookup) })
+    process.on('message', async ({ domain, options }) => {
+        process.send({ domain, record: await scanDomain(domain, Driver, require('dns').promises.lookup, options) })
     })
 }
 
@@ -304,12 +314,15 @@ function printSummary(summary, log) {
 
 /* eslint-disable no-console */
 async function main(args = process.argv.slice(2), {
-    root = ROOT, Driver, lookup, spawnWorker = forkWorker, killBrowsers = killProfileBrowsers, log = console.log,
+    root = ROOT, Driver, lookup, spawnWorker = forkWorker, killBrowsers = killProfileBrowsers,
+    profileRoot = os.tmpdir(), log = console.log,
 } = {}) {
     const options = parseArgs(args)
     if (options.help) {
-        log('Usage: node scripts/stacklookup-audit.js [--check] [--force] [--limit N] [--concurrency N]\n' +
-            '--check rebuilds the audit from cached scans without network. Default concurrency: 6.')
+        log('Usage: node scripts/stacklookup-audit.js [--check] [--force] [--retry] [--limit N] [--concurrency N]\n' +
+            '--check rebuilds the audit from cached scans without network.\n' +
+            '--retry rescans hosts that timed out or whose browser failed to start, with a 30 s wait.\n' +
+            'Default concurrency: 6.')
         return null
     }
     const data = path.join(root, 'data')
@@ -338,7 +351,11 @@ async function main(args = process.argv.slice(2), {
 
     if (!options.check) {
         fs.mkdirSync(cacheDirectory, { recursive: true })
-        const pending = domains.filter((domain) => options.force || !fs.existsSync(path.join(cacheDirectory, `${hostName(domain)}.json`)))
+        const cacheFile = (domain) => path.join(cacheDirectory, `${hostName(domain)}.json`)
+        const pending = domains.filter((domain) => options.retry
+            ? RETRYABLE.test((readCache(cacheFile(domain)) || {}).error || '')
+            : options.force || !fs.existsSync(cacheFile(domain)))
+        const scanOptions = options.retry ? RETRY_OPTIONS : SCAN_OPTIONS
         log(`${domains.length} hosts selected; ${pending.length} to scan, ${domains.length - pending.length} cached.`)
         if (pending.length) {
             // Only this branch scans; --check cannot launch a browser. An
@@ -353,13 +370,15 @@ async function main(args = process.argv.slice(2), {
             }
             const scanners = Array.from({ length: Math.min(options.concurrency, pending.length) }, (_, index) => {
                 if (Driver) {
-                    return (domain) => scanDomain(domain, Driver, lookup)
+                    return (domain) => scanDomain(domain, Driver, lookup, scanOptions)
                 }
-                const dataDir = path.join(os.tmpdir(), `stacklookup-chromium-${index}`)
+                const dataDir = path.join(profileRoot, `stacklookup-chromium-${index}`)
+                // A kept profile would answer rescans from Chromium's HTTP cache (304).
+                fs.rmSync(dataDir, { recursive: true, force: true })
                 dataDirs.push(dataDir)
                 const worker = spawnWorker(index, { ...process.env, CHROMIUM_DATA_DIR: dataDir })
                 workers.push(worker)
-                return workerScanner(worker)
+                return workerScanner(worker, scanOptions)
             })
             process.once('exit', killWorkers)
             try {

@@ -238,3 +238,11 @@ person can check the call in seconds.
   Hosts: 829 loaded with 2xx; failures led by navigation timeout (91), HTTP
   404 (51), NXDOMAIN (45), Chromium launch timeout (45, load from six
   browsers), HTTP 403 (41).
+- `--retry` (2026-10-29): rescans hosts whose cache failed for slowness
+  (navigation timeout, Chromium launch timeout, watchdog, worker exit) with a
+  30 s wait; worker profiles are emptied at start so rescans are not answered
+  from Chromium's HTTP cache (304). 142 hosts in 12 min with 4 workers: 69 now
+  load (2xx), 21 return a definite HTTP or network error, 52 still time out at
+  30 s. Totals: confirmed 6,646, unreviewed 5,472, unverifiable 4,122 (was
+  5,458), suspect-pattern 1,700, implied-only 908, not-detected 472,
+  not-in-catalog 40; suspect rate 22.3 % of 9,726 verifiable claims.

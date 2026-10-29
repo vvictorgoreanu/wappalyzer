@@ -21,7 +21,9 @@ function fixture(t) {
 
 test('audit flags accept spaced and equals values and reject invalid options before scanning', () => {
     assert.deepEqual(parseArgs(['--check', '--limit', '5', '--concurrency=2']),
-        { check: true, force: false, limit: 5, concurrency: 2, help: false })
+        { check: true, force: false, retry: false, limit: 5, concurrency: 2, help: false })
+    assert.equal(parseArgs(['--retry']).retry, true)
+    assert.throws(() => parseArgs(['--retry', '--check']), /retry/i)
     assert.equal(parseArgs([]).concurrency, 6)
     for (const args of [['--limit', '0'], ['--concurrency=-1'], ['--limit=NaN'], ['--unknown'], ['--limit=1.5']]) {
         assert.throws(() => parseArgs(args), /option|positive integer/i)
@@ -237,10 +239,16 @@ test('without an injected driver each worker is a separate process with its own 
     }
     const swept = []
     const killBrowsers = (dataDir) => swept.push(dataDir)
-    const result = await main(['--concurrency', '2'], { root, spawnWorker, killBrowsers, log() {} })
+    // A profile kept from an earlier run answers rescans from Chromium's HTTP
+    // cache (304), which the audit cannot verify.
+    const stale = path.join(root, 'stacklookup-chromium-0/Default')
+    fs.mkdirSync(stale, { recursive: true })
+    const result = await main(['--concurrency', '2'], { root, spawnWorker, killBrowsers, profileRoot: root, log() {} })
 
     assert.equal(spawned.length, 2)
     assert.equal(new Set(spawned.map(({ env }) => env.CHROMIUM_DATA_DIR)).size, 2)
+    assert.equal(spawned[0].env.CHROMIUM_DATA_DIR, path.join(root, 'stacklookup-chromium-0'))
+    assert.equal(fs.existsSync(stale), false)
     assert.deepEqual(scanned.map(([, domain]) => domain).sort(), ['a.com', 'b.com', 'c.com'])
     // A worker whose Chromium launch failed can ignore SIGTERM and leave that
     // browser running, so workers are killed outright and their profiles swept.
@@ -301,4 +309,31 @@ test('a host that does not resolve is recorded without launching a browser', asy
     assert.equal(read('b.com').error, null)
     assert.equal(constructed, 1)
     assert.equal(result.rows.find(({ domain }) => domain === 'a.com').verdict, 'unverifiable')
+})
+
+test('--retry rescans only hosts that failed to load in time, with a longer wait', async (t) => {
+    const root = fixture(t)
+    fs.writeFileSync(path.join(root, 'data/stacklookup-sample-part2.csv'),
+        'root_domain,domain,time,crawls,technologies\nc.com,c.com,2026-10-29,1,vendor\nd.com,d.com,2026-10-29,1,vendor\n')
+    const cache = (host, fields) => fs.writeFileSync(path.join(root, `data/stacklookup-scans/${host}.json`), JSON.stringify({
+        domain: host, finalUrl: `https://${host}/`, status: null, html: '', technologies: [], patterns: {}, errors: [], ...fields,
+    }))
+    cache('a.com', { error: 'Navigation timeout of 15000 ms exceeded (https://a.com/)' })
+    cache('b.com', { error: 'Timed out after 15000 ms while waiting for the WS endpoint URL to appear in stdout!' })
+    cache('c.com', { error: null, status: 404 })
+    cache('d.com', { error: 'Hostname could not be resolved (d.com)' })
+    const opened = []
+    class Driver {
+        constructor(options) { assert.equal(options.maxWait, 30000) }
+        async init() {}
+        async open(url) {
+            opened.push(url)
+            return { on() {}, async analyze() { return { urls: [{ url, status: 200 }], technologies: [], patterns: {} } } }
+        }
+        async destroy() {}
+    }
+    await main(['--retry'], { root, Driver, log() {} })
+
+    assert.deepEqual(opened.sort(), ['https://a.com/', 'https://b.com/'])
+    assert.equal(JSON.parse(fs.readFileSync(path.join(root, 'data/stacklookup-scans/a.com.json'))).options.maxWait, 30000)
 })
