@@ -9119,9 +9119,6 @@
       "recurring"
     ],
     "saas": true,
-    "scripts": [
-      "svSession"
-    ],
     "website": "https://sirvoy.com"
   },
   "Sistem": {

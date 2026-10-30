@@ -411,3 +411,22 @@ test('core-js is not inferred from an unrelated window.core', () => {
     const names = detectJs({ core: true }).map(({ name }) => name)
     assert.ok(!names.includes(CORE_JS))
 })
+
+const SIRVOY = 'Sirvoy'
+
+test('Sirvoy is detected from the SirvoyBookingWidget global its embed script defines', () => {
+    // secured.sirvoy.com/widget/sirvoy.js sets window.SirvoyBookingWidget
+    assert.ok(detectJs({ SirvoyBookingWidget: true }).some(({ name }) => name === SIRVOY))
+})
+
+test('Sirvoy is not inferred from the svSession cookie name in Wix runtime code', () => {
+    for (const script of [
+        // Wix inline bootstrap: the list of Wix's own session cookies
+        '{cookie:P}=(e=new Set([T,"client-binding",k,"svSession","smSession","server-session-bind","wixSession2","wixSession3"]',
+        // Wix Thunderbolt bundles: site member and visitor session accessors
+        'return{get siteMemberId(){return n.getSiteMemberId()},get visitorId(){return n.getVisitorId()},get svSession(){return n.getUserSession()},viewerSessionId:o',
+        'g=e=>{let{apps:t,siteMemberId:n,visitorId:r,svSession:o,smToken:s}=m,a=i().mapValues(t,"instance")',
+    ]) {
+        assert.ok(!detect({ scripts: [script] }).includes(SIRVOY), script)
+    }
+})
