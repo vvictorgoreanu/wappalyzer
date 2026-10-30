@@ -354,3 +354,34 @@ test('Lodash is not inferred from Underscore.js, which also sets _.VERSION', () 
         assert.ok(names.includes('Underscore.js'), JSON.stringify(chains))
     }
 })
+
+const GA = 'Google Analytics'
+
+test('Google Analytics is detected from a Google tag loaded with a GA4 or Universal Analytics id', () => {
+    for (const [src, version] of [
+        ['https://www.googletagmanager.com/gtag/js?id=G-98NR8EVBH7', 'GA4'],
+        // Loaded by a Tag Manager container, and first-party through Google tag gateway
+        ['https://www.googletagmanager.com/gtag/js?id=G-7LSBWW632J&cx=c&gtm=4e6ar1h1', 'GA4'],
+        ['https://www.example.com/gateway/gtag/js?id=G-3ZQW7GJN96&cx=c&gtm=4e6ar1', 'GA4'],
+        ['https://www.googletagmanager.com/gtag/js?id=UA-176929883-1', 'UA'],
+    ]) {
+        const ga = Wappalyzer.resolve(Wappalyzer.analyze({ scriptSrc: [src] })).find(({ name }) => name === GA)
+        assert.ok(ga, src)
+        assert.equal(ga.version, version, src)
+    }
+})
+
+test('Google Analytics is not inferred from a Google tag loaded for Google Ads, Floodlight or an unknown tag', () => {
+    for (const src of [
+        // Google Ads and Floodlight
+        'https://www.googletagmanager.com/gtag/js?id=AW-17804902379',
+        'https://www.googletagmanager.com/gtag/js?id=AW-17610753647&cx=c&gtm=4e6ar1',
+        'https://www.googletagmanager.com/gtag/js?id=DC-3924042',
+        // A GT- Google tag may or may not have a GA4 destination; the URL cannot tell
+        'https://www.googletagmanager.com/gtag/js?id=GT-NSL7KGS',
+        // An empty id loads no tag
+        'https://www.googletagmanager.com/gtag/js?id=',
+    ]) {
+        assert.ok(!detect({ scriptSrc: [src] }).includes(GA), src)
+    }
+})
