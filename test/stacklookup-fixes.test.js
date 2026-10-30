@@ -385,3 +385,29 @@ test('Google Analytics is not inferred from a Google tag loaded for Google Ads, 
         assert.ok(!detect({ scriptSrc: [src] }).includes(GA), src)
     }
 })
+
+const CORE_JS = 'core-js'
+
+test('core-js is detected from its shared store, its 0.x-2.x core global or babel-polyfill', () => {
+    const cases = [
+        // core-js 3.x: only the shared store
+        [{ '__core-js_shared__': true, '__core-js_shared__.versions.0.version': '3.51.0' }, '3.51.0'],
+        // core-js 2.6 client build: store and window.core
+        [{ '__core-js_shared__': true, '__core-js_shared__.versions.0.version': '2.6.12', core: true, 'core.version': '2.6.12' }, '2.6.12'],
+        // core-js 1.x-2.5 builds have no versions list; core.version carries it
+        [{ '__core-js_shared__': true, core: true, 'core.version': '1.2.6' }, '1.2.6'],
+        // babel-polyfill 6.26.0 (core-js 2.5.0)
+        [{ '__core-js_shared__': true, _babelPolyfill: true, core: true, 'core.version': '2.5.0' }, '2.5.0'],
+    ]
+    for (const [chains, version] of cases) {
+        const coreJs = detectJs(chains).find(({ name }) => name === CORE_JS)
+        assert.ok(coreJs, JSON.stringify(chains))
+        assert.equal(coreJs.version, version, JSON.stringify(chains))
+    }
+})
+
+test('core-js is not inferred from an unrelated window.core', () => {
+    // Cargo sites: the editor stub sets window.core = { markAsEditable }
+    const names = detectJs({ core: true }).map(({ name }) => name)
+    assert.ok(!names.includes(CORE_JS))
+})
