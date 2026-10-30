@@ -3768,19 +3768,12 @@
     ],
     "description": "Google Tag Manager is a tag management system (TMS) that allows you to quickly and easily update measurement codes and related code fragments collectively known as tags on your website or mobile app.",
     "html": [
-      "googletagmanager\\.com/ns\\.html[^>]+></iframe>",
-      "<!-- (?:End )?Google Tag Manager -->"
+      "/ns\\.html\\?(?:[^\"'>]*&)?id=GTM-[A-Z0-9]+"
     ],
     "icon": "Google Tag Manager.svg",
-    "js": {
-      "google_tag_data": "",
-      "google_tag_manager": "",
-      "googletag": ""
-    },
     "saas": true,
     "scriptSrc": [
-      "googletagmanager\\.com/gtm\\.js",
-      "\\.googletagmanager\\.com/"
+      "/gtm\\.js\\?(?:[^#]*&)?id=GTM-"
     ],
     "website": "https://www.google.com/tagmanager"
   },
