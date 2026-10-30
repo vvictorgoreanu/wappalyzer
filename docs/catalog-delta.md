@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 348 |
+| Changed | 349 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (348)
+## Changed (349)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1423,6 +1423,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Salesforce Service Cloud | xhrUrl | xhr | pricing, text |
 | Salesforce Work.Com | meta, xhrUrl | xhr | dom |
 | Salla | scriptSrc | - | - |
+| Schannel | - | - | headers |
 | Segment | - | - | dns |
 | Sentry | - | - | scriptSrc |
 | ServiceNow Agile Development | xhrUrl | xhr | dom, meta |

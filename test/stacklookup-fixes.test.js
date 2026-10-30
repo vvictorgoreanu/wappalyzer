@@ -55,3 +55,21 @@ test('IBM WebSphere Application Server is not inferred from PHP or HTTP server b
     assert.ok(!detect({ headers: { server: ['IBM HTTP Server/9.0.5'] } }).includes(WEBSPHERE))
     assert.ok(!detect({ headers: { server: ['HTTP Server/1.0'] } }).includes(WEBSPHERE))
 })
+
+const SCHANNEL = 'Schannel'
+
+test('Schannel is detected from IIS and HTTP.sys server banners', () => {
+    for (const server of ['Microsoft-IIS/10.0', 'Microsoft-IIS/8.5', 'Microsoft-HTTPAPI/2.0']) {
+        assert.ok(detect({ headers: { server: [server] } }).includes(SCHANNEL), server)
+    }
+})
+
+test('Schannel is not inferred from X-Powered-By or non-Windows server banners', () => {
+    for (const value of ['PHP/8.3.12', 'Next.js', 'ASP.NET', 'Express']) {
+        assert.ok(!detect({ headers: { 'x-powered-by': [value] } }).includes(SCHANNEL), value)
+    }
+    // Apache on Windows ships with OpenSSL, not Schannel.
+    for (const server of ['nginx', 'Apache/2.4.58 (Win64) OpenSSL/3.1.3', 'cloudflare']) {
+        assert.ok(!detect({ headers: { server: [server] } }).includes(SCHANNEL), server)
+    }
+})

@@ -2046,8 +2046,7 @@
       22
     ],
     "headers": {
-      "server": ".*(Microsoft-HTTPAPI|Microsoft-IIS)/.*",
-      "x-powered-by": ".*(.*)"
+      "server": "^Microsoft-(?:HTTPAPI|IIS)/"
     },
     "description": "Schannel (Secure Channel) is a security package that provides SSL and TLS protocols on Microsoft Windows systems.",
     "icon": "IIS.svg",
