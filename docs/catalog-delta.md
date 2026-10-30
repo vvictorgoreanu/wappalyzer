@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 352 |
+| Changed | 353 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (352)
+## Changed (353)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1265,6 +1265,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Docker | dns | - | - |
 | DocuSign | - | - | dns |
 | Dotdigital | - | - | scriptSrc |
+| DoubleClick Floodlight | html | - | scriptSrc, scripts |
 | Dremio | - | - | xhr |
 | Dropbox | description, saas, oss, xhr, scriptSrc | - | cats, dns |
 | Dynatrace | dns, scriptSrc | - | - |
