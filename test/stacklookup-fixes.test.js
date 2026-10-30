@@ -258,3 +258,51 @@ test('Azure App Service is not inferred from IIS, Kestrel or ARR banners or from
         assert.ok(!detect(items).includes(AZURE_APP_SERVICE), JSON.stringify(items))
     }
 })
+
+const GTM = 'Google Tag Manager'
+
+test('Google Tag Manager is detected from a GTM- container id in its snippet URLs', () => {
+    for (const src of [
+        'https://www.googletagmanager.com/gtm.js?id=GTM-NVPKZD4',
+        // Renamed data layer, and first-party serving through Google tag gateway
+        'https://www.googletagmanager.com/gtm.js?l=gtmDataLayer&id=GTM-52P6DN',
+        'https://www.example.com/metrics/gtm.js?id=GTM-MZV8B6LH',
+    ]) {
+        assert.ok(detect({ scriptSrc: [src] }).includes(GTM), src)
+    }
+    // The noscript part stays in the page when a consent banner holds gtm.js back
+    const html =
+        '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVTN7BBB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>'
+    assert.ok(detect({ html }).includes(GTM))
+})
+
+test('Google Tag Manager is not inferred from the Google tag, its globals or broken snippets', () => {
+    for (const src of [
+        // gtag.js for GA4, Google Ads, a Google tag, Universal Analytics and Floodlight
+        'https://www.googletagmanager.com/gtag/js?id=G-98NR8EVBH7',
+        'https://www.googletagmanager.com/gtag/js?id=AW-17804902379',
+        'https://www.googletagmanager.com/gtag/js?id=GT-5R7GQ2X',
+        'https://www.googletagmanager.com/gtag/js?id=UA-169155316-1&cx=c&gtm=4e6as1',
+        'https://www.googletagmanager.com/gtag/js?id=DC-3924042',
+        // The GTM loader given a GA4 id or a placeholder, not a container
+        'https://www.googletagmanager.com/gtm.js?id=G-1F4FGQ87T7',
+        'https://www.googletagmanager.com/gtm.js?id=XXX',
+    ]) {
+        assert.ok(!detect({ scriptSrc: [src] }).includes(GTM), src)
+    }
+    for (const html of [
+        // A commented-out snippet keeps its comment
+        "<!-- Google Tag Manager --> <!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];--> <!-- End Google Tag Manager -->",
+        // Google Optimize containers also use GTM- ids
+        "<script>ga('create', 'UA-39467830-1', 'auto'); ga('require', 'GTM-KL7BC3L');</script>",
+    ]) {
+        assert.ok(!detect({ html }).includes(GTM), html)
+    }
+    // Globals the Google tag and Google Publisher Tag define without a container
+    for (const chain of ['google_tag_data', 'google_tag_manager', 'googletag']) {
+        const names = Wappalyzer.resolve(
+            Wappalyzer.analyzeJs([{ name: GTM, chain, value: true }])
+        ).map(({ name }) => name)
+        assert.ok(!names.includes(GTM), chain)
+    }
+})

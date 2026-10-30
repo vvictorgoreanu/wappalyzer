@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 354
+    "changed": 355
   },
   "newCategories": [
     {
@@ -3424,6 +3424,17 @@
       "fieldsRemoved": [],
       "valuesChanged": [
         "dom"
+      ]
+    },
+    {
+      "name": "Google Tag Manager",
+      "fieldsAdded": [],
+      "fieldsRemoved": [
+        "js"
+      ],
+      "valuesChanged": [
+        "html",
+        "scriptSrc"
       ]
     },
     {
