@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 357 |
+| Changed | 358 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (357)
+## Changed (358)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1529,6 +1529,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | anime.js | headers | - | js |
 | authorize.net | html | - | - |
 | commercetools | xhrUrl | xhr | - |
+| core-js | - | - | js |
 | dc.js | - | - | scriptSrc |
 | eKomi | scriptSrc | - | - |
 | ipapi.co | xhrUrl | xhr | - |

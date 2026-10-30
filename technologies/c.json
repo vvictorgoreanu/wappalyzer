@@ -9467,7 +9467,6 @@
       "__core-js_shared__": "",
       "__core-js_shared__.versions.0.version": "^(.+)$\\;version:\\1",
       "_babelPolyfill": "",
-      "core": "",
       "core.version": "^(.+)$\\;version:\\1"
     },
     "oss": true,
