@@ -3607,7 +3607,7 @@
     ],
     "icon": "Lodash.svg",
     "js": {
-      "_.VERSION": "^(.+)$\\;confidence:0\\;version:\\1",
+      "_.VERSION": "^([2-4]\\..+)$\\;confidence:0\\;version:\\1",
       "_.differenceBy": "",
       "_.templateSettings.imports._.templateSettings.imports._.VERSION": "^(.+)$\\;version:\\1"
     },
