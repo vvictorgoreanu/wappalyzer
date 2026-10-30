@@ -11866,14 +11866,22 @@
     "cats": [
       22
     ],
+    "cookies": {
+      "ARRAffinitySameSite": ""
+    },
     "description": "Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends.",
-    "headers": {
-      "server": [
-        "Kestrel",
-        "Microsoft-IIS/",
-        "ARR/"
+    "dns": {
+      "CNAME": [
+        "^[a-z0-9-]+\\.(?:[a-z0-9]+-\\d+\\.)?azurewebsites\\.net\\.?$",
+        "\\.appserviceenvironment\\.net\\.?$"
       ]
     },
+    "implies": [
+      "Azure"
+    ],
+    "url": [
+      "^https?://[a-z0-9-]+\\.(?:[a-z0-9]+-\\d+\\.)?azurewebsites\\.net(?:[:/]|$)"
+    ],
     "website": "https://azure.microsoft.com/services/app-service/"
   },
   "Azure Application Gateway": {

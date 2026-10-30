@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 353 |
+| Changed | 354 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (353)
+## Changed (354)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1220,6 +1220,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Appwrite | scripts | - | - |
 | Atlassian Crucible | xhrUrl | xhr, dom | - |
 | Atlassian Jira Capture | xhrUrl | xhr | - |
+| Azure App Service | cookies, dns, implies, url | headers | - |
 | Azure DNS | - | - | dns |
 | Azure HDI | meta, xhrUrl | xhr | text, dom |
 | BMC Recovery Manager | xhrUrl | xhr | - |

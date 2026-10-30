@@ -220,3 +220,41 @@ test('DoubleClick Floodlight is not inferred from gtag.js, GTM or other doublecl
         assert.ok(!detect({ scriptSrc: [src] }).includes(FLOODLIGHT), src)
     }
 })
+
+const AZURE_APP_SERVICE = 'Azure App Service'
+
+test('Azure App Service is detected from its default hostname or affinity cookie and implies Azure', () => {
+    const cases = [
+        // Custom domains point a CNAME at the app's default hostname, in either documented shape
+        { dns: { cname: ['contoso.azurewebsites.net.'] } },
+        { dns: { cname: ['contoso-a6gqaeashthkhkeu.eastus-01.azurewebsites.net.'] } },
+        { dns: { cname: ['contoso.appserviceenvironment.net.'] } },
+        { url: 'https://contoso.azurewebsites.net/' },
+        { url: 'https://contoso-a6gqaeashthkhkeu.eastus-01.azurewebsites.net/login' },
+        // Set by the App Service front ends with ARRAffinity when session affinity is on
+        { cookies: { arraffinitysamesite: ['6cab9c152fca1337b55c609f536c15b1ddfff2d856539758b2ef39407cdb57ad'] } },
+    ]
+    for (const items of cases) {
+        const names = detect(items)
+        assert.ok(names.includes(AZURE_APP_SERVICE), JSON.stringify(items))
+        assert.ok(names.includes('Azure'), JSON.stringify(items))
+    }
+})
+
+test('Azure App Service is not inferred from IIS, Kestrel or ARR banners or from Static Web Apps', () => {
+    const cases = [
+        { headers: { server: ['Microsoft-IIS/10.0'], 'x-powered-by': ['ASP.NET'] } },
+        // On-premises Application Request Routing
+        { headers: { server: ['Microsoft-IIS/8.5'], 'x-powered-by': ['ASP.NET, ARR/3.0, ASP.NET'] } },
+        { headers: { server: ['Kestrel'] } },
+        // The plain ARRAffinity name is also used outside App Service; it maps to Azure only
+        { cookies: { arraffinity: ['6cab9c152fca1337b55c609f536c15b1ddfff2d856539758b2ef39407cdb57ad'] } },
+        // Azure Static Web Apps resolve through an internal App Service hop
+        { dns: { cname: ['msha-slice-0-am2-1.msha-slice-0-am2-1-ase.p.azurewebsites.net.'] } },
+        { dns: { cname: ['waws-prod-am2-9472da61.sip.p.azurewebsites.windows.net.'] } },
+        { url: 'https://ambitious-hill-079be3203.azurestaticapps.net/' },
+    ]
+    for (const items of cases) {
+        assert.ok(!detect(items).includes(AZURE_APP_SERVICE), JSON.stringify(items))
+    }
+})
