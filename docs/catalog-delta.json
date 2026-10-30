@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 357
+    "changed": 358
   },
   "newCategories": [
     {
@@ -4966,6 +4966,14 @@
         "js",
         "scriptSrc"
       ]
+    },
+    {
+      "name": "Sirvoy",
+      "fieldsAdded": [],
+      "fieldsRemoved": [
+        "scripts"
+      ],
+      "valuesChanged": []
     },
     {
       "name": "Sitecore",
