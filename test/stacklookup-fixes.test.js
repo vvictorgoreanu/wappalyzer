@@ -430,3 +430,38 @@ test('Sirvoy is not inferred from the svSession cookie name in Wix runtime code'
         assert.ok(!detect({ scripts: [script] }).includes(SIRVOY), script)
     }
 })
+
+const FACEBOOK_LOGIN = 'Facebook Login'
+
+/** Names resolved from driver.js getDom() results for the given selectors. */
+function detectDom(selectors) {
+    const items = []
+    for (const selector of selectors) {
+        for (const technology of Wappalyzer.technologies) {
+            if (Object.keys(technology.dom || {}).includes(selector)) {
+                items.push({ name: technology.name, selector, exists: '' })
+            }
+        }
+    }
+    return Wappalyzer.resolve(Wappalyzer.analyzeDom(items)).map(({ name }) => name)
+}
+
+test('Facebook Login is detected from the Login Button plugin or a Login Dialog link', () => {
+    for (const selector of [
+        // <div class="fb-login-button"> or XFBML <fb:login-button>
+        '.fb-login-button, fb\\:login-button',
+        // The iframe the SDK renders for that plugin (facebook.com/vX/plugins/login_button.php)
+        "iframe[src*='facebook.com/'][src*='/plugins/login_button']",
+        // A manually built login flow: <a href="https://www.facebook.com/vX/dialog/oauth?client_id=...">
+        "a[href*='facebook.com/'][href*='/dialog/oauth']",
+    ]) {
+        assert.ok(detectDom([selector]).includes(FACEBOOK_LOGIN), selector)
+    }
+})
+
+test('Facebook Login is not inferred from the Facebook SDK globals alone', () => {
+    // sdk.js defines FB.login and FB.getLoginStatus on every page that loads it,
+    // including pages that only use it for Like, Page or Comments plugins
+    const names = detectJs({ 'FB.getLoginStatus': true, 'FB.login': true }).map(({ name }) => name)
+    assert.ok(!names.includes(FACEBOOK_LOGIN))
+})

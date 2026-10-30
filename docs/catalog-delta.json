@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 359
+    "changed": 360
   },
   "newCategories": [
     {
@@ -3217,6 +3217,16 @@
       ],
       "fieldsRemoved": [
         "script"
+      ],
+      "valuesChanged": []
+    },
+    {
+      "name": "Facebook Login",
+      "fieldsAdded": [
+        "dom"
+      ],
+      "fieldsRemoved": [
+        "js"
       ],
       "valuesChanged": []
     },
