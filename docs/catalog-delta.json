@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 359
+    "changed": 360
   },
   "newCategories": [
     {
@@ -3413,6 +3413,14 @@
       "valuesChanged": [
         "scripts"
       ]
+    },
+    {
+      "name": "Google Compute Engine",
+      "fieldsAdded": [],
+      "fieldsRemoved": [
+        "headers"
+      ],
+      "valuesChanged": []
     },
     {
       "name": "Google Consumer Surveys",
