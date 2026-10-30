@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 359 |
+| Changed | 360 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (359)
+## Changed (360)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1391,6 +1391,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Office 365 | - | apps | dns |
 | OneTrust | - | - | scriptSrc |
 | Open Source Presto | - | url | - |
+| OpenGSE | - | - | headers |
 | OpenText WEM | scriptSrc | regex, script | headers |
 | OpenX | - | - | scriptSrc |
 | OptinMonster | scriptSrc | - | - |
