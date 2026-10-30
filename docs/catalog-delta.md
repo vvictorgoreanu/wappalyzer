@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 351 |
+| Changed | 352 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (351)
+## Changed (352)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1247,6 +1247,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | ClassiPress | - | keywords | - |
 | CleverTap | scriptSrc | - | - |
 | ClickUp | dns | - | - |
+| Cloudflare Bot Management | - | - | description |
 | Commerce Engine | xhrUrl | xhr | - |
 | Contentstack | scripts | - | - |
 | Cosmoshop | meta, url | - | scriptSrc |

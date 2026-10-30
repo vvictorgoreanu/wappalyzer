@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 351
+    "changed": 352
   },
   "newCategories": [
     {
@@ -2877,6 +2877,14 @@
       ],
       "fieldsRemoved": [],
       "valuesChanged": []
+    },
+    {
+      "name": "Cloudflare Bot Management",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "description"
+      ]
     },
     {
       "name": "Commerce Engine",

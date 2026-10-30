@@ -5802,7 +5802,7 @@
     "cookies": {
       "__cf_bm": ""
     },
-    "description": "Cloudflare bot management solution identifies and mitigates automated traffic to protect websites from bad bots.",
+    "description": "Cloudflare's bot protection identifies and mitigates automated traffic. Covers the Enterprise Bot Management add-on as well as Bot Fight Mode and Super Bot Fight Mode.",
     "icon": "CloudFlare.svg",
     "implies": [
       "Cloudflare"
