@@ -166,3 +166,22 @@ test('Nunjucks is not inferred from {{ }} or {% %} syntax of other template engi
         assert.ok(!detect({ html }).includes(NUNJUCKS), html)
     }
 })
+
+const CLOUDFLARE_BOT_MANAGEMENT = 'Cloudflare Bot Management'
+
+// __cf_bm is set by Bot Management, Bot Fight Mode and Super Bot Fight Mode
+// alike, so it identifies Cloudflare's bot protection, not one of its tiers.
+test('Cloudflare Bot Management is detected from the __cf_bm cookie and implies Cloudflare', () => {
+    const names = detect({ cookies: { __cf_bm: ['X1bOd7LrTy0-1793281535-1.0.1.1-uoMEUF8DiVkiEDWAPT'] } })
+    assert.ok(names.includes(CLOUDFLARE_BOT_MANAGEMENT))
+    assert.ok(names.includes('Cloudflare'))
+})
+
+test('Cloudflare Bot Management is not inferred from Cloudflare alone', () => {
+    const names = detect({
+        headers: { server: ['cloudflare'], 'cf-ray': ['a5229f1f5f8270d1-OTP'] },
+        cookies: { _cfuvid: ['2nyF1sQbN4Hk-1793281535-0.0.1.1-604800000'] },
+    })
+    assert.ok(names.includes('Cloudflare'))
+    assert.ok(!names.includes(CLOUDFLARE_BOT_MANAGEMENT))
+})
