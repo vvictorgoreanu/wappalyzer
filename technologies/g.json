@@ -3278,8 +3278,16 @@
     "description": "Google Campaign Manager 360 is a web-based ad management system for advertisers and agencies.",
     "icon": "Google Campaign Manager 360.svg",
     "website": "https://marketingplatform.google.com/about/campaign-manager-360/",
+    "html": [
+      "\\d+\\.fls\\.doubleclick\\.net/activityi?;src="
+    ],
+    "scriptSrc": [
+      "googletagmanager\\.com/gtag/js\\?id=DC-\\d"
+    ],
     "scripts": [
-      "fls.doubleclick.net"
+      "\"vtp_tagId\":\"DC-\\d+\"",
+      "\"function\":\"__fls\"",
+      "gtag\\(\\s*['\"]config['\"]\\s*,\\s*['\"]DC-\\d"
     ],
     "js": {
       "_cm_pixel": ""
