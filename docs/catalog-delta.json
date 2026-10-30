@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 353
+    "changed": 354
   },
   "newCategories": [
     {
@@ -2627,6 +2627,19 @@
       ],
       "fieldsRemoved": [
         "xhr"
+      ],
+      "valuesChanged": []
+    },
+    {
+      "name": "Azure App Service",
+      "fieldsAdded": [
+        "cookies",
+        "dns",
+        "implies",
+        "url"
+      ],
+      "fieldsRemoved": [
+        "headers"
       ],
       "valuesChanged": []
     },
