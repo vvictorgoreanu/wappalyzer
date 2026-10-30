@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 349
+    "changed": 350
   },
   "newCategories": [
     {
@@ -4522,6 +4522,14 @@
       ],
       "fieldsRemoved": [],
       "valuesChanged": []
+    },
+    {
+      "name": "Schannel",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "headers"
+      ]
     },
     {
       "name": "Segment",
