@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 358
+    "changed": 359
   },
   "newCategories": [
     {
@@ -5586,6 +5586,14 @@
         "xhr"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "core-js",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "js"
+      ]
     },
     {
       "name": "dc.js",
