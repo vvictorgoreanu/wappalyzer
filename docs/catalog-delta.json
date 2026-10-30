@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 348
+    "changed": 349
   },
   "newCategories": [
     {
@@ -3359,6 +3359,17 @@
       "fieldsRemoved": [],
       "valuesChanged": [
         "scriptSrc"
+      ]
+    },
+    {
+      "name": "Google Campaign Manager 360",
+      "fieldsAdded": [
+        "html",
+        "scriptSrc"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "scripts"
       ]
     },
     {

@@ -55,3 +55,31 @@ test('IBM WebSphere Application Server is not inferred from PHP or HTTP server b
     assert.ok(!detect({ headers: { server: ['IBM HTTP Server/9.0.5'] } }).includes(WEBSPHERE))
     assert.ok(!detect({ headers: { server: ['HTTP Server/1.0'] } }).includes(WEBSPHERE))
 })
+
+const CM360 = 'Google Campaign Manager 360'
+
+// The Floodlight URL builder that every gtag.js and GTM build carries.
+const GTAG_FLOODLIGHT_TEMPLATE =
+    'nk[3]=function(a){return"https://"+a.cq+".fls.doubleclick.net/activityi"+(P(467)?";":"/")}'
+
+test('Google Campaign Manager 360 is detected from a Floodlight tag or DC- configuration', () => {
+    const cases = [
+        { html: '<iframe height="0" width="0" src="https://8941176.fls.doubleclick.net/activityi;src=8941176;type=invmedia;cat=z3xkn0;ord=1"></iframe>' },
+        { scriptSrc: ['https://www.googletagmanager.com/gtag/js?id=DC-1234567'] },
+        { scripts: ['{"function":"__googtag","vtp_tagId":"DC-14970414","tag_id":161}'] },
+        { scripts: ['{"function":"__fls","metadata":["map"],"once_per_event":true}'] },
+        { scripts: ["gtag('config', 'DC-1234567');"] },
+    ]
+    for (const items of cases) {
+        assert.ok(detect(items).includes(CM360), JSON.stringify(items))
+    }
+})
+
+test('Google Campaign Manager 360 is not inferred from the Floodlight template in gtag.js or GTM', () => {
+    for (const script of [
+        GTAG_FLOODLIGHT_TEMPLATE,
+        "gtag('config', 'G-ABC1234567'); gtag('config', 'AW-123456789');",
+    ]) {
+        assert.ok(!detect({ scripts: [script] }).includes(CM360), script)
+    }
+})
