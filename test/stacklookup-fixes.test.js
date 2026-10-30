@@ -101,3 +101,35 @@ test('Google Campaign Manager 360 is not inferred from the Floodlight template i
         assert.ok(!detect({ scripts: [script] }).includes(CM360), script)
     }
 })
+
+const BLUEKAI = 'BlueKai'
+
+test('BlueKai is detected from its tag hosts and tag API', () => {
+    const cases = [
+        { scriptSrc: ['https://tags.bluekai.com/site/12345?ret=js&limit=1'] },
+        { scriptSrc: ['https://tags.bkrtx.com/js/bk-coretag.js'] },
+        { html: '<img height="1" width="1" src="//stags.bluekai.com/site/12345?ret=html">' },
+        { scripts: ["bk_addPageCtx('category', 'shoes'); BKTAG.doTag(12345, 4);"] },
+        // Async loader that injects bk-coretag.js from an inline script
+        { scripts: ['window.bk_async=function(){bk_allow_multiple_calls=true;bk_use_multiple_iframes=true;BKTAG.doTag(49075,1)};(function(){var s=document.createElement("script");s.async=true;s.src="https://tags.bkrtx.com/js/bk-coretag.js"})();'] },
+        { scripts: ['BKTAG.doTag(49075,1)'] },
+    ]
+    for (const items of cases) {
+        assert.ok(detect(items).includes(BLUEKAI), JSON.stringify(items))
+    }
+})
+
+test('BlueKai does not fire on "bk" fragments in unrelated code', () => {
+    const scripts = [
+        String.raw`/(?:kr|Kr|TL|zł|Kč)\.?\s?\d|\bKR\s?\d[\d ,.]*[.,]\d{2}/`,
+        '["y29UzMLN","DxbKyxrLu2vZC2LVBKrHDge","mtiXndK1mdrbBKrcBuu"]',
+        'ds=mz+"img/te_bk.gif";',
+        'import"./chunk.windoid_BkiqS_xQ.esm.js";',
+        '<option value="bdt_bkash">BKASH</option>',
+        // A consent manager's list of tracking hosts to block
+        '[["bidswitch.net",78,4,46,"script","URL"],["bluekai.com",79,4,47,"script","URL"]]',
+    ]
+    for (const script of scripts) {
+        assert.ok(!detect({ scripts: [script] }).includes(BLUEKAI), script)
+    }
+})

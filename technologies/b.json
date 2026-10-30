@@ -3300,7 +3300,13 @@
     "description": "Oracle BlueKai Data Management Platform (DMP).",
     "icon": "BlueKai.svg",
     "website": "https://www.oracle.com/cx/advertising/data-management-platform/",
-    "scripts": "(?:_bk|bk_ai|bk_dc|bk_host|bk_pu|bk_rg|bkr|bkaddCrossDomainParam|bk_allow_multiple|bk_automateOnly|bk_async|bk_beacon_count|bk_core|bk_useMobile|bk_addPageCtx|bk_addSiteCtx|bk_addOptOut)"
+    "html": "//s?tags\\.bluekai\\.com/site/\\d",
+    "scriptSrc": "//(?:s?tags\\.bluekai\\.com|tags\\.bkrtx\\.com)/",
+    "scripts": [
+      "\\b(?:bkaddCrossDomainParam|bk_allow_multiple_calls|bk_use_multiple_iframes|bk_automateOnly|bk_beacon_count|bk_useMobile|bk_addPageCtx|bk_addSiteCtx|bk_addOptOut|bk_doJSTag)\\b",
+      "\\bBKTAG\\.doTag\\(",
+      "tags\\.bkrtx\\.com/js/bk-coretag\\.js"
+    ]
   },
   "Blueknow": {
     "cats": [

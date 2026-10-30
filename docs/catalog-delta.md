@@ -1231,7 +1231,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Blackbaud TeamRaiser | scriptSrc | script | - |
 | Blackbaud eTapestry | - | - | scripts |
 | Blackboard | - | - | dns |
-| BlueKai | scripts | script | - |
+| BlueKai | html, scriptSrc, scripts | script | - |
 | Bootstrap | - | - | scriptSrc |
 | BowNow | scriptSrc | - | - |
 | BuySellAds | - | - | scriptSrc |
