@@ -133,3 +133,36 @@ test('BlueKai does not fire on "bk" fragments in unrelated code', () => {
         assert.ok(!detect({ scripts: [script] }).includes(BLUEKAI), script)
     }
 })
+
+const NUNJUCKS = 'Nunjucks'
+
+test('Nunjucks is detected from its browser bundle or precompiled templates', () => {
+    const cases = [
+        { scriptSrc: ['https://cdn.jsdelivr.net/npm/nunjucks@3.2.4/browser/nunjucks.min.js'] },
+        { scriptSrc: ['https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks-slim.js'] },
+        { scriptSrc: ['/assets/nunjucks-slim.js'] },
+        { scripts: ['/*! Browser bundle of nunjucks 3.2.4 (slim, only works with precompiled templates) */'] },
+        { scripts: ['(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["item.html"] = (function() {'] },
+    ]
+    for (const items of cases) {
+        assert.ok(detect(items).includes(NUNJUCKS), JSON.stringify(items))
+    }
+})
+
+test('Nunjucks is not inferred from {{ }} or {% %} syntax of other template engines', () => {
+    const pages = [
+        // Handlebars template on a Weebly site
+        '<li {{#id}}id="{{id}}"{{/id}}><a href="{{url}}">{{title}}</a></li>',
+        // Shopify money format
+        '<script>var theme = { moneyFormat: "{{amount_no_decimals}} yen" }</script>',
+        // WooCommerce variation template
+        '<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>',
+        // Jinja, Twig and Django tags shown in documentation
+        '<pre>{% extends "base.html" %}{% block content %}{% for user in users %}{{ user.name }}{% endfor %}{% endblock %}</pre>',
+        // A link to the download, not a loaded script
+        '<a href="files/nunjucks.min.js">nunjucks.min.js</a>',
+    ]
+    for (const html of pages) {
+        assert.ok(!detect({ html }).includes(NUNJUCKS), html)
+    }
+})

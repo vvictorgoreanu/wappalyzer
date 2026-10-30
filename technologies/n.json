@@ -2947,12 +2947,14 @@
     "description": "Nunjucks is a full-featured templating engine for JavaScript.",
     "website": "https://mozilla.github.io/nunjucks/",
     "icon": "Nunjucks.svg",
-    "html": [
-      "\\{\\%\\s*(block|endblock|extends|for|endfor|if|endif|include)\\s*.*?\\s*\\%\\}",
-      "\\{\\{\\s*.*?\\s*\\}\\}"
+    "scriptSrc": [
+      "/nunjucks[@/](\\d+(?:\\.\\d+)+)/(?:browser/)?nunjucks(?:-slim)?(?:\\.min)?\\.js\\;version:\\1",
+      "\\bnunjucks(?:-slim)?(?:\\.min)?\\.js"
     ],
     "scripts": [
-      "nunjucks(?:\\.min)?\\.js"
+      "Browser bundle of nunjucks (\\d+(?:\\.\\d+)+)\\;version:\\1",
+      "\\bnunjucksPrecompiled\\b",
+      "nunjucks(?:-slim)?(?:\\.min)?\\.js"
     ]
   },
   "Nuqlium": {

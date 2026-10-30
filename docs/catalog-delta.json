@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 350
+    "changed": 351
   },
   "newCategories": [
     {
@@ -4109,6 +4109,18 @@
         "script"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "Nunjucks",
+      "fieldsAdded": [
+        "scriptSrc"
+      ],
+      "fieldsRemoved": [
+        "html"
+      ],
+      "valuesChanged": [
+        "scripts"
+      ]
     },
     {
       "name": "OVH",
