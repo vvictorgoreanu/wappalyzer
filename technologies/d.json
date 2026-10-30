@@ -3838,11 +3838,16 @@
       36
     ],
     "icon": "DoubleClick.svg",
+    "html": [
+      "\\d+\\.fls\\.doubleclick\\.net/activityi?;src="
+    ],
     "scriptSrc": [
-      "\\.doubleclick\\.net"
+      "googletagmanager\\.com/gtag/js\\?id=DC-\\d"
     ],
     "scripts": [
-      "fls\\.doubleclick\\.net"
+      "\"vtp_tagId\":\"DC-\\d+\"",
+      "\"function\":\"__fls\"",
+      "gtag\\(\\s*['\"]config['\"]\\s*,\\s*['\"]DC-\\d"
     ],
     "website": "https://support.google.com/ds/answer/6029713?hl=en"
   },

@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 352
+    "changed": 353
   },
   "newCategories": [
     {
@@ -3048,6 +3048,17 @@
       "fieldsRemoved": [],
       "valuesChanged": [
         "scriptSrc"
+      ]
+    },
+    {
+      "name": "DoubleClick Floodlight",
+      "fieldsAdded": [
+        "html"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "scriptSrc",
+        "scripts"
       ]
     },
     {

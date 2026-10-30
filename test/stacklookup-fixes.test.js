@@ -185,3 +185,38 @@ test('Cloudflare Bot Management is not inferred from Cloudflare alone', () => {
     assert.ok(names.includes('Cloudflare'))
     assert.ok(!names.includes(CLOUDFLARE_BOT_MANAGEMENT))
 })
+
+const FLOODLIGHT = 'DoubleClick Floodlight'
+
+test('DoubleClick Floodlight is detected from a Floodlight tag or DC- configuration', () => {
+    const cases = [
+        { html: '<iframe height="0" width="0" src="https://1762894.fls.doubleclick.net/activityi;src=1762894;type=Heart;cat=HSubarHP;ord=1"></iframe>' },
+        // gtag.js for a DC- ID, as GTM or Adobe Launch insert it at runtime
+        { scriptSrc: ['https://www.googletagmanager.com/gtag/js?id=DC-3924042&cx=c&gtm=4e6as1'] },
+        { scripts: ['{"function":"__googtag","vtp_tagId":"DC-5756351","tag_id":12}'] },
+        { scripts: ['{"function":"__fls","metadata":["map"],"once_per_event":true}'] },
+        { scripts: ["gtag('config', 'DC-2906542');"] },
+    ]
+    for (const items of cases) {
+        assert.ok(detect(items).includes(FLOODLIGHT), JSON.stringify(items))
+    }
+})
+
+test('DoubleClick Floodlight is not inferred from gtag.js, GTM or other doubleclick.net products', () => {
+    for (const script of [
+        GTAG_FLOODLIGHT_TEMPLATE,
+        "gtag('config', 'G-ABC1234567'); gtag('config', 'AW-123456789');",
+    ]) {
+        assert.ok(!detect({ scripts: [script] }).includes(FLOODLIGHT), script)
+    }
+    for (const src of [
+        // Google Publisher Tag: the site sells ads
+        'https://securepubads.g.doubleclick.net/tag/js/gpt.js',
+        'https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202610230101/pubads_impl.js',
+        // Google Ads remarketing and Universal Analytics
+        'https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1065529365/?random=1',
+        'https://stats.g.doubleclick.net/dc.js',
+    ]) {
+        assert.ok(!detect({ scriptSrc: [src] }).includes(FLOODLIGHT), src)
+    }
+})
