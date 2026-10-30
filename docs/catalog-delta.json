@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 355
+    "changed": 356
   },
   "newCategories": [
     {
@@ -3777,6 +3777,14 @@
     },
     {
       "name": "Locomotive Scroll",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "js"
+      ]
+    },
+    {
+      "name": "Lodash",
       "fieldsAdded": [],
       "fieldsRemoved": [],
       "valuesChanged": [

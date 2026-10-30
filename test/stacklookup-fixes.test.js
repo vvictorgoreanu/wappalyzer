@@ -306,3 +306,51 @@ test('Google Tag Manager is not inferred from the Google tag, its globals or bro
         assert.ok(!names.includes(GTM), chain)
     }
 })
+
+const LODASH = 'Lodash'
+
+/**
+ * Names resolved from JS chains, fed the way driver.js does: one item per
+ * technology whose js rules read the chain (Lodash and Underscore.js both
+ * read _.VERSION).
+ */
+function detectJs(chains) {
+    const items = []
+    for (const [chain, value] of Object.entries(chains)) {
+        for (const technology of Wappalyzer.technologies) {
+            if (Object.keys(technology.js || {}).includes(chain)) {
+                items.push({ name: technology.name, chain, value })
+            }
+        }
+    }
+    return Wappalyzer.resolve(Wappalyzer.analyzeJs(items))
+}
+
+test('Lodash is detected from a 2.x-4.x _.VERSION or its own methods', () => {
+    const cases = [
+        // Full build (unpkg, cdnjs, WordPress, Wix)
+        { '_.VERSION': '4.18.1', '_.differenceBy': true },
+        // lodash.core.js has no differenceBy; only its version tells it apart
+        { '_.VERSION': '4.17.21' },
+        { '_.VERSION': '3.10.1' },
+        { '_.VERSION': '2.4.2' },
+    ]
+    for (const chains of cases) {
+        const lodash = detectJs(chains).find(({ name }) => name === LODASH)
+        assert.ok(lodash, JSON.stringify(chains))
+        assert.equal(lodash.version, chains['_.VERSION'])
+    }
+})
+
+test('Lodash is not inferred from Underscore.js, which also sets _.VERSION', () => {
+    const cases = [
+        // Weebly and WordPress pages: Underscore.js 1.8.3 and 1.13.8
+        { '_.VERSION': '1.8.3' },
+        { '_.VERSION': '1.13.8', '_.restArguments': true },
+    ]
+    for (const chains of cases) {
+        const names = detectJs(chains).map(({ name }) => name)
+        assert.ok(!names.includes(LODASH), JSON.stringify(chains))
+        assert.ok(names.includes('Underscore.js'), JSON.stringify(chains))
+    }
+})
