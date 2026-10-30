@@ -3198,7 +3198,8 @@
     },
     "scriptSrc": [
       "google-analytics\\.com/(?:ga|urchin|analytics)\\.js",
-      "googletagmanager\\.com/gtag/js"
+      "/gtag/js\\?(?:[^#]*&)?id=G-\\;version:GA4",
+      "/gtag/js\\?(?:[^#]*&)?id=UA-\\;version:UA"
     ],
     "scripts": [
       "gtag\\([^)]+'(UA-)\\;version:\\1?UA:",
