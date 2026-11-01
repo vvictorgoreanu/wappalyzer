@@ -7768,7 +7768,7 @@
     "description": "Twitter Ads is an advertising platform for Twitter 'microblogging' system.",
     "icon": "Twitter.svg",
     "js": {
-      "twttr": ""
+      "twq": ""
     },
     "pricing": [
       "payg"

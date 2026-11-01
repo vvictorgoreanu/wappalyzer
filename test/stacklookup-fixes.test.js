@@ -430,3 +430,31 @@ test('Sirvoy is not inferred from the svSession cookie name in Wix runtime code'
         assert.ok(!detect({ scripts: [script] }).includes(SIRVOY), script)
     }
 })
+
+const TWITTER_ADS = 'Twitter Ads'
+
+test('Twitter Ads is detected from the uwt.js script its pixel base code loads', () => {
+    // The base code inserts <script async src="https://static.ads-twitter.com/uwt.js">
+    assert.ok(detect({ scriptSrc: ['https://static.ads-twitter.com/uwt.js'] }).includes(TWITTER_ADS))
+})
+
+test('Twitter Ads is detected from the twq queue its pixel base code defines', () => {
+    // The base code sets window.twq = function() {...} before uwt.js loads; the script
+    // element may be gone by the time the page is scanned, the global stays
+    assert.ok(detectJs({ twq: true }).some(({ name }) => name === TWITTER_ADS))
+})
+
+test('Twitter Ads is not inferred from the twttr global of ordinary X/Twitter widgets', () => {
+    // widgets.js (Post and Follow buttons, embedded posts, timelines) defines window.twttr
+    const names = detectJs({ twttr: true }).map(({ name }) => name)
+    assert.ok(!names.includes(TWITTER_ADS))
+
+    for (const items of [
+        // WordPress.com blog with the Twitter widget
+        { html: '<script id="twitter-widgets-js" src="https://platform.twitter.com/widgets.js?ver=20111117"></script>', scriptSrc: ['https://platform.twitter.com/widgets.js?ver=20111117'] },
+        // The documented asynchronous loader snippet
+        { scripts: ['window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = "https://platform.x.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, "script", "twitter-wjs"));'], scriptSrc: ['https://platform.x.com/widgets.js'] },
+    ]) {
+        assert.ok(!detect(items).includes(TWITTER_ADS), JSON.stringify(items))
+    }
+})
