@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 360
+    "changed": 361
   },
   "newCategories": [
     {
@@ -5300,6 +5300,14 @@
         "script"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "Twitter Ads",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "js"
+      ]
     },
     {
       "name": "Twitter Conversion Tag",
