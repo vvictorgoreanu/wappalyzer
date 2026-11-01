@@ -431,6 +431,22 @@ test('Sirvoy is not inferred from the svSession cookie name in Wix runtime code'
     }
 })
 
+const GCE = 'Google Compute Engine'
+
+test('Google Compute Engine is not inferred from Server banners of Google front ends or look-alikes', () => {
+    for (const headers of [
+        // Blogger: *.blogspot.com and custom domains (CNAME ghs.google.com)
+        { server: ['GSE'] },
+        // Google Search, and a shared host that sends the same banner
+        { server: ['gws'] },
+        // App Engine / Cloud Run behind Google's front end, Google Cloud load balancer
+        { server: ['Google Frontend'], 'x-cloud-trace-context': ['e9f89cc597aaf6efbbe4e79dc32d8739'] },
+        { server: ['nginx'], via: ['1.1 google'] },
+    ]) {
+        assert.ok(!detect({ headers }).includes(GCE), JSON.stringify(headers))
+    }
+})
+
 const TWITTER_ADS = 'Twitter Ads'
 
 test('Twitter Ads is detected from the uwt.js script its pixel base code loads', () => {

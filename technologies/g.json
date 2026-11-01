@@ -3402,10 +3402,7 @@
     ],
     "description": "Google Compute Engine is Google's Infrastructure-as-a-Service (IaaS) offering, providing virtual machine instances for workloads.",
     "icon": "Google Cloud.svg",
-    "website": "https://cloud.google.com/compute/",
-    "headers": {
-      "Server": "(GSE|gws)"
-    }
+    "website": "https://cloud.google.com/compute/"
   },
   "Google Consumer Surveys": {
     "cats": [
