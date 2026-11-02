@@ -667,6 +667,85 @@ test('Stimulus is not inferred from other data-controller markup', () => {
     assert.ok(!detect({ scriptSrc: ['https://example.com/js/stimulus-slider.js'] }).includes(STIMULUS))
 })
 
+const BOOTSTRAP = 'Bootstrap'
+
+test('Bootstrap is detected from its distribution files', () => {
+    for (const url of [
+        'https://getbootstrap.com/docs/3.4/dist/js/bootstrap.min.js',
+        'https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+        'https://example.com/media/vendor/bootstrap/js/bootstrap-es5.min.js?5.3.2',
+        'https://example.com/wp-content/themes/example/assets/js/bootstrap.min.js?ver=2.4.0',
+        // Unminified copies served under their own name
+        'https://example.com/js/bootstrap.js',
+        'https://example.com/assets/js/bootstrap.js?v=1',
+    ]) {
+        assert.ok(detect({ scriptSrc: [url] }).includes(BOOTSTRAP), url)
+    }
+})
+
+test('Bootstrap is not inferred from platform boot loaders', () => {
+    for (const url of [
+        // Magento's RequireJS and Knockout loaders
+        'https://example.com/static/frontend/Example/default/en_GB/mage/bootstrap.min.js',
+        'https://example.com/static/frontend/Example/default/en_GB/Magento_Ui/js/lib/knockout/bootstrap.min.js',
+        'https://example.com/static/frontend/Example/default/en_GB/Magento_Ui/js/lib/knockout/bindings/bootstrap.min.js',
+        'https://example.com/MAGE/BOOTSTRAP.MIN.JS?v=1',
+        // Webpack bootstrapper chunks
+        'https://static.example.eu/assets/webpack/bootstrapper.ce10832e.js',
+        'https://example.com/assets/webpack/bootstrapper-chunk.js?v=1',
+    ]) {
+        assert.ok(!detect({ scriptSrc: [url] }).includes(BOOTSTRAP), url)
+    }
+})
+
+const WIX_ECOMMERCE = 'Wix eCommerce'
+
+test('Wix eCommerce is detected from its Stores, checkout, Bookings, Events and Pay Button services', () => {
+    const viewerModel = Wappalyzer.analyzeDom([{
+        name: WIX_ECOMMERCE,
+        selector: '#wix-viewer-model',
+        text: '{"componentUrl":"https://static.parastorage.com/services/wixstores-client-worker/1.0.0/app.js"}',
+    }])
+    assert.ok(Wappalyzer.resolve(viewerModel).some(({ name }) => name === WIX_ECOMMERCE))
+    for (const service of [
+        'wixstores-client-worker',
+        'ecom-platform-cart-icon',
+        'bookings-service-list-widget',
+        'events-details-page',
+        'pay-button',
+    ]) {
+        for (const cdn of ['static.parastorage.com', 'static.wixstatic.com']) {
+            const url = `https://${cdn}/services/${service}/1.0.0/viewer.js`
+            // The viewer model escapes slashes in JSON
+            for (const value of [url, url.replace(/\//g, '\\/')]) {
+                assert.ok(detect({ scripts: `{"componentUrl":"${value}"}` }).includes(WIX_ECOMMERCE), value)
+            }
+        }
+    }
+    // Legacy Art Store widgets
+    for (const page of ['cart', 'gallery']) {
+        const url = `https://progallery.wixapps.net/${page}.html?isStore=true`
+        assert.ok(detect({ scripts: `{"widgetUrl":"${url}"}` }).includes(WIX_ECOMMERCE), url)
+    }
+})
+
+test('Wix eCommerce is not inferred from the Wix media CDN or other Wix apps', () => {
+    for (const scripts of [
+        '{"siteAssets":{"clientTopology":{"mediaRootUrl":"https://static.wixstatic.com"}}}',
+        String.raw`{"mediaRootUrl":"https:\/\/static.wixstatic.com"}`,
+        '{"mediaRootUrl":"https://static.wixstatic.com","apps":["Wix Chat","Wix Blog"]}',
+        // Store experiment flags shipped to every Wix site
+        '{"platformAppsExperiments":{"specs.stores.MoveCustomUrlApiToSiteStoreConstructor":"true"}}',
+        'https://static.parastorage.com/services/wix-thunderbolt/1.0.0/viewer.js',
+        'https://static.parastorage.com/services/bookingsExample/1.0.0/viewer.js',
+        'https://static.parastorage.com/services/pro-gallery-santa-wrapper/1.0.0/gallery.js',
+        'https://progallery.wixapps.net/gallery.html?isStore=false',
+    ]) {
+        assert.ok(!detect({ scripts }).includes(WIX_ECOMMERCE), scripts)
+    }
+})
+
 const WHATSAPP_BUSINESS = 'WhatsApp Business Chat'
 
 test('WhatsApp Business Chat is detected from chat links to a phone number or business short links', () => {

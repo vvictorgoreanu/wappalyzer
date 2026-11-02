@@ -3588,7 +3588,8 @@
     ],
     "saas": true,
     "scripts": [
-      "static\\.wixstatic\\.com"
+      "(?:static\\.parastorage\\.com|static\\.wixstatic\\.com)\\\\?/services\\\\?/(?:wixstores|ecom-platform|bookings|events|pay-button)(?:-|\\\\?/)",
+      "progallery\\.wixapps\\.net\\\\?/(?:cart|gallery)\\.html\\?isStore=true"
     ],
     "website": "https://www.wix.com/freesitebuilder/tae-store"
   },
