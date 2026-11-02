@@ -474,3 +474,32 @@ test('Twitter Ads is not inferred from the twttr global of ordinary X/Twitter wi
         assert.ok(!detect(items).includes(TWITTER_ADS), JSON.stringify(items))
     }
 })
+
+const OPENGSE = 'OpenGSE'
+
+test('OpenGSE is detected from the X-Powered-By banner its servlet engine sets', () => {
+    // engines/minigse/.../WebAppCollectionImpl.java in the OpenGSE source
+    const detections = Wappalyzer.resolve(
+        Wappalyzer.analyze({ headers: { 'x-powered-by': ['Servlet/2.5 (OpenGSE/0.9)'] } })
+    )
+    const openGse = detections.find(({ name }) => name === OPENGSE)
+    assert.ok(openGse)
+    assert.equal(openGse.version, '0.9')
+    assert.ok(detections.some(({ name }) => name === 'Java'))
+})
+
+test('OpenGSE is not inferred from the Server: GSE banner of Google-hosted pages', () => {
+    // Blogger blogs (blogspot.com and custom domains) and some Google redirects
+    for (const server of ['GSE', 'gws', 'ESF', 'Google Frontend']) {
+        const names = detect({ headers: { server: [server] } })
+        assert.ok(!names.includes(OPENGSE), server)
+        assert.ok(!names.includes('Java'), server)
+    }
+    const blog = detect({
+        url: 'https://example.blogspot.com/',
+        headers: { server: ['GSE'] },
+        meta: { generator: ['blogger'] },
+    })
+    assert.ok(blog.includes('Blogger'))
+    assert.ok(!blog.includes(OPENGSE))
+})

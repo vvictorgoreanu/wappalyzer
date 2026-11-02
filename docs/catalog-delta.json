@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 361
+    "changed": 362
   },
   "newCategories": [
     {
@@ -4222,6 +4222,14 @@
         "url"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "OpenGSE",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "headers"
+      ]
     },
     {
       "name": "OpenText WEM",

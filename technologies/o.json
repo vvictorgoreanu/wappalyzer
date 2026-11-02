@@ -2000,7 +2000,7 @@
     ],
     "description": "OpenGSE is a test suite used for testing servlet compliance. It is deployed by using WAR files that are deployed on the server engine.",
     "headers": {
-      "Server": "GSE"
+      "X-Powered-By": "OpenGSE(?:/([\\d.]+))?\\;version:\\1"
     },
     "icon": "Google.svg",
     "implies": [
