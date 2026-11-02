@@ -173,10 +173,12 @@
       69
     ],
     "description": "Facebook Login is a way for people to create accounts and log into your app across multiple platforms.",
+    "dom": [
+      ".fb-login-button, fb\\:login-button",
+      "iframe[src*='facebook.com/'][src*='/plugins/login_button']",
+      "a[href*='facebook.com/'][href*='/dialog/oauth']"
+    ],
     "icon": "Facebook.svg",
-    "js": {
-      "FB.getLoginStatus": ""
-    },
     "website": "https://developers.facebook.com/docs/facebook-login/"
   },
   "Facebook Login Button": {
