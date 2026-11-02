@@ -15822,15 +15822,21 @@
     ],
     "description": "A modest JavaScript framework for the HTML you already have.",
     "html": [
-      "<[^>]+data-controller"
+      "\\sdata-action\\s*=\\s*[\"'][^\"']*(?:->|-&gt;)[a-z_][\\w-]*#[a-z_$][\\w$]*",
+      "[\"']@hotwired/stimulus[\"']\\s*:"
     ],
     "icon": "Stimulus.svg",
     "js": {
       "Stimulus.Application": "",
+      "Stimulus.router": "",
       "stimulus_application": ""
     },
+    "scriptSrc": [
+      "@hotwired/stimulus(?:@[^/]{1,80})?/dist/stimulus(?:\\.umd)?(?:\\.min)?\\.js"
+    ],
     "scripts": [
-      "/stimulus-bundle/controllers\\.js"
+      "/stimulus-bundle/controllers\\.js",
+      "[\"']@hotwired/stimulus[\"'/@]"
     ],
     "website": "https://stimulusjs.org/"
   },

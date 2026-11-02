@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 366
+    "changed": 367
   },
   "newCategories": [
     {
@@ -5144,6 +5144,18 @@
       "fieldsRemoved": [],
       "valuesChanged": [
         "js"
+      ]
+    },
+    {
+      "name": "Stimulus",
+      "fieldsAdded": [
+        "scriptSrc"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "html",
+        "js",
+        "scripts"
       ]
     },
     {

@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 366 |
+| Changed | 367 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (366)
+## Changed (367)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1483,6 +1483,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Spacious | scriptSrc | script | - |
 | Spring Framework | - | name | - |
 | Stackify Retrace | - | - | js |
+| Stimulus | scriptSrc | - | html, js, scripts |
 | Stripe Checkout | scriptSrc | script | - |
 | SuccessFactors LMS | - | slug | scripts |
 | Supabase | scriptSrc | - | js, scripts |

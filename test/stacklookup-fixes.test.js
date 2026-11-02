@@ -631,6 +631,41 @@ test('X is not inferred from ordinary links to x.com', () => {
     }
 })
 
+const STIMULUS = 'Stimulus'
+
+test('Stimulus is detected from its action descriptors, package and application global', () => {
+    for (const items of [
+        { html: '<button data-action="click->hello#greet">Greet</button>' },
+        { html: '<nav data-controller="navbar" data-action="scroll@window->navbar#scroll">' },
+        { html: '<body data-action="lazyload@window-&gt;checkout--checkout#initCheckout" data-controller="checkout--checkout">' },
+        { html: '<div data-action="dropdown#toggle click@window->dropdown#hide">' },
+        { html: '<script type="importmap">{"imports":{"@hotwired/stimulus":"/assets/stimulus.min-d03cf1ff.js"}}</script>' },
+        { scripts: 'import { Application } from "@hotwired/stimulus"\nwindow.Stimulus = Application.start()' },
+        { scriptSrc: ['https://unpkg.com/@hotwired/stimulus@3.2.2/dist/stimulus.umd.js'] },
+        { scriptSrc: ['https://cdn.jsdelivr.net/npm/@hotwired/stimulus/dist/stimulus.js'] },
+    ]) {
+        assert.ok(detect(items).includes(STIMULUS), JSON.stringify(items))
+    }
+    const names = detectJs({ 'Stimulus.router': true }).map(({ name }) => name)
+    assert.ok(names.includes(STIMULUS))
+})
+
+test('Stimulus is not inferred from other data-controller markup', () => {
+    for (const html of [
+        // Squarespace templates bind their own controllers
+        '<header data-test="header" id="header" class="black header theme-col--primary" data-section-theme="black" data-controller="Header" data-current-styles="{}">',
+        '<body id="collection-1" class="tweak-social-icons-style-regular" data-controller="HashManager, SiteLoader, MobileClassname">',
+        '<section data-test="page-section" data-controller="SectionWrapperController" data-controllers-bound="SectionWrapperController">',
+        '<a class="back" data-action="back" href="/">Back</a>',
+        // Shopware emotion widgets
+        '<div class="content--emotions" data-controllerUrl="/widgets/emotion/index/emotionId/3/controllerName/index">',
+        // A controller with no Stimulus action syntax
+        '<div data-controller="slider" data-autoplay="true">',
+    ]) {
+        assert.ok(!detect({ html }).includes(STIMULUS), html)
+    }
+    assert.ok(!detect({ scriptSrc: ['https://example.com/js/stimulus-slider.js'] }).includes(STIMULUS))
+
 const WHATSAPP_BUSINESS = 'WhatsApp Business Chat'
 
 test('WhatsApp Business Chat is detected from chat links to a phone number or business short links', () => {
