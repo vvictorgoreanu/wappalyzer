@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 364
+    "changed": 365
   },
   "newCategories": [
     {
@@ -5504,6 +5504,16 @@
       "fieldsRemoved": [],
       "valuesChanged": [
         "scriptSrc"
+      ]
+    },
+    {
+      "name": "X",
+      "fieldsAdded": [
+        "scriptSrc"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "html"
       ]
     },
     {
