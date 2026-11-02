@@ -2561,7 +2561,11 @@
     ],
     "description": "WhatsApp Business is a free to download app available on Android and iPhone using which businesses can connect with their customers.",
     "dom": [
-      "a[href*='api.whatsapp.com/send'], a[href*='web.whatsapp.com/send'], div[class*='wptwa-container'], a[href*='wa.link'][target='_blank'], link[href*='plugins/creame-whatsapp-me']"
+      "div[class*='wptwa-container'], a[href*='wa.link'][target='_blank'], link[href*='plugins/creame-whatsapp-me']"
+    ],
+    "html": [
+      "https?://(?:api|web)\\.whatsapp\\.com/send/?\\?(?:[^\"'#<>\\s]*&(?:amp;)?)?phone=(?:\\+|%2b)?\\d+",
+      "<a[^>]+href=[\"']https?://(?:www\\.)?wa\\.me/message/[a-z\\d]+/?[?#\"']"
     ],
     "icon": "WhatsApp.svg",
     "scriptSrc": [

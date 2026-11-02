@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 367
+    "changed": 368
   },
   "newCategories": [
     {
@@ -5443,6 +5443,16 @@
         "script"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "WhatsApp Business Chat",
+      "fieldsAdded": [
+        "html"
+      ],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "dom"
+      ]
     },
     {
       "name": "WiredMinds",
