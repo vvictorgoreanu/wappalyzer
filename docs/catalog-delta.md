@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 363 |
+| Changed | 364 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (363)
+## Changed (364)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1212,6 +1212,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Amazon Publisher Services | xhrUrl | xhr | - |
 | Amazon Redshift | icon, saas, oss, xhr | - | cats |
 | Amazon Simple Workflow (SWF) | xhrUrl | xhr | - |
+| Amazon Web Services | - | headers, scripts | - |
 | Amazon Widgets | xhrUrl | xhr | dom |
 | Amplience | scriptSrc | - | - |
 | Apache Hudi | xhrUrl | xhr | - |
