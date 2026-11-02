@@ -13,7 +13,7 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 | --- | --- |
 | Added | 1122 |
 | **Removed** | **0** |
-| Changed | 360 |
+| Changed | 362 |
 
 Nothing was removed from the catalog.
 
@@ -1176,7 +1176,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | 210 | Workflow automation | 7 |
 | 211 | Observability | 7 |
 
-## Changed (360)
+## Changed (362)
 
 | Technology | Fields added | Fields removed | Values changed |
 | --- | --- | --- | --- |
@@ -1304,6 +1304,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Google AdSense | - | - | scriptSrc |
 | Google Analytics | - | - | scriptSrc |
 | Google Campaign Manager 360 | html, scriptSrc | - | scripts |
+| Google Compute Engine | - | headers | - |
 | Google Consumer Surveys | scriptSrc | script | - |
 | Google Dataproc | meta | - | dom |
 | Google Tag Manager | - | js | html, scriptSrc |
@@ -1500,6 +1501,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | Twenty Twenty-Two | - | - | dom |
 | Twilio Flex | scriptSrc | script | - |
 | Twilio Video | scriptSrc | script | - |
+| Twitter Ads | - | - | js |
 | Twitter Conversion Tag | scriptSrc | script | - |
 | Umbraco | xhrUrl | xhr | scripts |
 | Uniconsent | - | - | scriptSrc |
