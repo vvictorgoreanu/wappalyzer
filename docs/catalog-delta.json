@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 363
+    "changed": 364
   },
   "newCategories": [
     {
@@ -2550,6 +2550,15 @@
       ],
       "fieldsRemoved": [
         "xhr"
+      ],
+      "valuesChanged": []
+    },
+    {
+      "name": "Amazon Web Services",
+      "fieldsAdded": [],
+      "fieldsRemoved": [
+        "headers",
+        "scripts"
       ],
       "valuesChanged": []
     },

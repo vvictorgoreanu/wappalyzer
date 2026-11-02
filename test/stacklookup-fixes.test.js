@@ -538,3 +538,58 @@ test('Facebook Login is not inferred from the Facebook SDK globals alone', () =>
     const names = detectJs({ 'FB.getLoginStatus': true, 'FB.login': true }).map(({ name }) => name)
     assert.ok(!names.includes(FACEBOOK_LOGIN))
 })
+
+const AWS = 'Amazon Web Services'
+
+test('Amazon Web Services is detected from Route 53 name servers', () => {
+    // Route 53 delegation sets: ns-<n>.awsdns-<nn>.{com,net,org,co.uk}
+    for (const ns of ['ns-322.awsdns-40.com', 'ns-1308.awsdns-35.org.', 'ns-1675.awsdns-17.co.uk', 'ns-797.awsdns-35.net']) {
+        assert.ok(detect({ dns: { ns: [ns] } }).includes(AWS), ns)
+    }
+})
+
+test('Amazon Web Services stays implied by the AWS services that serve a page', () => {
+    for (const items of [
+        { headers: { server: ['AmazonS3'] } },
+        { headers: { via: ['1.1 0123456789abcdef.cloudfront.net (CloudFront)'], 'x-amz-cf-id': ['T9pZ5w'] } },
+        { headers: { server: ['awselb/2.0'] } },
+        { cookies: { awsalb: ['example'] } },
+        { headers: { server: ['Apache/2.4.62 (Amazon)'] } },
+        { certIssuer: 'Amazon' },
+    ]) {
+        assert.ok(detect(items).includes(AWS), JSON.stringify(items))
+    }
+})
+
+test('Amazon Web Services is not inferred from amazonaws.com text inside script bundles', () => {
+    for (const script of [
+        // Chat widget bundle: agent profile images on a vendor bucket
+        'const image = `https://s3.amazonaws.com/tawk-to-pi/${O.pi}`;',
+        // Analytics bundle: a vendor module endpoint
+        'const review = "https://hj-engage-unmoderated-review.s3.eu-west-1.amazonaws.com";',
+        // AWS SDK bundled into a site script: endpoint template and protocol metadata
+        '{"endpoint":"{service}.{region}.amazonaws.com"}',
+        'const model = {xmlNamespace:"http://firehose.amazonaws.com/doc/2015-08-04"};',
+    ]) {
+        assert.ok(!detect({ scripts: [script] }).includes(AWS), script)
+    }
+})
+
+test('Amazon Web Services is not inferred from S3-compatible response headers', () => {
+    for (const headers of [
+        { 'x-amz-delete-marker': ['true'] },
+        { 'x-amz-err-code': ['AccessDenied'] },
+        { 'x-amz-err-message': ['Access Denied'] },
+        { 'x-amz-req-time-micros': ['19'] },
+        { 'x-amz-rid': ['ABCDEFGHIJ0123456789'] },
+        { 'x-amz-version-id': ['null'] },
+        // Backblaze B2's S3 API response (also sent by MinIO)
+        {
+            'x-amz-request-id': ['56aa38410aaebdd'],
+            'x-amz-id-2': ['aMa41BGZMOZMztjUfY9JmpzRnZLRjZmIQ'],
+            'x-amz-version-id': ['4_z6145af89f355ac2f74ed0c1b_f416a807037a7ee2a_d20220128_m231233_c004_v0402000_t0056'],
+        },
+    ]) {
+        assert.ok(!detect({ headers }).includes(AWS), JSON.stringify(headers))
+    }
+})
