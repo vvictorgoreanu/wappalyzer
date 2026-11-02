@@ -665,6 +665,7 @@ test('Stimulus is not inferred from other data-controller markup', () => {
         assert.ok(!detect({ html }).includes(STIMULUS), html)
     }
     assert.ok(!detect({ scriptSrc: ['https://example.com/js/stimulus-slider.js'] }).includes(STIMULUS))
+})
 
 const WHATSAPP_BUSINESS = 'WhatsApp Business Chat'
 
