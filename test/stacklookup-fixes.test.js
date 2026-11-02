@@ -431,6 +431,79 @@ test('Sirvoy is not inferred from the svSession cookie name in Wix runtime code'
     }
 })
 
+const GCE = 'Google Compute Engine'
+
+test('Google Compute Engine is not inferred from Server banners of Google front ends or look-alikes', () => {
+    for (const headers of [
+        // Blogger: *.blogspot.com and custom domains (CNAME ghs.google.com)
+        { server: ['GSE'] },
+        // Google Search, and a shared host that sends the same banner
+        { server: ['gws'] },
+        // App Engine / Cloud Run behind Google's front end, Google Cloud load balancer
+        { server: ['Google Frontend'], 'x-cloud-trace-context': ['e9f89cc597aaf6efbbe4e79dc32d8739'] },
+        { server: ['nginx'], via: ['1.1 google'] },
+    ]) {
+        assert.ok(!detect({ headers }).includes(GCE), JSON.stringify(headers))
+    }
+})
+
+const TWITTER_ADS = 'Twitter Ads'
+
+test('Twitter Ads is detected from the uwt.js script its pixel base code loads', () => {
+    // The base code inserts <script async src="https://static.ads-twitter.com/uwt.js">
+    assert.ok(detect({ scriptSrc: ['https://static.ads-twitter.com/uwt.js'] }).includes(TWITTER_ADS))
+})
+
+test('Twitter Ads is detected from the twq queue its pixel base code defines', () => {
+    // The base code sets window.twq = function() {...} before uwt.js loads; the script
+    // element may be gone by the time the page is scanned, the global stays
+    assert.ok(detectJs({ twq: true }).some(({ name }) => name === TWITTER_ADS))
+})
+
+test('Twitter Ads is not inferred from the twttr global of ordinary X/Twitter widgets', () => {
+    // widgets.js (Post and Follow buttons, embedded posts, timelines) defines window.twttr
+    const names = detectJs({ twttr: true }).map(({ name }) => name)
+    assert.ok(!names.includes(TWITTER_ADS))
+
+    for (const items of [
+        // WordPress.com blog with the Twitter widget
+        { html: '<script id="twitter-widgets-js" src="https://platform.twitter.com/widgets.js?ver=20111117"></script>', scriptSrc: ['https://platform.twitter.com/widgets.js?ver=20111117'] },
+        // The documented asynchronous loader snippet
+        { scripts: ['window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = "https://platform.x.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, "script", "twitter-wjs"));'], scriptSrc: ['https://platform.x.com/widgets.js'] },
+    ]) {
+        assert.ok(!detect(items).includes(TWITTER_ADS), JSON.stringify(items))
+    }
+})
+
+const OPENGSE = 'OpenGSE'
+
+test('OpenGSE is detected from the X-Powered-By banner its servlet engine sets', () => {
+    // engines/minigse/.../WebAppCollectionImpl.java in the OpenGSE source
+    const detections = Wappalyzer.resolve(
+        Wappalyzer.analyze({ headers: { 'x-powered-by': ['Servlet/2.5 (OpenGSE/0.9)'] } })
+    )
+    const openGse = detections.find(({ name }) => name === OPENGSE)
+    assert.ok(openGse)
+    assert.equal(openGse.version, '0.9')
+    assert.ok(detections.some(({ name }) => name === 'Java'))
+})
+
+test('OpenGSE is not inferred from the Server: GSE banner of Google-hosted pages', () => {
+    // Blogger blogs (blogspot.com and custom domains) and some Google redirects
+    for (const server of ['GSE', 'gws', 'ESF', 'Google Frontend']) {
+        const names = detect({ headers: { server: [server] } })
+        assert.ok(!names.includes(OPENGSE), server)
+        assert.ok(!names.includes('Java'), server)
+    }
+    const blog = detect({
+        url: 'https://example.blogspot.com/',
+        headers: { server: ['GSE'] },
+        meta: { generator: ['blogger'] },
+    })
+    assert.ok(blog.includes('Blogger'))
+    assert.ok(!blog.includes(OPENGSE))
+})
+
 const FACEBOOK_LOGIN = 'Facebook Login'
 
 /** Names resolved from driver.js getDom() results for the given selectors. */

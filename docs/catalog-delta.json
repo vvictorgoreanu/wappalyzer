@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 360
+    "changed": 363
   },
   "newCategories": [
     {
@@ -3425,6 +3425,14 @@
       ]
     },
     {
+      "name": "Google Compute Engine",
+      "fieldsAdded": [],
+      "fieldsRemoved": [
+        "headers"
+      ],
+      "valuesChanged": []
+    },
+    {
       "name": "Google Consumer Surveys",
       "fieldsAdded": [
         "scriptSrc"
@@ -4224,6 +4232,14 @@
         "url"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "OpenGSE",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "headers"
+      ]
     },
     {
       "name": "OpenText WEM",
@@ -5302,6 +5318,14 @@
         "script"
       ],
       "valuesChanged": []
+    },
+    {
+      "name": "Twitter Ads",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "js"
+      ]
     },
     {
       "name": "Twitter Conversion Tag",
