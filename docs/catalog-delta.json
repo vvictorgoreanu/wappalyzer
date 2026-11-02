@@ -12,7 +12,7 @@
   "summary": {
     "added": 1122,
     "removed": 0,
-    "changed": 366
+    "changed": 367
   },
   "newCategories": [
     {
@@ -5460,6 +5460,14 @@
       "fieldsRemoved": [],
       "valuesChanged": [
         "scriptSrc"
+      ]
+    },
+    {
+      "name": "Wix eCommerce",
+      "fieldsAdded": [],
+      "fieldsRemoved": [],
+      "valuesChanged": [
+        "scripts"
       ]
     },
     {
