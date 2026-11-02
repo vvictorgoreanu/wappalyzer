@@ -630,3 +630,34 @@ test('X is not inferred from ordinary links to x.com', () => {
         assert.ok(!detect({ html }).includes(X), html)
     }
 })
+
+const WHATSAPP_BUSINESS = 'WhatsApp Business Chat'
+
+test('WhatsApp Business Chat is detected from chat links to a phone number or business short links', () => {
+    for (const html of [
+        '<a href="https://api.whatsapp.com/send?phone=40766937478&amp;text=Hello" class="btn">',
+        '<a class="inline-flex items-center justify-center gap-2 h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-600 hover:bg-green-700 focus:shadow-outline focus:outline-none" href="https://api.whatsapp.com/send?l=en&amp;phone=393203211367&amp;text=test">',
+        '<a href="http://api.whatsapp.com/send?1=pt_BR&amp;phone=553534147858">',
+        '<a href="https://api.whatsapp.com/send/?phone=5515988080990&amp;text&amp;type=phone_number&amp;app_absent=0">',
+        '<a class="chaty-whatsapp" href="https://web.whatsapp.com/send?phone=%2B9660535418832&amp;text=">',
+        '<a href="https://wa.me/message/7IIN27INRSJED1" target="_blank">',
+        '<a href=\'https://wa.me/message/ZZTKHJXZLXURE1/\'>',
+    ]) {
+        assert.ok(detect({ html }).includes(WHATSAPP_BUSINESS), html)
+    }
+})
+
+test('WhatsApp Business Chat is not inferred from share links with no recipient', () => {
+    for (const html of [
+        '<a href="https://api.whatsapp.com/send?text=https://example.com/">',
+        '<a href="https://api.whatsapp.com/send/?phone&amp;text=https://www.example.com">',
+        '<a href="https://api.whatsapp.com/send?phone=&amp;text=share">',
+        '<a class="share-whatsapp" href="https://web.whatsapp.com/send?text=Example%20article%20https%3A%2F%2Fexample.com">',
+    ]) {
+        assert.ok(!detect({ html }).includes(WHATSAPP_BUSINESS), html)
+    }
+    // driver.js reports the old selector whenever any send link exists, share links included
+    assert.ok(!detectDom([
+        "a[href*='api.whatsapp.com/send'], a[href*='web.whatsapp.com/send'], div[class*='wptwa-container'], a[href*='wa.link'][target='_blank'], link[href*='plugins/creame-whatsapp-me']",
+    ]).includes(WHATSAPP_BUSINESS))
+})
