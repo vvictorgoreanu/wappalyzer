@@ -593,3 +593,40 @@ test('Amazon Web Services is not inferred from S3-compatible response headers', 
         assert.ok(!detect({ headers }).includes(AWS), JSON.stringify(headers))
     }
 })
+
+const X = 'X'
+
+test('X is detected from the documented X for Websites markup and widgets.js', () => {
+    for (const items of [
+        { html: '<a class="twitter-follow-button" href="https://x.com/example" data-size="large">Follow @example</a>' },
+        { html: '<a class="twitter-share-button" href="https://x.com/intent/tweet?text=Hello%20world">Post</a>' },
+        { html: '<a href="https://x.com/share" class="twitter-share-button" data-url="https://example.com/">Tweet</a>' },
+        { html: '<a class="twitter-hashtag-button" href="https://x.com/intent/tweet?button_hashtag=Example">Post #Example</a>' },
+        { html: '<a class="twitter-mention-button" href="https://x.com/intent/tweet?screen_name=example">Post to @example</a>' },
+        { html: '<a class="twitter-timeline" href="https://x.com/example" data-tweet-limit="3">Posts by @example</a>' },
+        { html: '<a data-show-count="false" class="sidebar twitter-follow-button" href="//x.com/example">Follow</a>' },
+        { scriptSrc: ['https://platform.x.com/widgets.js'] },
+    ]) {
+        assert.ok(detect(items).includes(X), JSON.stringify(items))
+    }
+})
+
+test('X is not inferred from ordinary links to x.com', () => {
+    for (const html of [
+        // Footer and header profile links
+        '<a href="https://x.com/example" target="_blank" rel="noreferrer">',
+        '<a href="https://x.com/example" class="sns_inner">',
+        '<a aria-label="Example on X" href="https://x.com/example" target="_blank" class="footer_social-link">',
+        '<a href="https://www.x.com/example" title="Follow @example on X!">',
+        // Site builders' own share buttons (no X script)
+        '<a class="cc-sharebuttons-x" href="https://x.com/share?text=Example&amp;url=https%3A%2F%2Fexample.com">',
+        '<a rel="noopener noreferrer nofollow" href="https://x.com/share?url=https://example.com/" target="_blank" class="wd-social-icon social-twitter">',
+        '<a href="https://x.com/intent/tweet?url=https%3A%2F%2Fexample.com" target="_blank">',
+        // IndieWeb syndication link to a post
+        '<a class="u-syndication" href="https://x.com/123/status/456" aria-label="This post on X">',
+        // A widget class on a link to another host
+        '<a class="twitter-follow-button" href="https://netflix.com/example">',
+    ]) {
+        assert.ok(!detect({ html }).includes(X), html)
+    }
+})
