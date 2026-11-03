@@ -6,16 +6,14 @@ Computed by parsing both revisions and comparing entries, not by reading the tex
 
 |  | Before | After |
 | --- | --- | --- |
-| Technologies | 7911 | 9033 |
+| Technologies | 7911 | 9032 |
 | Categories | 111 | 124 |
 
 | Change | Count |
 | --- | --- |
 | Added | 1122 |
-| **Removed** | **0** |
+| **Removed** | **1** |
 | Changed | 368 |
-
-Nothing was removed from the catalog.
 
 ## Added (1122)
 
@@ -1513,7 +1511,7 @@ Full metadata, deliberately **no detection channel** — these products emit not
 | VisitorTrack | scriptSrc | script | - |
 | WP Customer Reviews | scriptSrc | script | - |
 | WURFL.js | scriptSrc | script | - |
-| WebSocket | headers | - | - |
+| WebSocket | headers | - | html |
 | Website Tonight | scriptSrc | script | - |
 | WhatsApp Business Chat | html | - | dom |
 | WiredMinds | scriptSrc | script | - |

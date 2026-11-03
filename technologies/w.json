@@ -1947,6 +1947,7 @@
       "link[href^='wss://']"
     ],
     "html": [
+      "<link[^>]+rel=[\"']web-socket[\"']",
       "<(?:link|a)[^>]+href=[\"']wss?://"
     ],
     "icon": "WebSocket.svg",
@@ -1955,17 +1956,6 @@
     "headers": {
       "Upgrade": "websocket"
     }
-  },
-  "Websocket": {
-    "cats": [
-      19
-    ],
-    "html": [
-      "<link[^>]+rel=[\"']web-socket[\"']",
-      "<(?:link|a)[^>]+href=[\"']wss?://"
-    ],
-    "icon": "websocket.png",
-    "website": "https://en.wikipedia.org/wiki/WebSocket"
   },
   "WebSphere": {
     "cats": [

@@ -6,12 +6,12 @@
     "categories": 111
   },
   "after": {
-    "technologies": 9033,
+    "technologies": 9032,
     "categories": 124
   },
   "summary": {
     "added": 1122,
-    "removed": 0,
+    "removed": 1,
     "changed": 368
   },
   "newCategories": [
@@ -2247,7 +2247,9 @@
     "Zscaler",
     "pgvector"
   ],
-  "removedTechnologies": [],
+  "removedTechnologies": [
+    "Websocket"
+  ],
   "changed": [
     {
       "name": ".NET Framework",
@@ -5432,7 +5434,9 @@
         "headers"
       ],
       "fieldsRemoved": [],
-      "valuesChanged": []
+      "valuesChanged": [
+        "html"
+      ]
     },
     {
       "name": "Website Tonight",
